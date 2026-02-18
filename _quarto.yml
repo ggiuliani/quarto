@@ -4,8 +4,8 @@ project:
 website: 
   page-navigation: true
   title: "Living Earth" 
-  site-url: "https://openscapes.github.io/quarto-website-tutorial" 
-  repo-url: https://github.com/ggiuliani/LivingEarthLab/quarto 
+  site-url: "https://ggiuliani.github.io/quarto/" 
+  repo-url: https://github.com/ggiuliani/quarto 
   repo-actions: [edit, issue]
   
   page-footer:
