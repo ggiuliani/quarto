@@ -5,7 +5,7 @@ website:
   page-navigation: true
   title: "Living Earth" 
   site-url: "https://ggiuliani.github.io/quarto/" 
-  repo-url: https://github.com/ggiuliani/quarto 
+  repo-url: "https://github.com/ggiuliani/quarto" 
   repo-actions: [edit, issue]
   
   page-footer:
