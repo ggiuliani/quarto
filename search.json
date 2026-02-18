@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Living Earth",
+    "section": "",
+    "text": "It’s possible to create beautiful documentation to share online with Living Earth\nblalbla",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Living Earth",
+    "section": "",
+    "text": "It’s possible to create beautiful documentation to share online with Living Earth\nblalbla",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#what-is-living-earth",
+    "href": "index.html#what-is-living-earth",
+    "title": "Living Earth",
+    "section": "What is Living Earth?",
+    "text": "What is Living Earth?\nblacla",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#what-is-this-tutorial",
+    "href": "index.html#what-is-this-tutorial",
+    "title": "Living Earth",
+    "section": "What is this tutorial?",
+    "text": "What is this tutorial?\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Living Earth",
+    "section": "About",
+    "text": "About\nLiving Earth Lab is about XXX.",
+    "crumbs": [
+      "Welcome"
+    ]
+  }
+]
