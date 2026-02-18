@@ -9,8 +9,8 @@ website:
   repo-actions: [edit, issue]
   
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-By Openscapes, 2026"
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    left: "&copy; CC-BY Living Earth Lab, 2026"
     
   sidebar:
     logo: "images/openscapes_hex.png"
