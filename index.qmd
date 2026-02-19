@@ -1,5 +1,5 @@
 ---
-title: "Living Earth"
+title: "The Living Earth Handbook"
 subtitle: "A first test"
 ---
 
@@ -13,11 +13,17 @@ blalbla
 
 blacla 
 
-## What is this tutorial?
+## What is this book about?
 
 This is a 1-hour tutorial that can be used to teach or as self-paced learning. 
 
+## About the authors?
 
-## About
-
+This is a 1-hour tutorial that can be used to teach or as self-paced learning. 
 [Living Earth Lab](https://www.unige.ch/envirospace/livingearth) is about XXX.
+
+## How to cite this book?
+If you use this book, please cite it as:
+
+## License
+CC-BY-SA 4.0
