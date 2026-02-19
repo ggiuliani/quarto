@@ -44,7 +44,7 @@
     "href": "index.html#about-the-authors",
     "title": "The Living Earth Handbook",
     "section": "About the authors?",
-    "text": "About the authors?\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning. Living Earth Lab is about XXX.",
+    "text": "About the authors?\n\nGregory Giuliani\nRichard Lucas\nCarole Planque\nSébastien Chognard\n\nLiving Earth Lab is about XXX.",
     "crumbs": [
       "Welcome"
     ]
@@ -54,7 +54,7 @@
     "href": "index.html#how-to-cite-this-book",
     "title": "The Living Earth Handbook",
     "section": "How to cite this book?",
-    "text": "How to cite this book?\nIf you use this book, please cite it as:",
+    "text": "How to cite this book?\nIf you use this handbook on your work, please use this reference:\nGregory Giuliani, Richard Lucas, Carole Planque, Sébastien Chognard (2026). The Living Earth Handbook. University of Geneva (UNIGE), Switzerland. Online book available at: XXX DOI: XXX",
     "crumbs": [
       "Welcome"
     ]
@@ -64,7 +64,7 @@
     "href": "index.html#license",
     "title": "The Living Earth Handbook",
     "section": "License",
-    "text": "License\nCC-BY-SA 4.0",
+    "text": "License\nThis hanbook is licensed as Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) by Creative Commons. Living Earth is licensed under Apache 2.0.",
     "crumbs": [
       "Welcome"
     ]

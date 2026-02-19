@@ -19,11 +19,18 @@ This is a 1-hour tutorial that can be used to teach or as self-paced learning.
 
 ## About the authors?
 
-This is a 1-hour tutorial that can be used to teach or as self-paced learning. 
+- Gregory Giuliani
+- Richard Lucas
+- Carole Planque
+- Sébastien Chognard
+
 [Living Earth Lab](https://www.unige.ch/envirospace/livingearth) is about XXX.
 
 ## How to cite this book?
-If you use this book, please cite it as:
+If you use this handbook on your work, please use this reference:
+
+Gregory Giuliani, Richard Lucas, Carole Planque, Sébastien Chognard (2026). *The Living Earth Handbook*. University of Geneva (UNIGE), Switzerland. Online book available at: XXX DOI: XXX
 
 ## License
-CC-BY-SA 4.0
+This hanbook is licensed as [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) by Creative Commons.
+`Living Earth` is licensed under Apache 2.0.
