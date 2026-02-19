@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ggiuliani.github.io/quarto/index.html</loc>
-    <lastmod>2026-02-19T07:09:48.760Z</lastmod>
+    <lastmod>2026-02-19T07:48:27.544Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/tutorials/tuto1.html</loc>
@@ -35,5 +35,9 @@
   <url>
     <loc>https://ggiuliani.github.io/quarto/workshops/index.html</loc>
     <lastmod>2026-02-19T07:05:56.256Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggiuliani.github.io/quarto/acknowledgements.html</loc>
+    <lastmod>2026-02-19T07:48:23.050Z</lastmod>
   </url>
 </urlset>

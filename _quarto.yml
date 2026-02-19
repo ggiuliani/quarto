@@ -30,10 +30,14 @@ website:
     contents:
       - href: index.qmd
         text: Welcome
-      - href: introduction.qmd
-        text: Introduction
+      - href: acknowledgements.qmd
+        text: Acknowledgements
       - href: howto.qmd
         text: How to use this handbook
+      - href: introduction.qmd
+        text: Introduction
+      - href: change.qmd
+        text: Change framework
       - href: documentation.qmd
         text: Documentation
       - section: tutorials/index.qmd
