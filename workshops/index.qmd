@@ -1,0 +1,9 @@
+---
+title: "Workshops"
+subtitle: "All Living Earth workshops"
+---
+
+## Welcome {#welcome}
+
+blalbla
+

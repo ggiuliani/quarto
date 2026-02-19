@@ -18,14 +18,11 @@ website:
     align: center
     tools: 
       - icon: globe
-        href: https://openscapes.org
-        text: "Openscapes.org"
+        href: https://livingearthhub.org
+        text: "Living Earth Hub"
       - icon: github
-        href: https://github.com/openscapes/quarto-website-tutorial
-        text: "Quarto website tutorial"
-      - icon: twitter
-        href: https://twitter.com/openscapes
-        text: "Openscapes Twitter"         
+        href: https://github.com/ggiuliani/quarto
+        text: "Quarto website repository"        
 
     style: "docked"
     search: true
@@ -42,8 +39,10 @@ website:
       - section: tutorials/index.qmd
         contents: 
           - tutorials/tuto1.qmd
-      - href: workshops.qmd
-        text: Workshops  
+      - section: workshops/index.qmd
+        contents: 
+          - workshops/gistam2026.qmd
+          - workshops/earsel2026.qmd
 
 format:
   html:
