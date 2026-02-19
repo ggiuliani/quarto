@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ggiuliani.github.io/quarto/tutorials/tuto1.html</loc>
+    <lastmod>2026-02-19T06:59:55.253Z</lastmod>
+  </url>
+  <url>
     <loc>https://ggiuliani.github.io/quarto/index.html</loc>
-    <lastmod>2026-02-18T19:35:09.311Z</lastmod>
+    <lastmod>2026-02-19T06:59:55.252Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggiuliani.github.io/quarto/tutorials/index.html</loc>
+    <lastmod>2026-02-19T06:59:55.252Z</lastmod>
   </url>
 </urlset>
