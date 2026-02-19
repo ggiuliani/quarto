@@ -1,24 +1,66 @@
 [
   {
-    "objectID": "tutorials/tuto1.html",
-    "href": "tutorials/tuto1.html",
-    "title": "How to create overaching ED?",
+    "objectID": "workshops/earsel2026.html",
+    "href": "workshops/earsel2026.html",
+    "title": "EARSeL 2026",
     "section": "",
-    "text": "blalbla",
+    "text": "https://athens2026.earsel.org",
     "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
+      "Workshops",
+      "EARSeL 2026"
     ]
   },
   {
-    "objectID": "tutorials/tuto1.html#welcome",
-    "href": "tutorials/tuto1.html#welcome",
-    "title": "How to create overaching ED?",
+    "objectID": "workshops/earsel2026.html#welcome",
+    "href": "workshops/earsel2026.html#welcome",
+    "title": "EARSeL 2026",
+    "section": "",
+    "text": "https://athens2026.earsel.org",
+    "crumbs": [
+      "Workshops",
+      "EARSeL 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/gistam2026.html",
+    "href": "workshops/gistam2026.html",
+    "title": "GISTAM 2026",
+    "section": "",
+    "text": "https://gistam.scitevents.org/Home.aspx",
+    "crumbs": [
+      "Workshops",
+      "GISTAM 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/gistam2026.html#welcome",
+    "href": "workshops/gistam2026.html#welcome",
+    "title": "GISTAM 2026",
+    "section": "",
+    "text": "https://gistam.scitevents.org/Home.aspx",
+    "crumbs": [
+      "Workshops",
+      "GISTAM 2026"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Tutorials",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html#welcome",
+    "href": "tutorials/index.html#welcome",
+    "title": "Tutorials",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials"
     ]
   },
   {
@@ -92,23 +134,45 @@
     ]
   },
   {
-    "objectID": "tutorials/index.html",
-    "href": "tutorials/index.html",
-    "title": "Tutorials",
+    "objectID": "tutorials/tuto1.html",
+    "href": "tutorials/tuto1.html",
+    "title": "How to create overaching ED?",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials"
+      "Tutorials",
+      "How to create overaching ED?"
     ]
   },
   {
-    "objectID": "tutorials/index.html#welcome",
-    "href": "tutorials/index.html#welcome",
-    "title": "Tutorials",
+    "objectID": "tutorials/tuto1.html#welcome",
+    "href": "tutorials/tuto1.html#welcome",
+    "title": "How to create overaching ED?",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials"
+      "Tutorials",
+      "How to create overaching ED?"
+    ]
+  },
+  {
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "workshops/index.html#welcome",
+    "href": "workshops/index.html#welcome",
+    "title": "Workshops",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Workshops"
     ]
   }
 ]
