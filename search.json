@@ -1,66 +1,84 @@
 [
   {
-    "objectID": "workshops/earsel2026.html",
-    "href": "workshops/earsel2026.html",
-    "title": "EARSeL 2026",
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
     "section": "",
-    "text": "https://athens2026.earsel.org",
+    "text": "List of funding sources that supported the work.",
     "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
+      "Acknowledgements"
     ]
   },
   {
-    "objectID": "workshops/earsel2026.html#welcome",
-    "href": "workshops/earsel2026.html#welcome",
-    "title": "EARSeL 2026",
+    "objectID": "acknowledgements.html#funding-sources",
+    "href": "acknowledgements.html#funding-sources",
+    "title": "Acknowledgements",
     "section": "",
-    "text": "https://athens2026.earsel.org",
+    "text": "List of funding sources that supported the work.",
     "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
+      "Acknowledgements"
     ]
   },
   {
-    "objectID": "workshops/gistam2026.html",
-    "href": "workshops/gistam2026.html",
-    "title": "GISTAM 2026",
-    "section": "",
-    "text": "https://gistam.scitevents.org/Home.aspx",
+    "objectID": "acknowledgements.html#contributions",
+    "href": "acknowledgements.html#contributions",
+    "title": "Acknowledgements",
+    "section": "Contributions",
+    "text": "Contributions\nblacla",
     "crumbs": [
-      "Workshops",
-      "GISTAM 2026"
+      "Acknowledgements"
     ]
   },
   {
-    "objectID": "workshops/gistam2026.html#welcome",
-    "href": "workshops/gistam2026.html#welcome",
-    "title": "GISTAM 2026",
-    "section": "",
-    "text": "https://gistam.scitevents.org/Home.aspx",
+    "objectID": "acknowledgements.html#publications-using-living-earth",
+    "href": "acknowledgements.html#publications-using-living-earth",
+    "title": "Acknowledgements",
+    "section": "Publications using Living Earth",
+    "text": "Publications using Living Earth\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
     "crumbs": [
-      "Workshops",
-      "GISTAM 2026"
+      "Acknowledgements"
     ]
   },
   {
-    "objectID": "tutorials/index.html",
-    "href": "tutorials/index.html",
-    "title": "Tutorials",
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials"
+      "Workshops"
     ]
   },
   {
-    "objectID": "tutorials/index.html#welcome",
-    "href": "tutorials/index.html#welcome",
-    "title": "Tutorials",
+    "objectID": "workshops/index.html#welcome",
+    "href": "workshops/index.html#welcome",
+    "title": "Workshops",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials"
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "tutorials/tuto1.html",
+    "href": "tutorials/tuto1.html",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
+    ]
+  },
+  {
+    "objectID": "tutorials/tuto1.html#welcome",
+    "href": "tutorials/tuto1.html#welcome",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
     ]
   },
   {
@@ -134,45 +152,67 @@
     ]
   },
   {
-    "objectID": "tutorials/tuto1.html",
-    "href": "tutorials/tuto1.html",
-    "title": "How to create overaching ED?",
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Tutorials",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
+      "Tutorials"
     ]
   },
   {
-    "objectID": "tutorials/tuto1.html#welcome",
-    "href": "tutorials/tuto1.html#welcome",
-    "title": "How to create overaching ED?",
+    "objectID": "tutorials/index.html#welcome",
+    "href": "tutorials/index.html#welcome",
+    "title": "Tutorials",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
+      "Tutorials"
     ]
   },
   {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
+    "objectID": "workshops/gistam2026.html",
+    "href": "workshops/gistam2026.html",
+    "title": "GISTAM 2026",
     "section": "",
-    "text": "blalbla",
+    "text": "https://gistam.scitevents.org/Home.aspx",
     "crumbs": [
-      "Workshops"
+      "Workshops",
+      "GISTAM 2026"
     ]
   },
   {
-    "objectID": "workshops/index.html#welcome",
-    "href": "workshops/index.html#welcome",
-    "title": "Workshops",
+    "objectID": "workshops/gistam2026.html#welcome",
+    "href": "workshops/gistam2026.html#welcome",
+    "title": "GISTAM 2026",
     "section": "",
-    "text": "blalbla",
+    "text": "https://gistam.scitevents.org/Home.aspx",
     "crumbs": [
-      "Workshops"
+      "Workshops",
+      "GISTAM 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/earsel2026.html",
+    "href": "workshops/earsel2026.html",
+    "title": "EARSeL 2026",
+    "section": "",
+    "text": "https://athens2026.earsel.org",
+    "crumbs": [
+      "Workshops",
+      "EARSeL 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/earsel2026.html#welcome",
+    "href": "workshops/earsel2026.html#welcome",
+    "title": "EARSeL 2026",
+    "section": "",
+    "text": "https://athens2026.earsel.org",
+    "crumbs": [
+      "Workshops",
+      "EARSeL 2026"
     ]
   }
 ]
