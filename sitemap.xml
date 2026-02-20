@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ggiuliani.github.io/quarto/acknowledgements.html</loc>
-    <lastmod>2026-02-19T13:52:53.360Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggiuliani.github.io/quarto/workshops/index.html</loc>
-    <lastmod>2026-02-19T13:52:53.361Z</lastmod>
-  </url>
-  <url>
     <loc>https://ggiuliani.github.io/quarto/tutorials/tuto1.html</loc>
-    <lastmod>2026-02-19T13:52:53.360Z</lastmod>
+    <lastmod>2026-02-20T12:00:54.870Z</lastmod>
   </url>
   <url>
-    <loc>https://ggiuliani.github.io/quarto/index.html</loc>
-    <lastmod>2026-02-19T13:52:53.360Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggiuliani.github.io/quarto/tutorials/index.html</loc>
-    <lastmod>2026-02-19T13:52:53.360Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggiuliani.github.io/quarto/workshops/gistam2026.html</loc>
-    <lastmod>2026-02-19T13:52:53.361Z</lastmod>
+    <loc>https://ggiuliani.github.io/quarto/acknowledgements.html</loc>
+    <lastmod>2026-02-20T12:00:54.869Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/workshops/earsel2026.html</loc>
-    <lastmod>2026-02-19T13:52:53.360Z</lastmod>
+    <lastmod>2026-02-20T12:00:54.870Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggiuliani.github.io/quarto/index.html</loc>
+    <lastmod>2026-02-20T12:00:54.870Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggiuliani.github.io/quarto/workshops/index.html</loc>
+    <lastmod>2026-02-20T12:00:54.871Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggiuliani.github.io/quarto/workshops/gistam2026.html</loc>
+    <lastmod>2026-02-20T12:00:54.871Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggiuliani.github.io/quarto/tutorials/index.html</loc>
+    <lastmod>2026-02-20T12:00:54.870Z</lastmod>
   </url>
 </urlset>

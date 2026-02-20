@@ -1,5 +1,27 @@
 [
   {
+    "objectID": "tutorials/tuto1.html",
+    "href": "tutorials/tuto1.html",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
+    ]
+  },
+  {
+    "objectID": "tutorials/tuto1.html#welcome",
+    "href": "tutorials/tuto1.html#welcome",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
+    ]
+  },
+  {
     "objectID": "acknowledgements.html",
     "href": "acknowledgements.html",
     "title": "Acknowledgements",
@@ -40,45 +62,25 @@
     ]
   },
   {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
+    "objectID": "workshops/earsel2026.html",
+    "href": "workshops/earsel2026.html",
+    "title": "EARSeL 2026",
     "section": "",
-    "text": "blalbla",
+    "text": "https://athens2026.earsel.org",
     "crumbs": [
-      "Workshops"
+      "Workshops",
+      "EARSeL 2026"
     ]
   },
   {
-    "objectID": "workshops/index.html#welcome",
-    "href": "workshops/index.html#welcome",
-    "title": "Workshops",
+    "objectID": "workshops/earsel2026.html#welcome",
+    "href": "workshops/earsel2026.html#welcome",
+    "title": "EARSeL 2026",
     "section": "",
-    "text": "blalbla",
+    "text": "https://athens2026.earsel.org",
     "crumbs": [
-      "Workshops"
-    ]
-  },
-  {
-    "objectID": "tutorials/tuto1.html",
-    "href": "tutorials/tuto1.html",
-    "title": "How to create overaching ED?",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
-    ]
-  },
-  {
-    "objectID": "tutorials/tuto1.html#welcome",
-    "href": "tutorials/tuto1.html#welcome",
-    "title": "How to create overaching ED?",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
+      "Workshops",
+      "EARSeL 2026"
     ]
   },
   {
@@ -152,23 +154,23 @@
     ]
   },
   {
-    "objectID": "tutorials/index.html",
-    "href": "tutorials/index.html",
-    "title": "Tutorials",
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials"
+      "Workshops"
     ]
   },
   {
-    "objectID": "tutorials/index.html#welcome",
-    "href": "tutorials/index.html#welcome",
-    "title": "Tutorials",
+    "objectID": "workshops/index.html#welcome",
+    "href": "workshops/index.html#welcome",
+    "title": "Workshops",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials"
+      "Workshops"
     ]
   },
   {
@@ -194,25 +196,23 @@
     ]
   },
   {
-    "objectID": "workshops/earsel2026.html",
-    "href": "workshops/earsel2026.html",
-    "title": "EARSeL 2026",
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Tutorials",
     "section": "",
-    "text": "https://athens2026.earsel.org",
+    "text": "blalbla",
     "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
+      "Tutorials"
     ]
   },
   {
-    "objectID": "workshops/earsel2026.html#welcome",
-    "href": "workshops/earsel2026.html#welcome",
-    "title": "EARSeL 2026",
+    "objectID": "tutorials/index.html#welcome",
+    "href": "tutorials/index.html#welcome",
+    "title": "Tutorials",
     "section": "",
-    "text": "https://athens2026.earsel.org",
+    "text": "blalbla",
     "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
+      "Tutorials"
     ]
   }
 ]
