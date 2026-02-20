@@ -13,7 +13,7 @@ website:
     left: "&copy; CC-BY Living Earth Lab, 2026"
     
   sidebar:
-    logo: "images/openscapes_hex.png"
+    logo: "images/le_logo.png"
     pinned: true
     align: center
     tools: 
