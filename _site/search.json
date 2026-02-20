@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "The Living Earth Handbook",
     "section": "",
-    "text": "It’s possible to create beautiful documentation to share online with Living Earth\nblalbla",
+    "text": "It’s possible to create beautiful documentation to share online with Living Earth\nLiving Earth is a science-driven, open-source Earth Observation (EO) framework designed to support standardised, scalable, and transparent mapping of land cover worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.",
     "crumbs": [
       "Welcome"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#welcome",
     "title": "The Living Earth Handbook",
     "section": "",
-    "text": "It’s possible to create beautiful documentation to share online with Living Earth\nblalbla",
+    "text": "It’s possible to create beautiful documentation to share online with Living Earth\nLiving Earth is a science-driven, open-source Earth Observation (EO) framework designed to support standardised, scalable, and transparent mapping of land cover worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.",
     "crumbs": [
       "Welcome"
     ]
@@ -255,6 +255,56 @@
     "text": "Publications using Living Earth\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
     "crumbs": [
       "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "index.html#why-living-earth-matters",
+    "href": "index.html#why-living-earth-matters",
+    "title": "The Living Earth Handbook",
+    "section": "Why Living Earth matters?",
+    "text": "Why Living Earth matters?\nLand cover — the physical and biological cover on Earth’s surface such as vegetation types, water bodies, bare soil, or built environments — is a fundamental indicator of environmental state and change. Routine, high-quality land cover information is essential for tracking global and national progress toward environmental goals, such as the United Nations Sustainable Development Goals (SDGs). However, most existing Earth Observation data (e.g., analysis-ready data from satellites) do not, by themselves, provide standardized land cover products at national scales. Different methods, semantics, and classifications across countries make it difficult to compare or benchmark progress. Living Earth addresses that gap.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#a-global-framework-based-on-fao-lccs",
+    "href": "index.html#a-global-framework-based-on-fao-lccs",
+    "title": "The Living Earth Handbook",
+    "section": "A Global Framework Based on FAO LCCS",
+    "text": "A Global Framework Based on FAO LCCS\nAt the core of Living Earth is the Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) — a globally recognised, semantically robust taxonomy for land cover. Living Earth implements a fully operational version of FAO LCCS that is: - Optimised for Earth Observation data: It has been adapted to work with multiple satellite sources and national EO infrastructures. - Flexible yet consistent: Modifications have been made to environmental descriptors and classification hierarchies to ensure logic, scalability, and applicability even with limited data inputs. - Open-source and FAIR-compliant: The software is public and designed to follow FAIR (Findable, Accessible, Interoperable, Re-usable) data principles to encourage broad adoption. This implementation allows Living Earth to generate globally comparable land cover maps that can be used in policy, research, and sustainable land management.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#how-it-works",
+    "href": "index.html#how-it-works",
+    "title": "The Living Earth Handbook",
+    "section": "How it works?",
+    "text": "How it works?\nLiving Earth uses “environmental descriptors” — measurable or classifiable attributes (e.g., vegetation cover, water persistence) derived primarily from satellite data — as inputs. These descriptors feed into the LCCS hierarchy to produce detailed land cover classifications that are: - Scalable in space and time, enabling repeatable mapping workflows. - Applicable at national and continental scales, with demonstrated implementations in countries such as Australia and Wales. - Capable of supporting change detection, allowing assessment of land cover dynamics over years or decades.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#applications-and-impact",
+    "href": "index.html#applications-and-impact",
+    "title": "The Living Earth Handbook",
+    "section": "Applications and Impact",
+    "text": "Applications and Impact\nLiving Earth is a powerful tool for governments, environmental agencies, researchers, and policymakers who require robust landscape data for: - SDG reporting and planning — especially indicators related to land, biodiversity, and ecosystem health. - National monitoring systems — generating operational annual land cover maps using existing data infrastructures. - Landscape change analysis — identifying trends such as deforestation, urban expansion, and habitat shifts across time.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#open-collaborative-and-future-oriented",
+    "href": "index.html#open-collaborative-and-future-oriented",
+    "title": "The Living Earth Handbook",
+    "section": "Open, Collaborative, and Future-oriented?",
+    "text": "Open, Collaborative, and Future-oriented?\nLiving Earth is not just software — it’s a platform for global collaboration. Its open design supports extensions, plug-ins, and evolving environmental descriptors, making it adaptable for new sensors, regions, and ecosystem questions. The framework’s evolution continues through international partnerships, national implementations, and community contributions.",
+    "crumbs": [
+      "Welcome"
     ]
   }
 ]
