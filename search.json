@@ -88,17 +88,7 @@
     "href": "index.html",
     "title": "The Living Earth Handbook",
     "section": "",
-    "text": "It’s possible to create beautiful documentation to share online with Living Earth\nLiving Earth is a science-driven, open-source Earth Observation (EO) framework designed to support standardised, scalable, and transparent mapping of land cover worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "The Living Earth Handbook",
-    "section": "",
-    "text": "It’s possible to create beautiful documentation to share online with Living Earth\nLiving Earth is a science-driven, open-source Earth Observation (EO) framework designed to support standardised, scalable, and transparent mapping of land cover worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.",
+    "text": "[Living Earth](https://livingearthhub.org) is a science-driven, open-source Earth Observation (EO) framework designed to support standardised, scalable, and transparent mapping of land cover worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.",
     "crumbs": [
       "Welcome"
     ]
@@ -118,7 +108,7 @@
     "href": "index.html#a-global-framework-based-on-fao-lccs",
     "title": "The Living Earth Handbook",
     "section": "A Global Framework Based on FAO LCCS",
-    "text": "A Global Framework Based on FAO LCCS\nAt the core of Living Earth is the Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) — a globally recognised, semantically robust taxonomy for land cover. Living Earth implements a fully operational version of FAO LCCS that is: - Optimised for Earth Observation data: It has been adapted to work with multiple satellite sources and national EO infrastructures. - Flexible yet consistent: Modifications have been made to environmental descriptors and classification hierarchies to ensure logic, scalability, and applicability even with limited data inputs. - Open-source and FAIR-compliant: The software is public and designed to follow FAIR (Findable, Accessible, Interoperable, Re-usable) data principles to encourage broad adoption. This implementation allows Living Earth to generate globally comparable land cover maps that can be used in policy, research, and sustainable land management.",
+    "text": "A Global Framework Based on FAO LCCS\nAt the core of Living Earth is the Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) — a globally recognised, semantically robust taxonomy for land cover. Living Earth implements a fully operational version of FAO LCCS that is:\n\nOptimised for Earth Observation data: It has been adapted to work with multiple satellite sources and national EO infrastructures.\nFlexible yet consistent: Modifications have been made to environmental descriptors and classification hierarchies to ensure logic, scalability, and applicability even with limited data inputs.\nOpen-source and FAIR-compliant: The software is public and designed to follow FAIR (Findable, Accessible, Interoperable, Re-usable) data principles to encourage broad adoption. This implementation allows Living Earth to generate globally comparable land cover maps that can be used in policy, research, and sustainable land management.",
     "crumbs": [
       "Welcome"
     ]
@@ -128,7 +118,7 @@
     "href": "index.html#how-it-works",
     "title": "The Living Earth Handbook",
     "section": "How it works?",
-    "text": "How it works?\nLiving Earth uses “environmental descriptors” — measurable or classifiable attributes (e.g., vegetation cover, water persistence) derived primarily from satellite data — as inputs. These descriptors feed into the LCCS hierarchy to produce detailed land cover classifications that are: - Scalable in space and time, enabling repeatable mapping workflows. - Applicable at national and continental scales, with demonstrated implementations in countries such as Australia and Wales. - Capable of supporting change detection, allowing assessment of land cover dynamics over years or decades.",
+    "text": "How it works?\nLiving Earth uses “environmental descriptors” — measurable or classifiable attributes (e.g., vegetation cover, water persistence) derived primarily from satellite data — as inputs. These descriptors feed into the LCCS hierarchy to produce detailed land cover classifications that are:\n\nScalable in space and time, enabling repeatable mapping workflows.\nApplicable at national and continental scales, with demonstrated implementations in countries such as Australia and Wales.\nCapable of supporting change detection, allowing assessment of land cover dynamics over years or decades.",
     "crumbs": [
       "Welcome"
     ]
@@ -138,7 +128,7 @@
     "href": "index.html#applications-and-impact",
     "title": "The Living Earth Handbook",
     "section": "Applications and Impact",
-    "text": "Applications and Impact\nLiving Earth is a powerful tool for governments, environmental agencies, researchers, and policymakers who require robust landscape data for: - SDG reporting and planning — especially indicators related to land, biodiversity, and ecosystem health. - National monitoring systems — generating operational annual land cover maps using existing data infrastructures. - Landscape change analysis — identifying trends such as deforestation, urban expansion, and habitat shifts across time.",
+    "text": "Applications and Impact\nLiving Earth is a powerful tool for governments, environmental agencies, researchers, and policymakers who require robust landscape data for:\n\nSDG reporting and planning — especially indicators related to land, biodiversity, and ecosystem health.\nNational monitoring systems — generating operational annual land cover maps using existing data infrastructures.\nLandscape change analysis — identifying trends such as deforestation, urban expansion, and habitat shifts across time.",
     "crumbs": [
       "Welcome"
     ]
