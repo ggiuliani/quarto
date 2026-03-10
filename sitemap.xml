@@ -2,46 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ggiuliani.github.io/quarto/acknowledgements.html</loc>
-    <lastmod>2026-03-10T16:02:31.937Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.463Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/workshops/index.html</loc>
-    <lastmod>2026-03-10T16:02:31.940Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.465Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/tutorials/tuto1.html</loc>
-    <lastmod>2026-03-10T16:02:31.940Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.465Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggiuliani.github.io/quarto/index.html</loc>
+    <lastmod>2026-03-10T16:05:04.464Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/documentation/variables.html</loc>
-    <lastmod>2026-03-10T16:02:31.938Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.463Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/documentation/classification.html</loc>
-    <lastmod>2026-03-10T16:02:31.937Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.463Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/documentation/index.html</loc>
-    <lastmod>2026-03-10T16:02:31.938Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.463Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/documentation/layer_values.html</loc>
-    <lastmod>2026-03-10T16:02:31.938Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.463Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/documentation/data_ingestion.html</loc>
-    <lastmod>2026-03-10T16:02:31.938Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.463Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/tutorials/index.html</loc>
-    <lastmod>2026-03-10T16:02:31.938Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.464Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/workshops/gistam2026.html</loc>
-    <lastmod>2026-03-10T16:02:31.940Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.465Z</lastmod>
   </url>
   <url>
     <loc>https://ggiuliani.github.io/quarto/workshops/earsel2026.html</loc>
-    <lastmod>2026-03-10T16:02:31.940Z</lastmod>
+    <lastmod>2026-03-10T16:05:04.465Z</lastmod>
   </url>
 </urlset>
