@@ -1,27 +1,5 @@
 [
   {
-    "objectID": "tutorials/tuto1.html",
-    "href": "tutorials/tuto1.html",
-    "title": "How to create overaching ED?",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
-    ]
-  },
-  {
-    "objectID": "tutorials/tuto1.html#welcome",
-    "href": "tutorials/tuto1.html#welcome",
-    "title": "How to create overaching ED?",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
-    ]
-  },
-  {
     "objectID": "acknowledgements.html",
     "href": "acknowledgements.html",
     "title": "Acknowledgements",
@@ -62,25 +40,45 @@
     ]
   },
   {
-    "objectID": "workshops/earsel2026.html",
-    "href": "workshops/earsel2026.html",
-    "title": "EARSeL 2026",
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
     "section": "",
-    "text": "https://athens2026.earsel.org",
+    "text": "blalbla",
     "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
+      "Workshops"
     ]
   },
   {
-    "objectID": "workshops/earsel2026.html#welcome",
-    "href": "workshops/earsel2026.html#welcome",
-    "title": "EARSeL 2026",
+    "objectID": "workshops/index.html#welcome",
+    "href": "workshops/index.html#welcome",
+    "title": "Workshops",
     "section": "",
-    "text": "https://athens2026.earsel.org",
+    "text": "blalbla",
     "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "tutorials/tuto1.html",
+    "href": "tutorials/tuto1.html",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
+    ]
+  },
+  {
+    "objectID": "tutorials/tuto1.html#welcome",
+    "href": "tutorials/tuto1.html#welcome",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
     ]
   },
   {
@@ -184,23 +182,131 @@
     ]
   },
   {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
+    "objectID": "documentation/variables.html",
+    "href": "documentation/variables.html",
+    "title": "Variables",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Workshops"
+      "Documentation",
+      "Variables"
     ]
   },
   {
-    "objectID": "workshops/index.html#welcome",
-    "href": "workshops/index.html#welcome",
-    "title": "Workshops",
+    "objectID": "documentation/variables.html#welcome",
+    "href": "documentation/variables.html#welcome",
+    "title": "Variables",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Workshops"
+      "Documentation",
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html",
+    "href": "documentation/classification.html",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html#welcome",
+    "href": "documentation/classification.html#welcome",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html",
+    "href": "documentation/index.html",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html#welcome",
+    "href": "documentation/index.html#welcome",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html",
+    "href": "documentation/layer_values.html",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html#welcome",
+    "href": "documentation/layer_values.html#welcome",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/data_ingestion.html",
+    "href": "documentation/data_ingestion.html",
+    "title": "Data ingestion",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Data ingestion"
+    ]
+  },
+  {
+    "objectID": "documentation/data_ingestion.html#welcome",
+    "href": "documentation/data_ingestion.html#welcome",
+    "title": "Data ingestion",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Data ingestion"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html#welcome",
+    "href": "tutorials/index.html#welcome",
+    "title": "Tutorials",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials"
     ]
   },
   {
@@ -226,23 +332,25 @@
     ]
   },
   {
-    "objectID": "tutorials/index.html",
-    "href": "tutorials/index.html",
-    "title": "Tutorials",
+    "objectID": "workshops/earsel2026.html",
+    "href": "workshops/earsel2026.html",
+    "title": "EARSeL 2026",
     "section": "",
-    "text": "blalbla",
+    "text": "https://athens2026.earsel.org",
     "crumbs": [
-      "Tutorials"
+      "Workshops",
+      "EARSeL 2026"
     ]
   },
   {
-    "objectID": "tutorials/index.html#welcome",
-    "href": "tutorials/index.html#welcome",
-    "title": "Tutorials",
+    "objectID": "workshops/earsel2026.html#welcome",
+    "href": "workshops/earsel2026.html#welcome",
+    "title": "EARSeL 2026",
     "section": "",
-    "text": "blalbla",
+    "text": "https://athens2026.earsel.org",
     "crumbs": [
-      "Tutorials"
+      "Workshops",
+      "EARSeL 2026"
     ]
   }
 ]
