@@ -1,6 +1,11 @@
 ---
 title: "The Living Earth Handbook"
 subtitle: "A Standardised Global Land Cover Framework"
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
 ---
 
 *[Living Earth]*(https://livingearthhub.org) is a science-driven, open-source Earth Observation (EO) framework designed to support **standardised, scalable, and transparent mapping of land cover** worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.
