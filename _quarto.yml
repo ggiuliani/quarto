@@ -35,11 +35,19 @@ website:
       - href: howto.qmd
         text: How to use this handbook
       - href: introduction.qmd
-        text: Introduction
+        text: Introduction to LCCS
+      - href: installation.qmd
+        text: Installation
+      - href: quick_start.qmd
+        text: Quick Start
       - href: change.qmd
         text: Change framework
-      - href: documentation.qmd
-        text: Documentation
+      - section: documentation/index.qmd
+        contents: 
+          - documentation/variables.qmd
+          - documentation/layer_values.qmd
+          - documentation/data_ingestion.qmd
+          - documentation/classification.qmd
       - section: tutorials/index.qmd
         contents: 
           - tutorials/tuto1.qmd
@@ -47,6 +55,8 @@ website:
         contents: 
           - workshops/gistam2026.qmd
           - workshops/earsel2026.qmd
+      - href: land_degradation.qmd
+        text: Land Degradation
 
 format:
   html:
