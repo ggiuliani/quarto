@@ -57,6 +57,8 @@ website:
           - workshops/earsel2026.qmd
       - href: land_degradation.qmd
         text: Land Degradation
+      - href: le_in_a_box.qmd
+        text: Living Earth in a Box
 
 format:
   html:
