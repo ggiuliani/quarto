@@ -1,84 +1,294 @@
 [
   {
-    "objectID": "acknowledgements.html",
-    "href": "acknowledgements.html",
-    "title": "Acknowledgements",
+    "objectID": "intro_lccs.html",
+    "href": "intro_lccs.html",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
     "section": "",
-    "text": "List of funding sources that supported the work.",
+    "text": "The Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) was originally developed by Di Gregorio and Jansen (2000) to address a longstanding problem in land cover science: the lack of consistent, semantically rigorous, and globally transferable terminology for describing landscapes. The FAO LCCS attempts to fix historical issues of semantics with land cover classifications, identifying the need to align landscape descriptions with their “mapability.” It is a semantically-driven, integrated system that provides a taxonomy with a high level of descriptive detail, consistent and comparable across different scales and over time, and applicable to any geographic location worldwide. As a real a priori classification system, it covers all possible combinations of the classifiers considered. The classes derived are all unique and unambiguous, due to the internal consistency and systematic description of the classes, and the system is designed to map at a variety of scales, from small to large.",
     "crumbs": [
-      "Acknowledgements"
+      "Introduction to LCCS"
     ]
   },
   {
-    "objectID": "acknowledgements.html#funding-sources",
-    "href": "acknowledgements.html#funding-sources",
-    "title": "Acknowledgements",
+    "objectID": "intro_lccs.html#the-fao-land-cover-classification-system",
+    "href": "intro_lccs.html#the-fao-land-cover-classification-system",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
     "section": "",
-    "text": "List of funding sources that supported the work.",
+    "text": "The Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) was originally developed by Di Gregorio and Jansen (2000) to address a longstanding problem in land cover science: the lack of consistent, semantically rigorous, and globally transferable terminology for describing landscapes. The FAO LCCS attempts to fix historical issues of semantics with land cover classifications, identifying the need to align landscape descriptions with their “mapability.” It is a semantically-driven, integrated system that provides a taxonomy with a high level of descriptive detail, consistent and comparable across different scales and over time, and applicable to any geographic location worldwide. As a real a priori classification system, it covers all possible combinations of the classifiers considered. The classes derived are all unique and unambiguous, due to the internal consistency and systematic description of the classes, and the system is designed to map at a variety of scales, from small to large.",
     "crumbs": [
-      "Acknowledgements"
+      "Introduction to LCCS"
     ]
   },
   {
-    "objectID": "acknowledgements.html#contributions",
-    "href": "acknowledgements.html#contributions",
-    "title": "Acknowledgements",
-    "section": "Contributions",
-    "text": "Contributions\nblacla",
+    "objectID": "intro_lccs.html#structure-two-phases",
+    "href": "intro_lccs.html#structure-two-phases",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "Structure: Two Phases",
+    "text": "Structure: Two Phases\nThe FAO LCCS framework is organised into two successive phases: a Dichotomous Phase and a Modular-Hierarchical Phase. The Dichotomous Phase operates as a binary decision tree working through three successive levels. Level 1 separates vegetated from non-vegetated areas; Level 2 distinguishes terrestrial from aquatic areas; and Level 3 differentiates managed from natural cover types. This produces eight mutually exclusive broad land cover types: (1) Cultivated and Managed Terrestrial Areas, (2) Natural and Semi-Natural Terrestrial Vegetation, (3) Cultivated Aquatic or Regularly Flooded Areas, (4) Natural and Semi-Natural Aquatic or Regularly Flooded Vegetation, (5) Artificial Surfaces and Associated Areas, (6) Bare Areas, (7) Artificial Waterbodies, Snow and Ice, and (8) Natural Waterbodies, Snow and Ice. The Modular-Hierarchical Phase then provides progressively finer landscape descriptions for each of the eight Level 3 classes. In this phase, the generation of the land cover class is given by combining a set of predefined land cover classifiers that operate in a hierarchy as Level 4 “tiers.” At any position in the hierarchy the user can stop, and a mutually exclusive class is generated. Common classifiers used for (semi-)natural terrestrial vegetation types include Life Form, Cover, Height, and Macropattern. For aquatic or regularly flooded natural vegetation, water seasonality is an indispensable classifier. The classification is hierarchical: the more classifiers that are applied, the greater the thematic detail of the resulting land cover class. In its complete form, the FAO LCCS defines approximately 12,000 unique landscape descriptions.\nMore information: https://livingearth-lccs.readthedocs.io/en/latest/intro.html",
     "crumbs": [
-      "Acknowledgements"
+      "Introduction to LCCS"
     ]
   },
   {
-    "objectID": "acknowledgements.html#publications-using-living-earth",
-    "href": "acknowledgements.html#publications-using-living-earth",
-    "title": "Acknowledgements",
-    "section": "Publications using Living Earth",
-    "text": "Publications using Living Earth\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
+    "objectID": "intro_lccs.html#why-fao-lccs-matters-for-sustainable-development",
+    "href": "intro_lccs.html#why-fao-lccs-matters-for-sustainable-development",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "Why FAO LCCS Matters for Sustainable Development",
+    "text": "Why FAO LCCS Matters for Sustainable Development\nEarth Observation has been recognised as a key data source for supporting the United Nations Sustainable Development Goals (SDGs), and reliable, standardised, scalable mapping of land cover facilitates informed decision making, providing cohesive methods for target setting and reporting. The FAO LCCS is particularly suited to this role because, as an internationally recognised taxonomy, land cover maps produced using the LCCS taxonomy are also interoperable with end-user requirements — classes generated closely align with habitat taxonomies that are widely used by ecologists. Aber Despite these qualities, until recently no systematic EO-ready software implementation of the full LCCS-2 framework existed, creating a barrier to its widespread operational adoption.",
     "crumbs": [
-      "Acknowledgements"
+      "Introduction to LCCS"
     ]
   },
   {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
+    "objectID": "intro_lccs.html#living-earth-an-eo-optimised-implementation-of-fao-lccs-2",
+    "href": "intro_lccs.html#living-earth-an-eo-optimised-implementation-of-fao-lccs-2",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "Living Earth: An EO-Optimised Implementation of FAO LCCS-2",
+    "text": "Living Earth: An EO-Optimised Implementation of FAO LCCS-2\nLiving Earth, presented by Owers et al. (2021) in Big Earth Data, is the first fully implemented, open-source software package that brings the FAO LCCS-2 taxonomy into operational use with satellite Earth Observation data. The system takes multiple products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with some modifications where required to apply to EO data. It is capable of ingesting products from the Open Data Cube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins.",
+    "crumbs": [
+      "Introduction to LCCS"
+    ]
+  },
+  {
+    "objectID": "intro_lccs.html#design-principles-and-software-architecture",
+    "href": "intro_lccs.html#design-principles-and-software-architecture",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "Design Principles and Software Architecture",
+    "text": "Design Principles and Software Architecture\nLiving Earth was designed as an open-source Python library, built on top of xarray and NumPy, and utilising other established Python libraries for data import and export, such as GDAL, Rasterio, and the Open Data Cube. It was developed to align with FAIR principles — making data and methods Findable, Accessible, Interoperable, and Reusable — as an open-source system intended to use freely available EO data. The classification of land cover can be applied to any rasterised spatial data, independent of spatial and temporal resolution, as well as with direct functionality with the Open Data Cube. The software is released under an Apache 2.0 license and has been applied at national scale in both Australia (through Digital Earth Australia) and Wales (through the Living Wales project).",
+    "crumbs": [
+      "Introduction to LCCS"
+    ]
+  },
+  {
+    "objectID": "intro_lccs.html#implementing-the-dichotomous-phase-levels-13",
+    "href": "intro_lccs.html#implementing-the-dichotomous-phase-levels-13",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "Implementing the Dichotomous Phase (Levels 1–3)",
+    "text": "Implementing the Dichotomous Phase (Levels 1–3)\nThe initial dichotomous stage is coded as a 3-bit binary classification scheme, giving 8 classes. A string representation of the Level 1–3 classification has a length of 1–3 characters, and the eight allowed codes are A11, A12, A23, A24, B15, B16, B27, and B28, where the third character fully encodes all three levels. In practice, the Level 3 output is assembled from five binary input layers — vegetation presence, terrestrial/aquatic, managed/natural, and differentiation of waterbody and surface types — whose concatenation directly yields the eight broad landscape types defined by the FAO taxonomy.",
+    "crumbs": [
+      "Introduction to LCCS"
+    ]
+  },
+  {
+    "objectID": "intro_lccs.html#implementing-the-modular-hierarchical-phase-level-4",
+    "href": "intro_lccs.html#implementing-the-modular-hierarchical-phase-level-4",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "Implementing the Modular-Hierarchical Phase (Level 4)",
+    "text": "Implementing the Modular-Hierarchical Phase (Level 4)\nThe Level 4 implementation is where the greatest complexity lies. Within each Level 4 class scheme, fields are grouped conceptually, ordered in a sequence relating to the intended priority of data acquisition, and categorised as land cover, environment, or discipline-specific. The L4 classes operate in a hierarchical fashion, whereby several classes must be present for subsequent classes to be populated as useful landscape descriptors. All L4 classes are categorical, with several having continuous input data. A key design choice in Living Earth is that the scheme permits only finitely many possible classifications, and LCCS assigns each distinct classification a single unique integer for convenient representation in GIS applications. All 573,307 unique landscape descriptor codes and descriptions are provided in the supplementary material.",
+    "crumbs": [
+      "Introduction to LCCS"
+    ]
+  },
+  {
+    "objectID": "intro_lccs.html#resolving-semantic-challenges-for-eo",
+    "href": "intro_lccs.html#resolving-semantic-challenges-for-eo",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "Resolving Semantic Challenges for EO",
+    "text": "Resolving Semantic Challenges for EO\nSeveral modifications were necessary to make the LCCS-2 framework operational with EO data. A central issue was that FAO LCCS-2 utilises overlapping class boundaries for several continuous inputs (e.g. cover: closed &gt; 60–70%). Living Earth is optimised for EO, requiring distinct class boundaries for meaningful implementation of mapping. Class categorical boundaries were altered to give non-overlapping ranges, centred on the middle of the FAO LCCS-2 range (e.g. LCCS-2, &gt;60–70% becomes &gt;65% in Living Earth). This modification was introduced for all relevant classes including cover. Another important modification concerns tidal areas: a new class for tidal areas was generated, separating these from the water persistence categories because tidal areas can be perennial or non-perennial and thus may conflict with water persistence definitions. Living Earth also extends the FAO taxonomy in selected cases to accommodate EO-derivable information not originally foreseen in LCCS-2. For example, height and cover descriptors are added for cultivated areas, as these are not included in LCCS-2 but were deemed useful environmental descriptors that could be retrieved from EO data and help to provide some description of the cultivated landscape with a reasonable degree of accuracy.",
+    "crumbs": [
+      "Introduction to LCCS"
+    ]
+  },
+  {
+    "objectID": "intro_lccs.html#handling-incomplete-data-availability",
+    "href": "intro_lccs.html#handling-incomplete-data-availability",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "Handling Incomplete Data Availability",
+    "text": "Handling Incomplete Data Availability\nA particularly important design feature of Living Earth is its tolerance of partial data availability. Living Earth landscape descriptions do not assume all data are available and therefore can provide landscape classifications with partial LCCS-2 Level 4 descriptions. This is essential in practice: while the FAO LCCS defines approximately 12,000 unique complete landscape descriptions when all input data are available, it is impractical to expect complete data coverage for every environmental descriptor at every location and time step.",
+    "crumbs": [
+      "Introduction to LCCS"
+    ]
+  },
+  {
+    "objectID": "intro_lccs.html#the-role-of-environmental-descriptors",
+    "href": "intro_lccs.html#the-role-of-environmental-descriptors",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "The Role of Environmental Descriptors",
+    "text": "The Role of Environmental Descriptors\nCentral to the Living Earth workflow is the concept of environmental descriptors — biophysical input variables with predefined units or categories that can be retrieved or classified from EO data. Unlike other EO implementations of LCCS, which generally base their classifications on the “end classes” in the LCCS taxonomy, the EODESM approach that underpins Living Earth follows the sequence of classifications through the hierarchy using products derived from EO data, placing emphasis on retrieving continuous and categorical environmental descriptors. These are then combined to construct the LCCS classes. This approach has the critical advantage that it is applicable to any site globally, independent of scale and time. To guide resource allocation, Owers et al. (2021) identified priority environmental descriptors for each broad land cover type. For non-vegetated terrestrial areas, priority should be given to differentiating artificial surface types (built-up, non-built-up, linear, non-linear) and bare surface types (consolidated, non-consolidated, bare rock, hardpans, loose and shifting sands). For waterbodies, focus should fall on water state (water, snow, ice) and subsequently on water persistence and water depth.",
+    "crumbs": [
+      "Introduction to LCCS"
+    ]
+  },
+  {
+    "objectID": "intro_lccs.html#national-deployments",
+    "href": "intro_lccs.html#national-deployments",
+    "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
+    "section": "National Deployments",
+    "text": "National Deployments\nLiving Earth has been validated through two major national deployments. In Australia, it was deployed through Digital Earth Australia using the Landsat archive to produce annual continental-scale land cover maps at 25 m resolution from 1988 onwards. Output maps were validated with approximately 12,000 independent validation points, giving an overall map accuracy of 80%. In Wales, it has been applied within the Living Wales project using Sentinel-2 data, demonstrating the system’s transferability across different EO platforms, spatial contexts, and national EO infrastructure configurations.",
+    "crumbs": [
+      "Introduction to LCCS"
+    ]
+  },
+  {
+    "objectID": "workshops/earsel2026.html",
+    "href": "workshops/earsel2026.html",
+    "title": "EARSeL 2026",
+    "section": "",
+    "text": "https://athens2026.earsel.org",
+    "crumbs": [
+      "Workshops",
+      "EARSeL 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/earsel2026.html#welcome",
+    "href": "workshops/earsel2026.html#welcome",
+    "title": "EARSeL 2026",
+    "section": "",
+    "text": "https://athens2026.earsel.org",
+    "crumbs": [
+      "Workshops",
+      "EARSeL 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/gistam2026.html",
+    "href": "workshops/gistam2026.html",
+    "title": "GISTAM 2026",
+    "section": "",
+    "text": "https://gistam.scitevents.org/Home.aspx",
+    "crumbs": [
+      "Workshops",
+      "GISTAM 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/gistam2026.html#welcome",
+    "href": "workshops/gistam2026.html#welcome",
+    "title": "GISTAM 2026",
+    "section": "",
+    "text": "https://gistam.scitevents.org/Home.aspx",
+    "crumbs": [
+      "Workshops",
+      "GISTAM 2026"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Tutorials",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Workshops"
+      "Tutorials"
     ]
   },
   {
-    "objectID": "workshops/index.html#welcome",
-    "href": "workshops/index.html#welcome",
-    "title": "Workshops",
+    "objectID": "tutorials/index.html#welcome",
+    "href": "tutorials/index.html#welcome",
+    "title": "Tutorials",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Workshops"
+      "Tutorials"
     ]
   },
   {
-    "objectID": "tutorials/tuto1.html",
-    "href": "tutorials/tuto1.html",
-    "title": "How to create overaching ED?",
+    "objectID": "documentation/data_ingestion.html",
+    "href": "documentation/data_ingestion.html",
+    "title": "Data ingestion",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
+      "Documentation",
+      "Data ingestion"
     ]
   },
   {
-    "objectID": "tutorials/tuto1.html#welcome",
-    "href": "tutorials/tuto1.html#welcome",
-    "title": "How to create overaching ED?",
+    "objectID": "documentation/data_ingestion.html#welcome",
+    "href": "documentation/data_ingestion.html#welcome",
+    "title": "Data ingestion",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
+      "Documentation",
+      "Data ingestion"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html",
+    "href": "documentation/layer_values.html",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html#welcome",
+    "href": "documentation/layer_values.html#welcome",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html",
+    "href": "documentation/index.html",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html#welcome",
+    "href": "documentation/index.html#welcome",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html",
+    "href": "documentation/classification.html",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html#welcome",
+    "href": "documentation/classification.html#welcome",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/variables.html",
+    "href": "documentation/variables.html",
+    "title": "Variables",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "documentation/variables.html#welcome",
+    "href": "documentation/variables.html#welcome",
+    "title": "Variables",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Variables"
     ]
   },
   {
@@ -182,175 +392,85 @@
     ]
   },
   {
-    "objectID": "documentation/variables.html",
-    "href": "documentation/variables.html",
-    "title": "Variables",
+    "objectID": "tutorials/tuto1.html",
+    "href": "tutorials/tuto1.html",
+    "title": "How to create overaching ED?",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Documentation",
-      "Variables"
+      "Tutorials",
+      "How to create overaching ED?"
     ]
   },
   {
-    "objectID": "documentation/variables.html#welcome",
-    "href": "documentation/variables.html#welcome",
-    "title": "Variables",
+    "objectID": "tutorials/tuto1.html#welcome",
+    "href": "tutorials/tuto1.html#welcome",
+    "title": "How to create overaching ED?",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Documentation",
-      "Variables"
+      "Tutorials",
+      "How to create overaching ED?"
     ]
   },
   {
-    "objectID": "documentation/classification.html",
-    "href": "documentation/classification.html",
-    "title": "Classification",
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Documentation",
-      "Classification"
+      "Workshops"
     ]
   },
   {
-    "objectID": "documentation/classification.html#welcome",
-    "href": "documentation/classification.html#welcome",
-    "title": "Classification",
+    "objectID": "workshops/index.html#welcome",
+    "href": "workshops/index.html#welcome",
+    "title": "Workshops",
     "section": "",
     "text": "blalbla",
     "crumbs": [
-      "Documentation",
-      "Classification"
+      "Workshops"
     ]
   },
   {
-    "objectID": "documentation/index.html",
-    "href": "documentation/index.html",
-    "title": "Documentation",
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
     "section": "",
-    "text": "blalbla",
+    "text": "List of funding sources that supported the work.",
     "crumbs": [
-      "Documentation"
+      "Acknowledgements"
     ]
   },
   {
-    "objectID": "documentation/index.html#welcome",
-    "href": "documentation/index.html#welcome",
-    "title": "Documentation",
+    "objectID": "acknowledgements.html#funding-sources",
+    "href": "acknowledgements.html#funding-sources",
+    "title": "Acknowledgements",
     "section": "",
-    "text": "blalbla",
+    "text": "List of funding sources that supported the work.",
     "crumbs": [
-      "Documentation"
+      "Acknowledgements"
     ]
   },
   {
-    "objectID": "documentation/layer_values.html",
-    "href": "documentation/layer_values.html",
-    "title": "Layer values",
-    "section": "",
-    "text": "blalbla",
+    "objectID": "acknowledgements.html#contributions",
+    "href": "acknowledgements.html#contributions",
+    "title": "Acknowledgements",
+    "section": "Contributions",
+    "text": "Contributions\nblacla",
     "crumbs": [
-      "Documentation",
-      "Layer values"
+      "Acknowledgements"
     ]
   },
   {
-    "objectID": "documentation/layer_values.html#welcome",
-    "href": "documentation/layer_values.html#welcome",
-    "title": "Layer values",
-    "section": "",
-    "text": "blalbla",
+    "objectID": "acknowledgements.html#publications-using-living-earth",
+    "href": "acknowledgements.html#publications-using-living-earth",
+    "title": "Acknowledgements",
+    "section": "Publications using Living Earth",
+    "text": "Publications using Living Earth\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
     "crumbs": [
-      "Documentation",
-      "Layer values"
-    ]
-  },
-  {
-    "objectID": "documentation/data_ingestion.html",
-    "href": "documentation/data_ingestion.html",
-    "title": "Data ingestion",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Data ingestion"
-    ]
-  },
-  {
-    "objectID": "documentation/data_ingestion.html#welcome",
-    "href": "documentation/data_ingestion.html#welcome",
-    "title": "Data ingestion",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Data ingestion"
-    ]
-  },
-  {
-    "objectID": "tutorials/index.html",
-    "href": "tutorials/index.html",
-    "title": "Tutorials",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "tutorials/index.html#welcome",
-    "href": "tutorials/index.html#welcome",
-    "title": "Tutorials",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "workshops/gistam2026.html",
-    "href": "workshops/gistam2026.html",
-    "title": "GISTAM 2026",
-    "section": "",
-    "text": "https://gistam.scitevents.org/Home.aspx",
-    "crumbs": [
-      "Workshops",
-      "GISTAM 2026"
-    ]
-  },
-  {
-    "objectID": "workshops/gistam2026.html#welcome",
-    "href": "workshops/gistam2026.html#welcome",
-    "title": "GISTAM 2026",
-    "section": "",
-    "text": "https://gistam.scitevents.org/Home.aspx",
-    "crumbs": [
-      "Workshops",
-      "GISTAM 2026"
-    ]
-  },
-  {
-    "objectID": "workshops/earsel2026.html",
-    "href": "workshops/earsel2026.html",
-    "title": "EARSeL 2026",
-    "section": "",
-    "text": "https://athens2026.earsel.org",
-    "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
-    ]
-  },
-  {
-    "objectID": "workshops/earsel2026.html#welcome",
-    "href": "workshops/earsel2026.html#welcome",
-    "title": "EARSeL 2026",
-    "section": "",
-    "text": "https://athens2026.earsel.org",
-    "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
+      "Acknowledgements"
     ]
   }
 ]

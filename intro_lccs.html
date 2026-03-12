@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Classification – Living Earth</title>
+<title>The FAO LCCS Schema and Its Implementation in Living Earth – Living Earth</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../tutorials/index.html" rel="next">
-<link href="../documentation/data_ingestion.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7087e1fe497f498abc06882b41efe3b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./installation.qmd" rel="next">
+<link href="./howto.qmd" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7087e1fe497f498abc06882b41efe3b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../documentation/classification.html">Classification</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro_lccs.html">Introduction to LCCS</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,9 +96,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/le_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../images/le_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/le_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./images/le_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
     <a href="https://livingearthhub.org" title="Living Earth Hub" class="quarto-navigation-tool px-1" aria-label="Living Earth Hub"><i class="bi bi-globe"></i></a>
@@ -114,76 +114,76 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../acknowledgements.html" class="sidebar-item-text sidebar-link">
+  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgements</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../howto.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./howto.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to use this handbook</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro_lccs.html" class="sidebar-item-text sidebar-link">
+  <a href="./intro_lccs.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Introduction to LCCS</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../installation.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./installation.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../quick_start.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./quick_start.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quick Start</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../change.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./change.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Change framework</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../documentation/index.html" class="sidebar-item-text sidebar-link">
+            <a href="./documentation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../documentation/variables.html" class="sidebar-item-text sidebar-link">
+  <a href="./documentation/variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../documentation/layer_values.html" class="sidebar-item-text sidebar-link">
+  <a href="./documentation/layer_values.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Layer values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../documentation/data_ingestion.html" class="sidebar-item-text sidebar-link">
+  <a href="./documentation/data_ingestion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data ingestion</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../documentation/classification.html" class="sidebar-item-text sidebar-link active">
+  <a href="./documentation/classification.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classification</span></a>
   </div>
 </li>
@@ -191,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../tutorials/index.html" class="sidebar-item-text sidebar-link">
+            <a href="./tutorials/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tutorials</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -200,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tuto1.html" class="sidebar-item-text sidebar-link">
+  <a href="./tutorials/tuto1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to create overaching ED?</span></a>
   </div>
 </li>
@@ -208,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../workshops/index.html" class="sidebar-item-text sidebar-link">
+            <a href="./workshops/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workshops</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -217,13 +217,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workshops/gistam2026.html" class="sidebar-item-text sidebar-link">
+  <a href="./workshops/gistam2026.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GISTAM 2026</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workshops/earsel2026.html" class="sidebar-item-text sidebar-link">
+  <a href="./workshops/earsel2026.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">EARSeL 2026</span></a>
   </div>
 </li>
@@ -231,13 +231,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../land_degradation.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./land_degradation.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Land Degradation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../le_in_a_box.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./le_in_a_box.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Living Earth in a Box</span></a>
   </div>
 </li>
@@ -251,16 +251,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
+  <li><a href="#the-fao-land-cover-classification-system" id="toc-the-fao-land-cover-classification-system" class="nav-link active" data-scroll-target="#the-fao-land-cover-classification-system">The FAO Land Cover Classification System</a></li>
+  <li><a href="#structure-two-phases" id="toc-structure-two-phases" class="nav-link" data-scroll-target="#structure-two-phases">Structure: Two Phases</a></li>
+  <li><a href="#why-fao-lccs-matters-for-sustainable-development" id="toc-why-fao-lccs-matters-for-sustainable-development" class="nav-link" data-scroll-target="#why-fao-lccs-matters-for-sustainable-development">Why FAO LCCS Matters for Sustainable Development</a></li>
+  <li><a href="#living-earth-an-eo-optimised-implementation-of-fao-lccs-2" id="toc-living-earth-an-eo-optimised-implementation-of-fao-lccs-2" class="nav-link" data-scroll-target="#living-earth-an-eo-optimised-implementation-of-fao-lccs-2">Living Earth: An EO-Optimised Implementation of FAO LCCS-2</a></li>
+  <li><a href="#design-principles-and-software-architecture" id="toc-design-principles-and-software-architecture" class="nav-link" data-scroll-target="#design-principles-and-software-architecture">Design Principles and Software Architecture</a></li>
+  <li><a href="#implementing-the-dichotomous-phase-levels-13" id="toc-implementing-the-dichotomous-phase-levels-13" class="nav-link" data-scroll-target="#implementing-the-dichotomous-phase-levels-13">Implementing the Dichotomous Phase (Levels 1–3)</a></li>
+  <li><a href="#implementing-the-modular-hierarchical-phase-level-4" id="toc-implementing-the-modular-hierarchical-phase-level-4" class="nav-link" data-scroll-target="#implementing-the-modular-hierarchical-phase-level-4">Implementing the Modular-Hierarchical Phase (Level 4)</a></li>
+  <li><a href="#resolving-semantic-challenges-for-eo" id="toc-resolving-semantic-challenges-for-eo" class="nav-link" data-scroll-target="#resolving-semantic-challenges-for-eo">Resolving Semantic Challenges for EO</a></li>
+  <li><a href="#handling-incomplete-data-availability" id="toc-handling-incomplete-data-availability" class="nav-link" data-scroll-target="#handling-incomplete-data-availability">Handling Incomplete Data Availability</a></li>
+  <li><a href="#the-role-of-environmental-descriptors" id="toc-the-role-of-environmental-descriptors" class="nav-link" data-scroll-target="#the-role-of-environmental-descriptors">The Role of Environmental Descriptors</a></li>
+  <li><a href="#national-deployments" id="toc-national-deployments" class="nav-link" data-scroll-target="#national-deployments">National Deployments</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ggiuliani/quarto/edit/main/documentation/classification.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ggiuliani/quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ggiuliani/quarto/edit/main/intro_lccs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ggiuliani/quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../documentation/classification.html">Classification</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Classification</h1>
+<h1 class="title">The FAO LCCS Schema and Its Implementation in Living Earth</h1>
 </div>
 
 
@@ -277,9 +287,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
-<p>blalbla</p>
+<section id="the-fao-land-cover-classification-system" class="level2">
+<h2 class="anchored" data-anchor-id="the-fao-land-cover-classification-system">The FAO Land Cover Classification System</h2>
+<p>The Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) was originally developed by Di Gregorio and Jansen (2000) to address a longstanding problem in land cover science: the lack of consistent, semantically rigorous, and globally transferable terminology for describing landscapes. The FAO LCCS attempts to fix historical issues of semantics with land cover classifications, identifying the need to align landscape descriptions with their “mapability.” It is a semantically-driven, integrated system that provides a taxonomy with a high level of descriptive detail, consistent and comparable across different scales and over time, and applicable to any geographic location worldwide. As a real a priori classification system, it covers all possible combinations of the classifiers considered. The classes derived are all unique and unambiguous, due to the internal consistency and systematic description of the classes, and the system is designed to map at a variety of scales, from small to large.</p>
+</section>
+<section id="structure-two-phases" class="level2">
+<h2 class="anchored" data-anchor-id="structure-two-phases">Structure: Two Phases</h2>
+<p>The FAO LCCS framework is organised into two successive phases: a Dichotomous Phase and a Modular-Hierarchical Phase. <strong>The Dichotomous Phase</strong> operates as a binary decision tree working through three successive levels. Level 1 separates vegetated from non-vegetated areas; Level 2 distinguishes terrestrial from aquatic areas; and Level 3 differentiates managed from natural cover types. This produces eight mutually exclusive broad land cover types: (1) Cultivated and Managed Terrestrial Areas, (2) Natural and Semi-Natural Terrestrial Vegetation, (3) Cultivated Aquatic or Regularly Flooded Areas, (4) Natural and Semi-Natural Aquatic or Regularly Flooded Vegetation, (5) Artificial Surfaces and Associated Areas, (6) Bare Areas, (7) Artificial Waterbodies, Snow and Ice, and (8) Natural Waterbodies, Snow and Ice. <strong>The Modular-Hierarchical Phase</strong> then provides progressively finer landscape descriptions for each of the eight Level 3 classes. In this phase, the generation of the land cover class is given by combining a set of predefined land cover classifiers that operate in a hierarchy as Level 4 “tiers.” At any position in the hierarchy the user can stop, and a mutually exclusive class is generated. Common classifiers used for (semi-)natural terrestrial vegetation types include Life Form, Cover, Height, and Macropattern. For aquatic or regularly flooded natural vegetation, water seasonality is an indispensable classifier. The classification is hierarchical: the more classifiers that are applied, the greater the thematic detail of the resulting land cover class. In its complete form, the FAO LCCS defines approximately 12,000 unique landscape descriptions.</p>
+<p>More information: https://livingearth-lccs.readthedocs.io/en/latest/intro.html</p>
+</section>
+<section id="why-fao-lccs-matters-for-sustainable-development" class="level2">
+<h2 class="anchored" data-anchor-id="why-fao-lccs-matters-for-sustainable-development">Why FAO LCCS Matters for Sustainable Development</h2>
+<p>Earth Observation has been recognised as a key data source for supporting the United Nations Sustainable Development Goals (SDGs), and reliable, standardised, scalable mapping of land cover facilitates informed decision making, providing cohesive methods for target setting and reporting. The FAO LCCS is particularly suited to this role because, as an internationally recognised taxonomy, land cover maps produced using the LCCS taxonomy are also interoperable with end-user requirements — classes generated closely align with habitat taxonomies that are widely used by ecologists. Aber Despite these qualities, until recently no systematic EO-ready software implementation of the full LCCS-2 framework existed, creating a barrier to its widespread operational adoption.</p>
+</section>
+<section id="living-earth-an-eo-optimised-implementation-of-fao-lccs-2" class="level2">
+<h2 class="anchored" data-anchor-id="living-earth-an-eo-optimised-implementation-of-fao-lccs-2">Living Earth: An EO-Optimised Implementation of FAO LCCS-2</h2>
+<p>Living Earth, presented by Owers et al.&nbsp;(2021) in Big Earth Data, is the first fully implemented, open-source software package that brings the FAO LCCS-2 taxonomy into operational use with satellite Earth Observation data. The system takes multiple products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with some modifications where required to apply to EO data. It is capable of ingesting products from the Open Data Cube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins.</p>
+</section>
+<section id="design-principles-and-software-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="design-principles-and-software-architecture">Design Principles and Software Architecture</h2>
+<p>Living Earth was designed as an open-source Python library, built on top of xarray and NumPy, and utilising other established Python libraries for data import and export, such as GDAL, Rasterio, and the Open Data Cube. It was developed to align with FAIR principles — making data and methods Findable, Accessible, Interoperable, and Reusable — as an open-source system intended to use freely available EO data. The classification of land cover can be applied to any rasterised spatial data, independent of spatial and temporal resolution, as well as with direct functionality with the Open Data Cube. The software is released under an Apache 2.0 license and has been applied at national scale in both Australia (through Digital Earth Australia) and Wales (through the Living Wales project).</p>
+</section>
+<section id="implementing-the-dichotomous-phase-levels-13" class="level2">
+<h2 class="anchored" data-anchor-id="implementing-the-dichotomous-phase-levels-13">Implementing the Dichotomous Phase (Levels 1–3)</h2>
+<p>The initial dichotomous stage is coded as a 3-bit binary classification scheme, giving 8 classes. A string representation of the Level 1–3 classification has a length of 1–3 characters, and the eight allowed codes are A11, A12, A23, A24, B15, B16, B27, and B28, where the third character fully encodes all three levels. In practice, the Level 3 output is assembled from five binary input layers — vegetation presence, terrestrial/aquatic, managed/natural, and differentiation of waterbody and surface types — whose concatenation directly yields the eight broad landscape types defined by the FAO taxonomy.</p>
+</section>
+<section id="implementing-the-modular-hierarchical-phase-level-4" class="level2">
+<h2 class="anchored" data-anchor-id="implementing-the-modular-hierarchical-phase-level-4">Implementing the Modular-Hierarchical Phase (Level 4)</h2>
+<p>The Level 4 implementation is where the greatest complexity lies. Within each Level 4 class scheme, fields are grouped conceptually, ordered in a sequence relating to the intended priority of data acquisition, and categorised as land cover, environment, or discipline-specific. The L4 classes operate in a hierarchical fashion, whereby several classes must be present for subsequent classes to be populated as useful landscape descriptors. All L4 classes are categorical, with several having continuous input data. A key design choice in Living Earth is that the scheme permits only finitely many possible classifications, and LCCS assigns each distinct classification a single unique integer for convenient representation in GIS applications. All 573,307 unique landscape descriptor codes and descriptions are provided in the supplementary material.</p>
+</section>
+<section id="resolving-semantic-challenges-for-eo" class="level2">
+<h2 class="anchored" data-anchor-id="resolving-semantic-challenges-for-eo">Resolving Semantic Challenges for EO</h2>
+<p>Several modifications were necessary to make the LCCS-2 framework operational with EO data. A central issue was that FAO LCCS-2 utilises overlapping class boundaries for several continuous inputs (e.g.&nbsp;cover: closed &gt; 60–70%). Living Earth is optimised for EO, requiring distinct class boundaries for meaningful implementation of mapping. Class categorical boundaries were altered to give non-overlapping ranges, centred on the middle of the FAO LCCS-2 range (e.g.&nbsp;LCCS-2, &gt;60–70% becomes &gt;65% in Living Earth). This modification was introduced for all relevant classes including cover. Another important modification concerns tidal areas: a new class for tidal areas was generated, separating these from the water persistence categories because tidal areas can be perennial or non-perennial and thus may conflict with water persistence definitions. Living Earth also extends the FAO taxonomy in selected cases to accommodate EO-derivable information not originally foreseen in LCCS-2. For example, height and cover descriptors are added for cultivated areas, as these are not included in LCCS-2 but were deemed useful environmental descriptors that could be retrieved from EO data and help to provide some description of the cultivated landscape with a reasonable degree of accuracy.</p>
+</section>
+<section id="handling-incomplete-data-availability" class="level2">
+<h2 class="anchored" data-anchor-id="handling-incomplete-data-availability">Handling Incomplete Data Availability</h2>
+<p>A particularly important design feature of Living Earth is its tolerance of partial data availability. Living Earth landscape descriptions do not assume all data are available and therefore can provide landscape classifications with partial LCCS-2 Level 4 descriptions. This is essential in practice: while the FAO LCCS defines approximately 12,000 unique complete landscape descriptions when all input data are available, it is impractical to expect complete data coverage for every environmental descriptor at every location and time step.</p>
+</section>
+<section id="the-role-of-environmental-descriptors" class="level2">
+<h2 class="anchored" data-anchor-id="the-role-of-environmental-descriptors">The Role of Environmental Descriptors</h2>
+<p>Central to the Living Earth workflow is the concept of environmental descriptors — biophysical input variables with predefined units or categories that can be retrieved or classified from EO data. Unlike other EO implementations of LCCS, which generally base their classifications on the “end classes” in the LCCS taxonomy, the EODESM approach that underpins Living Earth follows the sequence of classifications through the hierarchy using products derived from EO data, placing emphasis on retrieving continuous and categorical environmental descriptors. These are then combined to construct the LCCS classes. This approach has the critical advantage that it is applicable to any site globally, independent of scale and time. To guide resource allocation, Owers et al.&nbsp;(2021) identified priority environmental descriptors for each broad land cover type. For non-vegetated terrestrial areas, priority should be given to differentiating artificial surface types (built-up, non-built-up, linear, non-linear) and bare surface types (consolidated, non-consolidated, bare rock, hardpans, loose and shifting sands). For waterbodies, focus should fall on water state (water, snow, ice) and subsequently on water persistence and water depth.</p>
+</section>
+<section id="national-deployments" class="level2">
+<h2 class="anchored" data-anchor-id="national-deployments">National Deployments</h2>
+<p>Living Earth has been validated through two major national deployments. In Australia, it was deployed through Digital Earth Australia using the Landsat archive to produce annual continental-scale land cover maps at 25 m resolution from 1988 onwards. Output maps were validated with approximately 12,000 independent validation points, giving an overall map accuracy of 80%. In Wales, it has been applied within the Living Wales project using Sentinel-2 data, demonstrating the system’s transferability across different EO platforms, spatial contexts, and national EO infrastructure configurations.</p>
 
 
 </section>
@@ -687,13 +738,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../documentation/data_ingestion.html" class="pagination-link" aria-label="Data ingestion">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data ingestion</span>
+      <a href="./howto.qmd" class="pagination-link" aria-label="How to use this handbook">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">How to use this handbook</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../tutorials/index.html" class="pagination-link" aria-label="Tutorials">
-        <span class="nav-page-text">Tutorials</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./installation.qmd" class="pagination-link" aria-label="Installation">
+        <span class="nav-page-text">Installation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -705,7 +756,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ggiuliani/quarto/edit/main/documentation/classification.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ggiuliani/quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ggiuliani/quarto/edit/main/intro_lccs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ggiuliani/quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
