@@ -34,7 +34,7 @@ website:
         text: Acknowledgements
       - href: howto.qmd
         text: How to use this handbook
-      - href: introduction.qmd
+      - href: intro_lccs.qmd
         text: Introduction to LCCS
       - href: installation.qmd
         text: Installation
