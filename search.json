@@ -1,536 +1,92 @@
 [
   {
-    "objectID": "installation.html",
-    "href": "installation.html",
-    "title": "Installing Living Earth LCCS",
+    "objectID": "change.html",
+    "href": "change.html",
+    "title": "The Global Change Taxonomy in the Context of Living Earth",
     "section": "",
-    "text": "Living Earth LCCS is an implementation of the FAO Land Cover Classification System (LCCS) designed to be applied to Earth Observation (EO) data. It was developed to generate land cover maps for countries such as Australia and Wales. The system takes multiple input products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with modifications where required for EO data.\nThe system is capable of ingesting products from OpenDataCube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins. Existing products can be read directly, or products can be created from Analysis Ready Data (ARD) through the use of plugins and virtual products.\nThe software is open-source under an Apache 2.0 licence and hosted at the following locations:\n\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nDocumentation: https://livingearth-lccs.readthedocs.io",
+    "text": "Understanding how and why land cover changes is just as important as mapping what land looks like at any given moment. Living Earth addresses this challenge through the Global Change Taxonomy (GCT), a standardised and globally applicable framework for describing land cover change in a consistent and evidence-based way. Published by Lucas et al. (2022, Global Change Biology, doi:10.1111/gcb.16346), the GCT was developed as a direct extension of the classification principles that underpin the Living Earth system.\nWhere Living Earth maps the state of the land surface using the FAO Land Cover Classification System (LCCS), the Global Change Taxonomy describes transitions between states — what changed, by how much, and under what pressures. Together, these two components form a coherent and interoperable framework for land monitoring from the local to the planetary scale.",
     "crumbs": [
-      "Installation"
+      "Change framework"
     ]
   },
   {
-    "objectID": "installation.html#overview",
-    "href": "installation.html#overview",
-    "title": "Installing Living Earth LCCS",
+    "objectID": "change.html#overview",
+    "href": "change.html#overview",
+    "title": "The Global Change Taxonomy in the Context of Living Earth",
     "section": "",
-    "text": "Living Earth LCCS is an implementation of the FAO Land Cover Classification System (LCCS) designed to be applied to Earth Observation (EO) data. It was developed to generate land cover maps for countries such as Australia and Wales. The system takes multiple input products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with modifications where required for EO data.\nThe system is capable of ingesting products from OpenDataCube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins. Existing products can be read directly, or products can be created from Analysis Ready Data (ARD) through the use of plugins and virtual products.\nThe software is open-source under an Apache 2.0 licence and hosted at the following locations:\n\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nDocumentation: https://livingearth-lccs.readthedocs.io",
+    "text": "Understanding how and why land cover changes is just as important as mapping what land looks like at any given moment. Living Earth addresses this challenge through the Global Change Taxonomy (GCT), a standardised and globally applicable framework for describing land cover change in a consistent and evidence-based way. Published by Lucas et al. (2022, Global Change Biology, doi:10.1111/gcb.16346), the GCT was developed as a direct extension of the classification principles that underpin the Living Earth system.\nWhere Living Earth maps the state of the land surface using the FAO Land Cover Classification System (LCCS), the Global Change Taxonomy describes transitions between states — what changed, by how much, and under what pressures. Together, these two components form a coherent and interoperable framework for land monitoring from the local to the planetary scale.",
     "crumbs": [
-      "Installation"
+      "Change framework"
     ]
   },
   {
-    "objectID": "installation.html#prerequisites",
-    "href": "installation.html#prerequisites",
-    "title": "Installing Living Earth LCCS",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nBefore installing Living Earth LCCS, ensure the following are available on your system:\n\n\n\nRequirement\nNotes\n\n\n\n\nPython 3\nVersion 3.8 or later recommended\n\n\nGit\nTo clone the repository\n\n\nGDAL\nFor raster data handling\n\n\npip or conda\nPython package manager\n\n\n\nIf you intend to use Living Earth with the OpenDataCube (ODC) backend, a working ODC installation with a configured PostgreSQL database is also required.",
+    "objectID": "change.html#why-a-new-change-taxonomy-was-needed",
+    "href": "change.html#why-a-new-change-taxonomy-was-needed",
+    "title": "The Global Change Taxonomy in the Context of Living Earth",
+    "section": "Why a New Change Taxonomy Was Needed",
+    "text": "Why a New Change Taxonomy Was Needed\nDespite decades of Earth observation and land cover research, the language used to describe land cover change has remained highly inconsistent. Terms such as degradation, deforestation, desertification or vegetation dieback are used differently across disciplines, countries and policy contexts, making it difficult to compare or aggregate findings at regional or global scales.\nThis fragmentation has real consequences: it limits the ability of scientists, land managers and policymakers to communicate clearly about the nature and causes of landscape change, and weakens collective responses to environmental challenges such as biodiversity loss, climate change and land degradation. A globally consistent and detailed change framework has therefore long been lacking.\nThe Global Change Taxonomy addresses this gap by providing a structured, openly accessible vocabulary of change that is:\n\nStandardised — each term is precisely defined in an openly accessible glossary\nEvidence-based — every change class is linked to measurable Environmental Descriptors (EDs)\nScale-independent — applicable from individual plots to entire nations\nTime-aware — change descriptions explicitly account for when and how long change events occur\nGlobally relevant — applicable to any land cover type and any region of the world",
     "crumbs": [
-      "Installation"
+      "Change framework"
     ]
   },
   {
-    "objectID": "installation.html#installation-options",
-    "href": "installation.html#installation-options",
-    "title": "Installing Living Earth LCCS",
-    "section": "Installation Options",
-    "text": "Installation Options\n\nOption 1 — Install from the Bitbucket Repository (Recommended)\nClone the repository from Bitbucket and install it locally using pip:\ngit clone https://bitbucket.org/au-eoed/livingearth_lccs.git\ncd livingearth_lccs\npip install .\nTo install in editable/development mode (so that local code changes are immediately reflected):\npip install -e .\n\n\nOption 2 — Install with Optional Dependencies\nDepending on your use case, you may wish to install additional optional dependency groups. Common extras include support for OpenDataCube integration or documentation building. Check the setup.py or pyproject.toml file in the repository for the full list of optional extras, then install as appropriate:\n# Example: install with ODC support\npip install \".[odc]\"\n\n# Example: install with documentation tools\npip install \".[docs]\"\n\n\nOption 3 — Install in a Conda/Virtual Environment (Recommended for Isolation)\nUsing a virtual environment keeps your system Python clean and avoids dependency conflicts.\n\ncondavenv\n\n\nconda create -n livingearth python=3.9\nconda activate livingearth\ngit clone https://bitbucket.org/au-eoed/livingearth_lccs.git\ncd livingearth_lccs\npip install .\n\n\npython -m venv livingearth_env\n# On Linux/macOS:\nsource livingearth_env/bin/activate\n# On Windows:\n# livingearth_env\\Scripts\\activate\ngit clone https://bitbucket.org/au-eoed/livingearth_lccs.git\ncd livingearth_lccs\npip install .",
+    "objectID": "change.html#conceptual-foundations",
+    "href": "change.html#conceptual-foundations",
+    "title": "The Global Change Taxonomy in the Context of Living Earth",
+    "section": "Conceptual Foundations",
+    "text": "Conceptual Foundations\n\nThe DPSIR Framework\nThe Global Change Taxonomy is built on the Driver–Pressure–State–Impact–Response (DPSIR) framework, originally developed by the European Environment Agency. DPSIR provides a logical structure for understanding causality in environmental change:\n\n\n\n\n\n\n\nComponent\nRole in the GCT\n\n\n\n\nDrivers\nUnderlying forces that generate pressure (e.g. rising CO₂, population growth, demand for resources)\n\n\nPressures\nDirect natural or human-induced agents of change (e.g. wildfire, drought, deforestation, overgrazing)\n\n\nState\nThe observable condition of the land surface at a given time, described using Environmental Descriptors\n\n\nImpacts\nThe measurable consequences of changes in state (e.g. vegetation loss, flooding, coral bleaching)\n\n\nResponses\nActions taken to address or mitigate change (e.g. restoration, policy interventions)\n\n\n\nIn the GCT, land cover maps produced by Living Earth LCCS provide a direct measure of state, with temporal comparisons between maps generating the evidence needed to identify impacts. Additional data sources — such as climate records, field surveys and management histories — provide evidence for the pressures behind those impacts.\n\n\nThe Role of Environmental Descriptors\nThe connection between Living Earth land cover maps and the Global Change Taxonomy runs through Environmental Descriptors (EDs) — the same measurable variables that are used to construct LCCS classifications. EDs are either continuous (e.g. canopy cover in %, water depth in metres, vegetation height in metres) or categorical (e.g. dominant lifeform, plant species codes, water state), and are assigned standardised units or pre-defined codes.\nIn the change framework, EDs serve a dual purpose:\n\nAs state indicators, they describe the land cover at any given moment and form the basis of LCCS classifications (as Overarching, Essential, and Additional EDs — OEDs, EEDs, and AEDs respectively).\nAs evidence for change, temporal comparisons of EDs between two time periods (T₁ and T₂) generate the empirical evidence needed to identify what changed (the impact) and why (the pressure).\n\nThis direct link between Living Earth’s classification inputs and the GCT’s evidence base is a key strength of the system: the same data used to produce land cover maps can be directly interrogated to characterise the nature and causes of change.",
     "crumbs": [
-      "Installation"
+      "Change framework"
     ]
   },
   {
-    "objectID": "installation.html#opendatacube-integration",
-    "href": "installation.html#opendatacube-integration",
-    "title": "Installing Living Earth LCCS",
-    "section": "OpenDataCube Integration",
-    "text": "OpenDataCube Integration\nThe system is capable of ingesting products from OpenDataCube, which is the primary data backend for large-scale deployments such as Digital Earth Australia. If you plan to use this integration:\n\nInstall and configure the OpenDataCube following the ODC documentation.\nEnsure your ODC environment is connected to a PostgreSQL database.\nProducts can be indexed into ODC and then consumed directly by Living Earth LCCS.",
+    "objectID": "change.html#structure-of-the-global-change-taxonomy",
+    "href": "change.html#structure-of-the-global-change-taxonomy",
+    "title": "The Global Change Taxonomy in the Context of Living Earth",
+    "section": "Structure of the Global Change Taxonomy",
+    "text": "Structure of the Global Change Taxonomy\n\nThe ‘Impact (Pressure)’ Notation\nThe core innovation of the GCT is its use of a combined ‘impact (pressure)’ notation to describe change. Rather than using a single umbrella term (e.g. “degradation”), each change class pairs:\n\nan impact — the observable consequence of change (e.g. vegetation loss (extent), flooding, coral bleaching)\nwith a pressure — the reason behind it (e.g. deforestation, excess rain, prolonged temperature increase)\n\nThis structure allows impact and pressure terms to be defined independently and then combined flexibly, so that the same impact (e.g. vegetation dieback) can be paired with many different pressures (e.g. drought, pathogens, prolonged inundation, sea level fluctuation), yielding distinct and precisely defined change classes.\n\n\nScale and Scope\nThe current version of the GCT comprises:\n\n77 impact terms covering vegetation, water, urban, agricultural and naturally bare surface domains\n144 pressure terms spanning abiotic, biotic and anthropogenic categories (71 natural, 73 human-influenced)\n246 combined ‘impact (pressure)’ classes, representing the full range of change categories currently identified as globally relevant\n\nExamples span the full breadth of land change processes:\n\n\n\n\n\n\n\nCategory\nExample GCT class\n\n\n\n\nNatural abiotic\nDeglaciation (prolonged temperature increase)\n\n\nNatural abiotic\nNet snow loss (extent) (snowmelt)\n\n\nNatural biotic\nVegetation gain (extent) (colonisation)\n\n\nNatural biotic\nVegetation species change (succession)\n\n\nAnthropogenic\nVegetation loss (extent) (deforestation)\n\n\nAnthropogenic\nCropland gain (agricultural expansion)\n\n\nAnthropogenic\nWater gain (extent) (wetland restoration and/or construction)\n\n\nAnthropogenic\nUrban sprawl (construction)\n\n\n\nAll terms and their definitions are maintained in an openly accessible online glossary at doi:10.5281/zenodo.6884999, designed to be updated as knowledge evolves.\n\n\nTypes of Change: Conversions and Modifications\nThe GCT distinguishes two fundamental modes of land cover change:\nConversions occur when a pixel transitions from one Level 3 LCCS class to another between T₁ and T₂ — for example, natural terrestrial vegetation (NTV) becoming an artificial surface (AS) through urban expansion. This represents a change in extent of both the original and replacement class.\nModifications occur when the overarching land cover class remains the same but measurable attributes within it change — for example, a decrease in canopy cover (%), a change in dominant lifeform from woody to herbaceous, or a shift in water depth or turbidity. These changes in amount or type are captured through comparisons of EEDs and AEDs within the same OED class.\nThis distinction is important because both types of change are ecologically and politically significant, yet modifications are often invisible to coarser land cover products that only track broad class changes.",
     "crumbs": [
-      "Installation"
+      "Change framework"
     ]
   },
   {
-    "objectID": "installation.html#high-performance-computing-and-cloud-environments",
-    "href": "installation.html#high-performance-computing-and-cloud-environments",
-    "title": "Installing Living Earth LCCS",
-    "section": "High-Performance Computing and Cloud Environments",
-    "text": "High-Performance Computing and Cloud Environments\nLiving Earth has been optimised for high-performance computing, with tested compatibility on several national supercomputing facilities (e.g. Australia’s National Computational Infrastructure) and cloud services. For such environments, the installation steps above apply, but you should consult your HPC/cloud platform’s documentation for environment module management and job scheduling.",
+    "objectID": "change.html#the-role-of-time",
+    "href": "change.html#the-role-of-time",
+    "title": "The Global Change Taxonomy in the Context of Living Earth",
+    "section": "The Role of Time",
+    "text": "The Role of Time\nA distinctive feature of the GCT is its explicit treatment of time as evidence for change. Four temporal dimensions are considered:\n\n\n\n\n\n\n\n\nDimension\nDefinition\nExample\n\n\n\n\nOccurrence\nDuration of the causative event or activity\nA storm lasts hours; deforestation may last weeks\n\n\nLag\nTime between the pressure and the observable impact\nPathogen infestation may cause dieback months later\n\n\nManifestation\nHow long the impact remains detectable\nFlood damage visible for days; deforestation visible for decades\n\n\nDuration\nTotal period from onset to completion or recovery\nRegrowth after fire may take decades\n\n\n\nThese temporal attributes are built into the evidence base for each GCT class, allowing users to better interpret the timing and reversibility of changes observed in satellite time-series data. For example, flash floods, crop harvesting and snow accumulation are linked to sub-daily to weekly timescales, while desertification, deglaciation and ecological succession unfold over decades to centuries.",
     "crumbs": [
-      "Installation"
+      "Change framework"
     ]
   },
   {
-    "objectID": "installation.html#verifying-the-installation",
-    "href": "installation.html#verifying-the-installation",
-    "title": "Installing Living Earth LCCS",
-    "section": "Verifying the Installation",
-    "text": "Verifying the Installation\nAfter installation, you can verify it worked by importing the package in Python:\nimport livingearth_lccs\nprint(livingearth_lccs.__version__)",
+    "objectID": "change.html#applying-the-global-change-taxonomy-with-living-earth",
+    "href": "change.html#applying-the-global-change-taxonomy-with-living-earth",
+    "title": "The Global Change Taxonomy in the Context of Living Earth",
+    "section": "Applying the Global Change Taxonomy with Living Earth",
+    "text": "Applying the Global Change Taxonomy with Living Earth\nIn practice, using the GCT in the context of Living Earth involves the following steps:\n\nGenerate multi-temporal land cover maps using Living Earth LCCS for two or more time periods (T₁ and T₂).\nCompare OED classes between periods to identify broad conversions (between-class changes) or the absence of class change.\nExamine EED and AED layers at T₁ and T₂ to characterise detailed modifications (within-class changes in amounts or types of descriptors).\nIdentify the impact — the observable consequence of change — using the direction and magnitude of ED changes.\nGather evidence for the pressure — typically from ancillary data sources such as climate records, fire histories, management plans, or biodiversity surveys.\nAssign a GCT class using the ‘impact (pressure)’ notation, consulting the glossary to ensure consistent terminology.\n\nThis workflow can be applied at any spatial scale and using any combination of ground observations, Earth observation data, or predictive model outputs.",
     "crumbs": [
-      "Installation"
+      "Change framework"
     ]
   },
   {
-    "objectID": "installation.html#notes-and-further-resources",
-    "href": "installation.html#notes-and-further-resources",
-    "title": "Installing Living Earth LCCS",
-    "section": "Notes and Further Resources",
-    "text": "Notes and Further Resources\n\n\n\n\n\n\nNote\n\n\n\nThe readthedocs installation page (/en/latest/installation.html) may not always be publicly accessible. If you can reach it, it will contain the most authoritative and up-to-date installation instructions. The steps above are based on standard Python packaging conventions and information available from the project’s documentation and publications.\n\n\n\nPlugins: The system can be expanded via plugins, and existing products can be read directly or created from Analysis Ready Data (ARD) through the use of plugins and virtual products.\nFull documentation: https://livingearth-lccs.readthedocs.io/en/latest/\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nLicence: Apache 2.0",
+    "objectID": "change.html#supporting-global-environmental-policy",
+    "href": "change.html#supporting-global-environmental-policy",
+    "title": "The Global Change Taxonomy in the Context of Living Earth",
+    "section": "Supporting Global Environmental Policy",
+    "text": "Supporting Global Environmental Policy\nThe Global Change Taxonomy was explicitly designed to serve the needs of national and international policy and reporting frameworks. By providing consistent and standardised descriptions of land change, it supports:\n\nUN Sustainable Development Goals (SDGs) — particularly SDG 15 (Life on Land) and SDG 6 (Clean Water)\nIPBES assessments of biodiversity and ecosystem services\nLand degradation neutrality targets under the UNCCD\nNational greenhouse gas inventories and REDD+ reporting for forests\nEcosystem restoration monitoring under the UN Decade on Ecosystem Restoration (2021–2030)\n\nThe taxonomy also provides detailed and standardised language for describing processes that are currently described inconsistently in the literature and policy, including land degradation, desertification, and ecosystem recovery — replacing broad umbrella terms with precise, evidence-based combinations of impacts and pressures.",
     "crumbs": [
-      "Installation"
+      "Change framework"
     ]
   },
   {
-    "objectID": "acknowledgements.html",
-    "href": "acknowledgements.html",
-    "title": "Acknowledgements",
-    "section": "",
-    "text": "List of funding sources that supported the work.",
+    "objectID": "change.html#key-reference",
+    "href": "change.html#key-reference",
+    "title": "The Global Change Taxonomy in the Context of Living Earth",
+    "section": "Key Reference",
+    "text": "Key Reference\nLucas, R.M., German, S., Metternicht, G., Schmidt, R.K., Owers, C.J., Prober, S.M., et al. (2022). A globally relevant change taxonomy and evidence-based change framework for land monitoring. Global Change Biology, 28(21), 6293–6317. https://doi.org/10.1111/gcb.16346\n\n\n\n\n\n\nNote\n\n\n\nThe Global Change Taxonomy glossary, containing all impact and pressure term definitions, is openly accessible at https://doi.org/10.5281/zenodo.6884999 and is designed to be updated over time through an ongoing peer-review process.",
     "crumbs": [
-      "Acknowledgements"
-    ]
-  },
-  {
-    "objectID": "acknowledgements.html#funding-sources",
-    "href": "acknowledgements.html#funding-sources",
-    "title": "Acknowledgements",
-    "section": "",
-    "text": "List of funding sources that supported the work.",
-    "crumbs": [
-      "Acknowledgements"
-    ]
-  },
-  {
-    "objectID": "acknowledgements.html#contributions",
-    "href": "acknowledgements.html#contributions",
-    "title": "Acknowledgements",
-    "section": "Contributions",
-    "text": "Contributions\nblacla",
-    "crumbs": [
-      "Acknowledgements"
-    ]
-  },
-  {
-    "objectID": "acknowledgements.html#publications-using-living-earth",
-    "href": "acknowledgements.html#publications-using-living-earth",
-    "title": "Acknowledgements",
-    "section": "Publications using Living Earth",
-    "text": "Publications using Living Earth\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
-    "crumbs": [
-      "Acknowledgements"
-    ]
-  },
-  {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Workshops"
-    ]
-  },
-  {
-    "objectID": "workshops/index.html#welcome",
-    "href": "workshops/index.html#welcome",
-    "title": "Workshops",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Workshops"
-    ]
-  },
-  {
-    "objectID": "tutorials/tuto1.html",
-    "href": "tutorials/tuto1.html",
-    "title": "How to create overaching ED?",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
-    ]
-  },
-  {
-    "objectID": "tutorials/tuto1.html#welcome",
-    "href": "tutorials/tuto1.html#welcome",
-    "title": "How to create overaching ED?",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
-    ]
-  },
-  {
-    "objectID": "quickstart.html",
-    "href": "quickstart.html",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "",
-    "text": "Living Earth LCCS is an open-source Python package that generates land cover maps from Earth Observation (EO) data using the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS v2). It has been applied at national scales in Australia, Wales, Papua New Guinea, and Switzerland, and is designed to be globally scalable.\nThe classification approach works by combining Environmental Descriptors (EDs) — measurable properties of the landscape retrieved from satellite data — through a hierarchical decision-tree framework to produce standardised land cover classes. These classes fall into three levels:\n\n\n\n\n\n\n\nDescriptor type\nRole\n\n\n\n\nOverarching EDs (OEDs)\nDetermine the 8 base-level LCCS Level 3 classes (e.g. vegetated vs. bare, terrestrial vs. aquatic, managed vs. natural)\n\n\nEssential EDs (EEDs)\nAdd detail within each L3 class (e.g. lifeform, water hydroperiod) to yield Level 4 classifications\n\n\nAdditional EDs (AEDs)\nProvide further biophysical context (e.g. soil acidity, dominant species, urban density) — not part of the core FAO taxonomy\n\n\n\nThe resulting maps can represent over 12,000 unique land cover classes, each carrying biophysical meaning and expressed as a numeric code for use in GIS applications.",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "quickstart.html#what-is-living-earth-lccs",
-    "href": "quickstart.html#what-is-living-earth-lccs",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "",
-    "text": "Living Earth LCCS is an open-source Python package that generates land cover maps from Earth Observation (EO) data using the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS v2). It has been applied at national scales in Australia, Wales, Papua New Guinea, and Switzerland, and is designed to be globally scalable.\nThe classification approach works by combining Environmental Descriptors (EDs) — measurable properties of the landscape retrieved from satellite data — through a hierarchical decision-tree framework to produce standardised land cover classes. These classes fall into three levels:\n\n\n\n\n\n\n\nDescriptor type\nRole\n\n\n\n\nOverarching EDs (OEDs)\nDetermine the 8 base-level LCCS Level 3 classes (e.g. vegetated vs. bare, terrestrial vs. aquatic, managed vs. natural)\n\n\nEssential EDs (EEDs)\nAdd detail within each L3 class (e.g. lifeform, water hydroperiod) to yield Level 4 classifications\n\n\nAdditional EDs (AEDs)\nProvide further biophysical context (e.g. soil acidity, dominant species, urban density) — not part of the core FAO taxonomy\n\n\n\nThe resulting maps can represent over 12,000 unique land cover classes, each carrying biophysical meaning and expressed as a numeric code for use in GIS applications.",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "quickstart.html#before-you-begin",
-    "href": "quickstart.html#before-you-begin",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "Before You Begin",
-    "text": "Before You Begin\nMake sure you have completed installation as described in the Installation Guide. In summary, you need:\n\nPython ≥ 3.8\nThe livingearth_lccs package installed\nGDAL available in your environment\n(Optional) An OpenDataCube (ODC) instance if using cube-based data access\n\nVerify your installation:\nimport livingearth_lccs\nprint(livingearth_lccs.__version__)",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "quickstart.html#core-concepts",
-    "href": "quickstart.html#core-concepts",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "Core Concepts",
-    "text": "Core Concepts\n\nThe LCCS Classification Hierarchy\nThe FAO LCCS operates in two stages:\nStage 1 — Dichotomous phase (Levels 1–3)\nThree binary decisions produce 8 possible Level 3 (L3) classes:\nLevel 1:  Vegetation (A)     vs.  Bare (B)\nLevel 2:  Terrestrial (1)    vs.  Aquatic (2)\nLevel 3:  Managed (odd)      vs.  Natural (even)\nValid L3 codes are: A11, A12, A23, A24, B15, B16, B27, B28.\nStage 2 — Modular-hierarchical phase (Level 4)\nEach L3 class is further described by approximately a dozen categorical L4 fields (41 in total). These encode attributes such as lifeform, canopy height, crop type, and water seasonality. L4 classes operate hierarchically: some fields must be populated before others become meaningful.\n\n\nInput Data\nLiving Earth accepts two types of data sources:\n\nGDAL-compatible rasters — any local or remote file format supported by GDAL (GeoTIFF, NetCDF, HDF, COG, etc.)\nOpenDataCube products — data indexed in an ODC instance (e.g. Digital Earth Australia, the Welsh Data Cube)\n\nInputs correspond to Environmental Descriptors and must be provided as classified or continuous raster layers (e.g. fractional vegetation cover as a percentage, water hydroperiod in months per year, lifeform as a categorical code).",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "quickstart.html#step-by-step-workflow",
-    "href": "quickstart.html#step-by-step-workflow",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "Step-by-Step Workflow",
-    "text": "Step-by-Step Workflow\n\nStep 1 — Prepare Your Environmental Descriptor Inputs\nEach input raster should correspond to one Environmental Descriptor. Ensure your data:\n\nIs spatially aligned (same CRS, extent, and resolution)\nUses the correct units or category codes as expected by the LCCS layer definitions\nCovers your area of interest\n\nFor example, a minimal set of OEDs to produce L3 classifications might include:\n\n\n\n\n\n\n\n\nDescriptor\nFormat\nExample values\n\n\n\n\nPresence of vegetation cover\nBinary raster\n0 = bare, 1 = vegetated\n\n\nTerrestrial / aquatic\nBinary raster\n0 = aquatic, 1 = terrestrial\n\n\nManaged / natural\nBinary raster\n0 = natural, 1 = managed\n\n\n\nTo generate L4 detail, add EEDs such as:\n\n\n\n\n\n\n\n\nDescriptor\nFormat\nExample values\n\n\n\n\nLifeform (vegetation)\nCategorical raster\ne.g. 1 = woody, 2 = herbaceous\n\n\nAnnual water hydroperiod\nContinuous raster (months/yr)\n0–12\n\n\nCanopy height\nContinuous raster (metres)\n0–50+\n\n\n\n\n\nStep 2 — Import the Package\nimport livingearth_lccs\nFor GDAL-based raster workflows, you will typically also need:\nimport numpy as np\nfrom osgeo import gdal\n\n\nStep 3 — Load the L3 Classification Layers\nThe dichotomous L3 phase is handled by the Level 3 classification module. Pass your OED arrays (as NumPy arrays or equivalent) into the L3 decision tree:\nfrom livingearth_lccs import l3_layers_lccs\n\n# Example: load your OED rasters as numpy arrays\n# (replace these with your actual data loading steps)\nvegetation = gdal.Open(\"vegetation_cover.tif\").ReadAsArray()\nterrestrial = gdal.Open(\"terrestrial_aquatic.tif\").ReadAsArray()\nmanaged = gdal.Open(\"managed_natural.tif\").ReadAsArray()\n\n# Generate L3 classification\nl3_result = l3_layers_lccs.classify(\n    vegetation=vegetation,\n    terrestrial=terrestrial,\n    managed=managed\n)\n\n\n\n\n\n\nNote\n\n\n\nExact function signatures and argument names should be confirmed against the module docstrings in the repository (l3_layers_lccs.py) or the API reference in the documentation.\n\n\n\n\nStep 4 — Generate L4 Descriptors\nOnce L3 classes are available, pass the EED layers into the L4 module to produce the full modular-hierarchical classification. The L4 code is documented with docstrings in l4_layers_lccs.py:\nfrom livingearth_lccs import l4_layers_lccs\n\nlifeform = gdal.Open(\"lifeform.tif\").ReadAsArray()\nhydroperiod = gdal.Open(\"hydroperiod.tif\").ReadAsArray()\n\nl4_result = l4_layers_lccs.classify(\n    l3_classification=l3_result,\n    lifeform=lifeform,\n    hydroperiod=hydroperiod,\n    # ... add further EEDs as available\n)\n\n\nStep 5 — Write Output to File\nThe classification result is a raster array of integer codes (each uniquely identifying a land cover class). Write it out using GDAL:\ndriver = gdal.GetDriverByName(\"GTiff\")\nout_ds = driver.Create(\n    \"landcover_output.tif\",\n    l4_result.shape[1],   # columns\n    l4_result.shape[0],   # rows\n    1,                    # number of bands\n    gdal.GDT_Int32\n)\n\n# Copy georeferencing from one of your input files\nref_ds = gdal.Open(\"vegetation_cover.tif\")\nout_ds.SetGeoTransform(ref_ds.GetGeoTransform())\nout_ds.SetProjection(ref_ds.GetProjection())\n\nout_ds.GetRasterBand(1).WriteArray(l4_result)\nout_ds.FlushCache()\nout_ds = None\nprint(\"Output written to landcover_output.tif\")",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "quickstart.html#using-an-opendatacube-backend",
-    "href": "quickstart.html#using-an-opendatacube-backend",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "Using an OpenDataCube Backend",
-    "text": "Using an OpenDataCube Backend\nIf your data is indexed in an OpenDataCube (ODC) instance, products can be loaded directly through the ODC API before passing them to the LCCS classification routines.\nimport datacube\n\ndc = datacube.Datacube(app=\"livingearth_quickstart\")\n\n# Load a product (example: fractional vegetation cover)\ndata = dc.load(\n    product=\"fc_percentile_albers_annual\",\n    x=(149.0, 150.0),\n    y=(-36.0, -35.0),\n    time=(\"2020-01-01\", \"2020-12-31\"),\n    output_crs=\"EPSG:3577\",\n    resolution=(-30, 30)\n)\n\nfvc = data[\"PV\"].values  # Photosynthetic Vegetation fraction\nPass the resulting NumPy arrays into the LCCS classification modules as shown in Steps 3 and 4 above.",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "quickstart.html#using-plugins",
-    "href": "quickstart.html#using-plugins",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "Using Plugins",
-    "text": "Using Plugins\nLiving Earth supports a plugin system for extending its input handling and for generating EDs from Analysis Ready Data (ARD). Plugins can be used to:\n\nCompute Environmental Descriptors directly from ARD (e.g. deriving hydroperiod from Sentinel-1 backscatter time series)\nIntegrate new data sources or sensors\nAdd virtual products\n\nConsult the plugin documentation and the plugins/ directory in the repository for examples of how to develop and register a plugin.",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "quickstart.html#understanding-the-output",
-    "href": "quickstart.html#understanding-the-output",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "Understanding the Output",
-    "text": "Understanding the Output\nEach pixel in the output raster contains a unique integer code representing a full LCCS classification. For example:\n\nAn integer corresponding to A11 (vegetated, terrestrial, managed) combined with L4 attributes such as herbaceous lifeform, annual crop encodes a specific agricultural land cover class.\nThe full lookup table of all 573,307+ unique codes and their descriptions is available in the supplementary material of the Living Earth publication (Lewis et al., 2021, Big Earth Data).\n\nTo interpret codes, refer to the l4_layers_lccs.py docstrings or the LCCS documentation, which describe each field, its permitted values, and its dependencies.",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "quickstart.html#next-steps",
-    "href": "quickstart.html#next-steps",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "Next Steps",
-    "text": "Next Steps\nOnce you have produced your first land cover map, you can:\n\nCompare maps across time to detect land cover change using the Living Earth Global Change Taxonomy\nGenerate habitat maps through direct translation of selected LCCS classes (as done for Wales)\nQuantify uncertainty associated with each Environmental Descriptor and propagate it through the classification\nExplore the interactive map of existing Living Earth products at livingearthhub.org",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "quickstart.html#key-references",
-    "href": "quickstart.html#key-references",
-    "title": "Quick Start Guide — Living Earth LCCS",
-    "section": "Key References",
-    "text": "Key References\n\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nDocumentation: https://livingearth-lccs.readthedocs.io/en/latest/\nLiving Earth Hub: http://livingearthhub.org\nLewis et al. (2021). Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development. Big Earth Data, 5(3). https://doi.org/10.1080/20964471.2021.1948179\n\n\n\n\n\n\n\nImportant\n\n\n\nThe official documentation at livingearth-lccs.readthedocs.io contains the most up-to-date API reference, function signatures, and worked examples. Always consult it alongside this guide, as specific argument names and module structures may evolve between versions.",
-    "crumbs": [
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "documentation/data_ingestion.html",
-    "href": "documentation/data_ingestion.html",
-    "title": "Data ingestion",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Data ingestion"
-    ]
-  },
-  {
-    "objectID": "documentation/data_ingestion.html#welcome",
-    "href": "documentation/data_ingestion.html#welcome",
-    "title": "Data ingestion",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Data ingestion"
-    ]
-  },
-  {
-    "objectID": "documentation/layer_values.html",
-    "href": "documentation/layer_values.html",
-    "title": "Layer values",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Layer values"
-    ]
-  },
-  {
-    "objectID": "documentation/layer_values.html#welcome",
-    "href": "documentation/layer_values.html#welcome",
-    "title": "Layer values",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Layer values"
-    ]
-  },
-  {
-    "objectID": "documentation/index.html",
-    "href": "documentation/index.html",
-    "title": "Documentation",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation/index.html#welcome",
-    "href": "documentation/index.html#welcome",
-    "title": "Documentation",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation/classification.html",
-    "href": "documentation/classification.html",
-    "title": "Classification",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Classification"
-    ]
-  },
-  {
-    "objectID": "documentation/classification.html#welcome",
-    "href": "documentation/classification.html#welcome",
-    "title": "Classification",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Classification"
-    ]
-  },
-  {
-    "objectID": "documentation/variables.html",
-    "href": "documentation/variables.html",
-    "title": "Variables",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Variables"
-    ]
-  },
-  {
-    "objectID": "documentation/variables.html#welcome",
-    "href": "documentation/variables.html#welcome",
-    "title": "Variables",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Variables"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The Living Earth Handbook",
-    "section": "",
-    "text": "[Living Earth](https://livingearthhub.org) is a science-driven, open-source Earth Observation (EO) framework designed to support standardised, scalable, and transparent mapping of land cover worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#why-living-earth-matters",
-    "href": "index.html#why-living-earth-matters",
-    "title": "The Living Earth Handbook",
-    "section": "Why Living Earth matters?",
-    "text": "Why Living Earth matters?\nLand cover — the physical and biological cover on Earth’s surface such as vegetation types, water bodies, bare soil, or built environments — is a fundamental indicator of environmental state and change. Routine, high-quality land cover information is essential for tracking global and national progress toward environmental goals, such as the United Nations Sustainable Development Goals (SDGs). However, most existing Earth Observation data (e.g., analysis-ready data from satellites) do not, by themselves, provide standardized land cover products at national scales. Different methods, semantics, and classifications across countries make it difficult to compare or benchmark progress. Living Earth addresses that gap.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#a-global-framework-based-on-fao-lccs",
-    "href": "index.html#a-global-framework-based-on-fao-lccs",
-    "title": "The Living Earth Handbook",
-    "section": "A Global Framework Based on FAO LCCS",
-    "text": "A Global Framework Based on FAO LCCS\nAt the core of Living Earth is the Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) — a globally recognised, semantically robust taxonomy for land cover. Living Earth implements a fully operational version of FAO LCCS that is:\n\nOptimised for Earth Observation data: It has been adapted to work with multiple satellite sources and national EO infrastructures.\nFlexible yet consistent: Modifications have been made to environmental descriptors and classification hierarchies to ensure logic, scalability, and applicability even with limited data inputs.\nOpen-source and FAIR-compliant: The software is public and designed to follow FAIR (Findable, Accessible, Interoperable, Re-usable) data principles to encourage broad adoption. This implementation allows Living Earth to generate globally comparable land cover maps that can be used in policy, research, and sustainable land management.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#how-it-works",
-    "href": "index.html#how-it-works",
-    "title": "The Living Earth Handbook",
-    "section": "How it works?",
-    "text": "How it works?\nLiving Earth uses “environmental descriptors” — measurable or classifiable attributes (e.g., vegetation cover, water persistence) derived primarily from satellite data — as inputs. These descriptors feed into the LCCS hierarchy to produce detailed land cover classifications that are:\n\nScalable in space and time, enabling repeatable mapping workflows.\nApplicable at national and continental scales, with demonstrated implementations in countries such as Australia and Wales.\nCapable of supporting change detection, allowing assessment of land cover dynamics over years or decades.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#applications-and-impact",
-    "href": "index.html#applications-and-impact",
-    "title": "The Living Earth Handbook",
-    "section": "Applications and Impact",
-    "text": "Applications and Impact\nLiving Earth is a powerful tool for governments, environmental agencies, researchers, and policymakers who require robust landscape data for:\n\nSDG reporting and planning — especially indicators related to land, biodiversity, and ecosystem health.\nNational monitoring systems — generating operational annual land cover maps using existing data infrastructures.\nLandscape change analysis — identifying trends such as deforestation, urban expansion, and habitat shifts across time.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#open-collaborative-and-future-oriented",
-    "href": "index.html#open-collaborative-and-future-oriented",
-    "title": "The Living Earth Handbook",
-    "section": "Open, Collaborative, and Future-oriented?",
-    "text": "Open, Collaborative, and Future-oriented?\nLiving Earth is not just software — it’s a platform for global collaboration. Its open design supports extensions, plug-ins, and evolving environmental descriptors, making it adaptable for new sensors, regions, and ecosystem questions. The framework’s evolution continues through international partnerships, national implementations, and community contributions.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#what-is-this-book-about",
-    "href": "index.html#what-is-this-book-about",
-    "title": "The Living Earth Handbook",
-    "section": "What is this book about?",
-    "text": "What is this book about?\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#about-the-authors",
-    "href": "index.html#about-the-authors",
-    "title": "The Living Earth Handbook",
-    "section": "About the authors?",
-    "text": "About the authors?\n\nGregory Giuliani\nRichard Lucas\nCarole Planque\nSébastien Chognard\n\nLiving Earth Lab is about XXX.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#how-to-cite-this-book",
-    "href": "index.html#how-to-cite-this-book",
-    "title": "The Living Earth Handbook",
-    "section": "How to cite this book?",
-    "text": "How to cite this book?\nIf you use this handbook on your work, please use this reference:\nGregory Giuliani, Richard Lucas, Carole Planque, Sébastien Chognard (2026). The Living Earth Handbook. University of Geneva (UNIGE), Switzerland. Online book available at: XXX DOI: XXX",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#license",
-    "href": "index.html#license",
-    "title": "The Living Earth Handbook",
-    "section": "License",
-    "text": "License\nThis hanbook is licensed as Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) by Creative Commons. Living Earth is licensed under Apache 2.0.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "tutorials/index.html",
-    "href": "tutorials/index.html",
-    "title": "Tutorials",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "tutorials/index.html#welcome",
-    "href": "tutorials/index.html#welcome",
-    "title": "Tutorials",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "workshops/gistam2026.html",
-    "href": "workshops/gistam2026.html",
-    "title": "GISTAM 2026",
-    "section": "",
-    "text": "https://gistam.scitevents.org/Home.aspx",
-    "crumbs": [
-      "Workshops",
-      "GISTAM 2026"
-    ]
-  },
-  {
-    "objectID": "workshops/gistam2026.html#welcome",
-    "href": "workshops/gistam2026.html#welcome",
-    "title": "GISTAM 2026",
-    "section": "",
-    "text": "https://gistam.scitevents.org/Home.aspx",
-    "crumbs": [
-      "Workshops",
-      "GISTAM 2026"
-    ]
-  },
-  {
-    "objectID": "workshops/earsel2026.html",
-    "href": "workshops/earsel2026.html",
-    "title": "EARSeL 2026",
-    "section": "",
-    "text": "https://athens2026.earsel.org",
-    "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
-    ]
-  },
-  {
-    "objectID": "workshops/earsel2026.html#welcome",
-    "href": "workshops/earsel2026.html#welcome",
-    "title": "EARSeL 2026",
-    "section": "",
-    "text": "https://athens2026.earsel.org",
-    "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
+      "Change framework"
     ]
   },
   {
@@ -651,6 +207,540 @@
     "text": "National Deployments\nLiving Earth has been validated through two major national deployments. In Australia, it was deployed through Digital Earth Australia using the Landsat archive to produce annual continental-scale land cover maps at 25 m resolution from 1988 onwards. Output maps were validated with approximately 12,000 independent validation points, giving an overall map accuracy of 80%. In Wales, it has been applied within the Living Wales project using Sentinel-2 data, demonstrating the system’s transferability across different EO platforms, spatial contexts, and national EO infrastructure configurations.",
     "crumbs": [
       "Introduction to LCCS"
+    ]
+  },
+  {
+    "objectID": "workshops/earsel2026.html",
+    "href": "workshops/earsel2026.html",
+    "title": "EARSeL 2026",
+    "section": "",
+    "text": "https://athens2026.earsel.org",
+    "crumbs": [
+      "Workshops",
+      "EARSeL 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/earsel2026.html#welcome",
+    "href": "workshops/earsel2026.html#welcome",
+    "title": "EARSeL 2026",
+    "section": "",
+    "text": "https://athens2026.earsel.org",
+    "crumbs": [
+      "Workshops",
+      "EARSeL 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/gistam2026.html",
+    "href": "workshops/gistam2026.html",
+    "title": "GISTAM 2026",
+    "section": "",
+    "text": "https://gistam.scitevents.org/Home.aspx",
+    "crumbs": [
+      "Workshops",
+      "GISTAM 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/gistam2026.html#welcome",
+    "href": "workshops/gistam2026.html#welcome",
+    "title": "GISTAM 2026",
+    "section": "",
+    "text": "https://gistam.scitevents.org/Home.aspx",
+    "crumbs": [
+      "Workshops",
+      "GISTAM 2026"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html#welcome",
+    "href": "tutorials/index.html#welcome",
+    "title": "Tutorials",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Living Earth Handbook",
+    "section": "",
+    "text": "[Living Earth](https://livingearthhub.org) is a science-driven, open-source Earth Observation (EO) framework designed to support standardised, scalable, and transparent mapping of land cover worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#why-living-earth-matters",
+    "href": "index.html#why-living-earth-matters",
+    "title": "The Living Earth Handbook",
+    "section": "Why Living Earth matters?",
+    "text": "Why Living Earth matters?\nLand cover — the physical and biological cover on Earth’s surface such as vegetation types, water bodies, bare soil, or built environments — is a fundamental indicator of environmental state and change. Routine, high-quality land cover information is essential for tracking global and national progress toward environmental goals, such as the United Nations Sustainable Development Goals (SDGs). However, most existing Earth Observation data (e.g., analysis-ready data from satellites) do not, by themselves, provide standardized land cover products at national scales. Different methods, semantics, and classifications across countries make it difficult to compare or benchmark progress. Living Earth addresses that gap.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#a-global-framework-based-on-fao-lccs",
+    "href": "index.html#a-global-framework-based-on-fao-lccs",
+    "title": "The Living Earth Handbook",
+    "section": "A Global Framework Based on FAO LCCS",
+    "text": "A Global Framework Based on FAO LCCS\nAt the core of Living Earth is the Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) — a globally recognised, semantically robust taxonomy for land cover. Living Earth implements a fully operational version of FAO LCCS that is:\n\nOptimised for Earth Observation data: It has been adapted to work with multiple satellite sources and national EO infrastructures.\nFlexible yet consistent: Modifications have been made to environmental descriptors and classification hierarchies to ensure logic, scalability, and applicability even with limited data inputs.\nOpen-source and FAIR-compliant: The software is public and designed to follow FAIR (Findable, Accessible, Interoperable, Re-usable) data principles to encourage broad adoption. This implementation allows Living Earth to generate globally comparable land cover maps that can be used in policy, research, and sustainable land management.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#how-it-works",
+    "href": "index.html#how-it-works",
+    "title": "The Living Earth Handbook",
+    "section": "How it works?",
+    "text": "How it works?\nLiving Earth uses “environmental descriptors” — measurable or classifiable attributes (e.g., vegetation cover, water persistence) derived primarily from satellite data — as inputs. These descriptors feed into the LCCS hierarchy to produce detailed land cover classifications that are:\n\nScalable in space and time, enabling repeatable mapping workflows.\nApplicable at national and continental scales, with demonstrated implementations in countries such as Australia and Wales.\nCapable of supporting change detection, allowing assessment of land cover dynamics over years or decades.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#applications-and-impact",
+    "href": "index.html#applications-and-impact",
+    "title": "The Living Earth Handbook",
+    "section": "Applications and Impact",
+    "text": "Applications and Impact\nLiving Earth is a powerful tool for governments, environmental agencies, researchers, and policymakers who require robust landscape data for:\n\nSDG reporting and planning — especially indicators related to land, biodiversity, and ecosystem health.\nNational monitoring systems — generating operational annual land cover maps using existing data infrastructures.\nLandscape change analysis — identifying trends such as deforestation, urban expansion, and habitat shifts across time.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#open-collaborative-and-future-oriented",
+    "href": "index.html#open-collaborative-and-future-oriented",
+    "title": "The Living Earth Handbook",
+    "section": "Open, Collaborative, and Future-oriented?",
+    "text": "Open, Collaborative, and Future-oriented?\nLiving Earth is not just software — it’s a platform for global collaboration. Its open design supports extensions, plug-ins, and evolving environmental descriptors, making it adaptable for new sensors, regions, and ecosystem questions. The framework’s evolution continues through international partnerships, national implementations, and community contributions.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#what-is-this-book-about",
+    "href": "index.html#what-is-this-book-about",
+    "title": "The Living Earth Handbook",
+    "section": "What is this book about?",
+    "text": "What is this book about?\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#about-the-authors",
+    "href": "index.html#about-the-authors",
+    "title": "The Living Earth Handbook",
+    "section": "About the authors?",
+    "text": "About the authors?\n\nGregory Giuliani\nRichard Lucas\nCarole Planque\nSébastien Chognard\n\nLiving Earth Lab is about XXX.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-cite-this-book",
+    "href": "index.html#how-to-cite-this-book",
+    "title": "The Living Earth Handbook",
+    "section": "How to cite this book?",
+    "text": "How to cite this book?\nIf you use this handbook on your work, please use this reference:\nGregory Giuliani, Richard Lucas, Carole Planque, Sébastien Chognard (2026). The Living Earth Handbook. University of Geneva (UNIGE), Switzerland. Online book available at: XXX DOI: XXX",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "The Living Earth Handbook",
+    "section": "License",
+    "text": "License\nThis hanbook is licensed as Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) by Creative Commons. Living Earth is licensed under Apache 2.0.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "documentation/variables.html",
+    "href": "documentation/variables.html",
+    "title": "Variables",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "documentation/variables.html#welcome",
+    "href": "documentation/variables.html#welcome",
+    "title": "Variables",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html",
+    "href": "documentation/classification.html",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html#welcome",
+    "href": "documentation/classification.html#welcome",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html",
+    "href": "documentation/index.html",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html#welcome",
+    "href": "documentation/index.html#welcome",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html",
+    "href": "documentation/layer_values.html",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html#welcome",
+    "href": "documentation/layer_values.html#welcome",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/data_ingestion.html",
+    "href": "documentation/data_ingestion.html",
+    "title": "Data ingestion",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Data ingestion"
+    ]
+  },
+  {
+    "objectID": "documentation/data_ingestion.html#welcome",
+    "href": "documentation/data_ingestion.html#welcome",
+    "title": "Data ingestion",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Data ingestion"
+    ]
+  },
+  {
+    "objectID": "quickstart.html",
+    "href": "quickstart.html",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "",
+    "text": "Living Earth LCCS is an open-source Python package that generates land cover maps from Earth Observation (EO) data using the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS v2). It has been applied at national scales in Australia, Wales, Papua New Guinea, and Switzerland, and is designed to be globally scalable.\nThe classification approach works by combining Environmental Descriptors (EDs) — measurable properties of the landscape retrieved from satellite data — through a hierarchical decision-tree framework to produce standardised land cover classes. These classes fall into three levels:\n\n\n\n\n\n\n\nDescriptor type\nRole\n\n\n\n\nOverarching EDs (OEDs)\nDetermine the 8 base-level LCCS Level 3 classes (e.g. vegetated vs. bare, terrestrial vs. aquatic, managed vs. natural)\n\n\nEssential EDs (EEDs)\nAdd detail within each L3 class (e.g. lifeform, water hydroperiod) to yield Level 4 classifications\n\n\nAdditional EDs (AEDs)\nProvide further biophysical context (e.g. soil acidity, dominant species, urban density) — not part of the core FAO taxonomy\n\n\n\nThe resulting maps can represent over 12,000 unique land cover classes, each carrying biophysical meaning and expressed as a numeric code for use in GIS applications.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#what-is-living-earth-lccs",
+    "href": "quickstart.html#what-is-living-earth-lccs",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "",
+    "text": "Living Earth LCCS is an open-source Python package that generates land cover maps from Earth Observation (EO) data using the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS v2). It has been applied at national scales in Australia, Wales, Papua New Guinea, and Switzerland, and is designed to be globally scalable.\nThe classification approach works by combining Environmental Descriptors (EDs) — measurable properties of the landscape retrieved from satellite data — through a hierarchical decision-tree framework to produce standardised land cover classes. These classes fall into three levels:\n\n\n\n\n\n\n\nDescriptor type\nRole\n\n\n\n\nOverarching EDs (OEDs)\nDetermine the 8 base-level LCCS Level 3 classes (e.g. vegetated vs. bare, terrestrial vs. aquatic, managed vs. natural)\n\n\nEssential EDs (EEDs)\nAdd detail within each L3 class (e.g. lifeform, water hydroperiod) to yield Level 4 classifications\n\n\nAdditional EDs (AEDs)\nProvide further biophysical context (e.g. soil acidity, dominant species, urban density) — not part of the core FAO taxonomy\n\n\n\nThe resulting maps can represent over 12,000 unique land cover classes, each carrying biophysical meaning and expressed as a numeric code for use in GIS applications.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#before-you-begin",
+    "href": "quickstart.html#before-you-begin",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Before You Begin",
+    "text": "Before You Begin\nMake sure you have completed installation as described in the Installation Guide. In summary, you need:\n\nPython ≥ 3.8\nThe livingearth_lccs package installed\nGDAL available in your environment\n(Optional) An OpenDataCube (ODC) instance if using cube-based data access\n\nVerify your installation:\nimport livingearth_lccs\nprint(livingearth_lccs.__version__)",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#core-concepts",
+    "href": "quickstart.html#core-concepts",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Core Concepts",
+    "text": "Core Concepts\n\nThe LCCS Classification Hierarchy\nThe FAO LCCS operates in two stages:\nStage 1 — Dichotomous phase (Levels 1–3)\nThree binary decisions produce 8 possible Level 3 (L3) classes:\nLevel 1:  Vegetation (A)     vs.  Bare (B)\nLevel 2:  Terrestrial (1)    vs.  Aquatic (2)\nLevel 3:  Managed (odd)      vs.  Natural (even)\nValid L3 codes are: A11, A12, A23, A24, B15, B16, B27, B28.\nStage 2 — Modular-hierarchical phase (Level 4)\nEach L3 class is further described by approximately a dozen categorical L4 fields (41 in total). These encode attributes such as lifeform, canopy height, crop type, and water seasonality. L4 classes operate hierarchically: some fields must be populated before others become meaningful.\n\n\nInput Data\nLiving Earth accepts two types of data sources:\n\nGDAL-compatible rasters — any local or remote file format supported by GDAL (GeoTIFF, NetCDF, HDF, COG, etc.)\nOpenDataCube products — data indexed in an ODC instance (e.g. Digital Earth Australia, the Welsh Data Cube)\n\nInputs correspond to Environmental Descriptors and must be provided as classified or continuous raster layers (e.g. fractional vegetation cover as a percentage, water hydroperiod in months per year, lifeform as a categorical code).",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#step-by-step-workflow",
+    "href": "quickstart.html#step-by-step-workflow",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Step-by-Step Workflow",
+    "text": "Step-by-Step Workflow\n\nStep 1 — Prepare Your Environmental Descriptor Inputs\nEach input raster should correspond to one Environmental Descriptor. Ensure your data:\n\nIs spatially aligned (same CRS, extent, and resolution)\nUses the correct units or category codes as expected by the LCCS layer definitions\nCovers your area of interest\n\nFor example, a minimal set of OEDs to produce L3 classifications might include:\n\n\n\n\n\n\n\n\nDescriptor\nFormat\nExample values\n\n\n\n\nPresence of vegetation cover\nBinary raster\n0 = bare, 1 = vegetated\n\n\nTerrestrial / aquatic\nBinary raster\n0 = aquatic, 1 = terrestrial\n\n\nManaged / natural\nBinary raster\n0 = natural, 1 = managed\n\n\n\nTo generate L4 detail, add EEDs such as:\n\n\n\n\n\n\n\n\nDescriptor\nFormat\nExample values\n\n\n\n\nLifeform (vegetation)\nCategorical raster\ne.g. 1 = woody, 2 = herbaceous\n\n\nAnnual water hydroperiod\nContinuous raster (months/yr)\n0–12\n\n\nCanopy height\nContinuous raster (metres)\n0–50+\n\n\n\n\n\nStep 2 — Import the Package\nimport livingearth_lccs\nFor GDAL-based raster workflows, you will typically also need:\nimport numpy as np\nfrom osgeo import gdal\n\n\nStep 3 — Load the L3 Classification Layers\nThe dichotomous L3 phase is handled by the Level 3 classification module. Pass your OED arrays (as NumPy arrays or equivalent) into the L3 decision tree:\nfrom livingearth_lccs import l3_layers_lccs\n\n# Example: load your OED rasters as numpy arrays\n# (replace these with your actual data loading steps)\nvegetation = gdal.Open(\"vegetation_cover.tif\").ReadAsArray()\nterrestrial = gdal.Open(\"terrestrial_aquatic.tif\").ReadAsArray()\nmanaged = gdal.Open(\"managed_natural.tif\").ReadAsArray()\n\n# Generate L3 classification\nl3_result = l3_layers_lccs.classify(\n    vegetation=vegetation,\n    terrestrial=terrestrial,\n    managed=managed\n)\n\n\n\n\n\n\nNote\n\n\n\nExact function signatures and argument names should be confirmed against the module docstrings in the repository (l3_layers_lccs.py) or the API reference in the documentation.\n\n\n\n\nStep 4 — Generate L4 Descriptors\nOnce L3 classes are available, pass the EED layers into the L4 module to produce the full modular-hierarchical classification. The L4 code is documented with docstrings in l4_layers_lccs.py:\nfrom livingearth_lccs import l4_layers_lccs\n\nlifeform = gdal.Open(\"lifeform.tif\").ReadAsArray()\nhydroperiod = gdal.Open(\"hydroperiod.tif\").ReadAsArray()\n\nl4_result = l4_layers_lccs.classify(\n    l3_classification=l3_result,\n    lifeform=lifeform,\n    hydroperiod=hydroperiod,\n    # ... add further EEDs as available\n)\n\n\nStep 5 — Write Output to File\nThe classification result is a raster array of integer codes (each uniquely identifying a land cover class). Write it out using GDAL:\ndriver = gdal.GetDriverByName(\"GTiff\")\nout_ds = driver.Create(\n    \"landcover_output.tif\",\n    l4_result.shape[1],   # columns\n    l4_result.shape[0],   # rows\n    1,                    # number of bands\n    gdal.GDT_Int32\n)\n\n# Copy georeferencing from one of your input files\nref_ds = gdal.Open(\"vegetation_cover.tif\")\nout_ds.SetGeoTransform(ref_ds.GetGeoTransform())\nout_ds.SetProjection(ref_ds.GetProjection())\n\nout_ds.GetRasterBand(1).WriteArray(l4_result)\nout_ds.FlushCache()\nout_ds = None\nprint(\"Output written to landcover_output.tif\")",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#using-an-opendatacube-backend",
+    "href": "quickstart.html#using-an-opendatacube-backend",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Using an OpenDataCube Backend",
+    "text": "Using an OpenDataCube Backend\nIf your data is indexed in an OpenDataCube (ODC) instance, products can be loaded directly through the ODC API before passing them to the LCCS classification routines.\nimport datacube\n\ndc = datacube.Datacube(app=\"livingearth_quickstart\")\n\n# Load a product (example: fractional vegetation cover)\ndata = dc.load(\n    product=\"fc_percentile_albers_annual\",\n    x=(149.0, 150.0),\n    y=(-36.0, -35.0),\n    time=(\"2020-01-01\", \"2020-12-31\"),\n    output_crs=\"EPSG:3577\",\n    resolution=(-30, 30)\n)\n\nfvc = data[\"PV\"].values  # Photosynthetic Vegetation fraction\nPass the resulting NumPy arrays into the LCCS classification modules as shown in Steps 3 and 4 above.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#using-plugins",
+    "href": "quickstart.html#using-plugins",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Using Plugins",
+    "text": "Using Plugins\nLiving Earth supports a plugin system for extending its input handling and for generating EDs from Analysis Ready Data (ARD). Plugins can be used to:\n\nCompute Environmental Descriptors directly from ARD (e.g. deriving hydroperiod from Sentinel-1 backscatter time series)\nIntegrate new data sources or sensors\nAdd virtual products\n\nConsult the plugin documentation and the plugins/ directory in the repository for examples of how to develop and register a plugin.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#understanding-the-output",
+    "href": "quickstart.html#understanding-the-output",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Understanding the Output",
+    "text": "Understanding the Output\nEach pixel in the output raster contains a unique integer code representing a full LCCS classification. For example:\n\nAn integer corresponding to A11 (vegetated, terrestrial, managed) combined with L4 attributes such as herbaceous lifeform, annual crop encodes a specific agricultural land cover class.\nThe full lookup table of all 573,307+ unique codes and their descriptions is available in the supplementary material of the Living Earth publication (Lewis et al., 2021, Big Earth Data).\n\nTo interpret codes, refer to the l4_layers_lccs.py docstrings or the LCCS documentation, which describe each field, its permitted values, and its dependencies.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#next-steps",
+    "href": "quickstart.html#next-steps",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Next Steps",
+    "text": "Next Steps\nOnce you have produced your first land cover map, you can:\n\nCompare maps across time to detect land cover change using the Living Earth Global Change Taxonomy\nGenerate habitat maps through direct translation of selected LCCS classes (as done for Wales)\nQuantify uncertainty associated with each Environmental Descriptor and propagate it through the classification\nExplore the interactive map of existing Living Earth products at livingearthhub.org",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#key-references",
+    "href": "quickstart.html#key-references",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Key References",
+    "text": "Key References\n\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nDocumentation: https://livingearth-lccs.readthedocs.io/en/latest/\nLiving Earth Hub: http://livingearthhub.org\nLewis et al. (2021). Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development. Big Earth Data, 5(3). https://doi.org/10.1080/20964471.2021.1948179\n\n\n\n\n\n\n\nImportant\n\n\n\nThe official documentation at livingearth-lccs.readthedocs.io contains the most up-to-date API reference, function signatures, and worked examples. Always consult it alongside this guide, as specific argument names and module structures may evolve between versions.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "tutorials/tuto1.html",
+    "href": "tutorials/tuto1.html",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
+    ]
+  },
+  {
+    "objectID": "tutorials/tuto1.html#welcome",
+    "href": "tutorials/tuto1.html#welcome",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
+    ]
+  },
+  {
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "workshops/index.html#welcome",
+    "href": "workshops/index.html#welcome",
+    "title": "Workshops",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "List of funding sources that supported the work.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html#funding-sources",
+    "href": "acknowledgements.html#funding-sources",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "List of funding sources that supported the work.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html#contributions",
+    "href": "acknowledgements.html#contributions",
+    "title": "Acknowledgements",
+    "section": "Contributions",
+    "text": "Contributions\nblacla",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html#publications-using-living-earth",
+    "href": "acknowledgements.html#publications-using-living-earth",
+    "title": "Acknowledgements",
+    "section": "Publications using Living Earth",
+    "text": "Publications using Living Earth\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "Installing Living Earth LCCS",
+    "section": "",
+    "text": "Living Earth LCCS is an implementation of the FAO Land Cover Classification System (LCCS) designed to be applied to Earth Observation (EO) data. It was developed to generate land cover maps for countries such as Australia and Wales. The system takes multiple input products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with modifications where required for EO data.\nThe system is capable of ingesting products from OpenDataCube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins. Existing products can be read directly, or products can be created from Analysis Ready Data (ARD) through the use of plugins and virtual products.\nThe software is open-source under an Apache 2.0 licence and hosted at the following locations:\n\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nDocumentation: https://livingearth-lccs.readthedocs.io",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#overview",
+    "href": "installation.html#overview",
+    "title": "Installing Living Earth LCCS",
+    "section": "",
+    "text": "Living Earth LCCS is an implementation of the FAO Land Cover Classification System (LCCS) designed to be applied to Earth Observation (EO) data. It was developed to generate land cover maps for countries such as Australia and Wales. The system takes multiple input products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with modifications where required for EO data.\nThe system is capable of ingesting products from OpenDataCube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins. Existing products can be read directly, or products can be created from Analysis Ready Data (ARD) through the use of plugins and virtual products.\nThe software is open-source under an Apache 2.0 licence and hosted at the following locations:\n\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nDocumentation: https://livingearth-lccs.readthedocs.io",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#prerequisites",
+    "href": "installation.html#prerequisites",
+    "title": "Installing Living Earth LCCS",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nBefore installing Living Earth LCCS, ensure the following are available on your system:\n\n\n\nRequirement\nNotes\n\n\n\n\nPython 3\nVersion 3.8 or later recommended\n\n\nGit\nTo clone the repository\n\n\nGDAL\nFor raster data handling\n\n\npip or conda\nPython package manager\n\n\n\nIf you intend to use Living Earth with the OpenDataCube (ODC) backend, a working ODC installation with a configured PostgreSQL database is also required.",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#installation-options",
+    "href": "installation.html#installation-options",
+    "title": "Installing Living Earth LCCS",
+    "section": "Installation Options",
+    "text": "Installation Options\n\nOption 1 — Install from the Bitbucket Repository (Recommended)\nClone the repository from Bitbucket and install it locally using pip:\ngit clone https://bitbucket.org/au-eoed/livingearth_lccs.git\ncd livingearth_lccs\npip install .\nTo install in editable/development mode (so that local code changes are immediately reflected):\npip install -e .\n\n\nOption 2 — Install with Optional Dependencies\nDepending on your use case, you may wish to install additional optional dependency groups. Common extras include support for OpenDataCube integration or documentation building. Check the setup.py or pyproject.toml file in the repository for the full list of optional extras, then install as appropriate:\n# Example: install with ODC support\npip install \".[odc]\"\n\n# Example: install with documentation tools\npip install \".[docs]\"\n\n\nOption 3 — Install in a Conda/Virtual Environment (Recommended for Isolation)\nUsing a virtual environment keeps your system Python clean and avoids dependency conflicts.\n\ncondavenv\n\n\nconda create -n livingearth python=3.9\nconda activate livingearth\ngit clone https://bitbucket.org/au-eoed/livingearth_lccs.git\ncd livingearth_lccs\npip install .\n\n\npython -m venv livingearth_env\n# On Linux/macOS:\nsource livingearth_env/bin/activate\n# On Windows:\n# livingearth_env\\Scripts\\activate\ngit clone https://bitbucket.org/au-eoed/livingearth_lccs.git\ncd livingearth_lccs\npip install .",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#opendatacube-integration",
+    "href": "installation.html#opendatacube-integration",
+    "title": "Installing Living Earth LCCS",
+    "section": "OpenDataCube Integration",
+    "text": "OpenDataCube Integration\nThe system is capable of ingesting products from OpenDataCube, which is the primary data backend for large-scale deployments such as Digital Earth Australia. If you plan to use this integration:\n\nInstall and configure the OpenDataCube following the ODC documentation.\nEnsure your ODC environment is connected to a PostgreSQL database.\nProducts can be indexed into ODC and then consumed directly by Living Earth LCCS.",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#high-performance-computing-and-cloud-environments",
+    "href": "installation.html#high-performance-computing-and-cloud-environments",
+    "title": "Installing Living Earth LCCS",
+    "section": "High-Performance Computing and Cloud Environments",
+    "text": "High-Performance Computing and Cloud Environments\nLiving Earth has been optimised for high-performance computing, with tested compatibility on several national supercomputing facilities (e.g. Australia’s National Computational Infrastructure) and cloud services. For such environments, the installation steps above apply, but you should consult your HPC/cloud platform’s documentation for environment module management and job scheduling.",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#verifying-the-installation",
+    "href": "installation.html#verifying-the-installation",
+    "title": "Installing Living Earth LCCS",
+    "section": "Verifying the Installation",
+    "text": "Verifying the Installation\nAfter installation, you can verify it worked by importing the package in Python:\nimport livingearth_lccs\nprint(livingearth_lccs.__version__)",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#notes-and-further-resources",
+    "href": "installation.html#notes-and-further-resources",
+    "title": "Installing Living Earth LCCS",
+    "section": "Notes and Further Resources",
+    "text": "Notes and Further Resources\n\n\n\n\n\n\nNote\n\n\n\nThe readthedocs installation page (/en/latest/installation.html) may not always be publicly accessible. If you can reach it, it will contain the most authoritative and up-to-date installation instructions. The steps above are based on standard Python packaging conventions and information available from the project’s documentation and publications.\n\n\n\nPlugins: The system can be expanded via plugins, and existing products can be read directly or created from Analysis Ready Data (ARD) through the use of plugins and virtual products.\nFull documentation: https://livingearth-lccs.readthedocs.io/en/latest/\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nLicence: Apache 2.0",
+    "crumbs": [
+      "Installation"
     ]
   }
 ]
