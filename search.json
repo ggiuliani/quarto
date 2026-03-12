@@ -1,5 +1,439 @@
 [
   {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "Installing Living Earth LCCS",
+    "section": "",
+    "text": "Living Earth LCCS is an implementation of the FAO Land Cover Classification System (LCCS) designed to be applied to Earth Observation (EO) data. It was developed to generate land cover maps for countries such as Australia and Wales. The system takes multiple input products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with modifications where required for EO data.\nThe system is capable of ingesting products from OpenDataCube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins. Existing products can be read directly, or products can be created from Analysis Ready Data (ARD) through the use of plugins and virtual products.\nThe software is open-source under an Apache 2.0 licence and hosted at the following locations:\n\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nDocumentation: https://livingearth-lccs.readthedocs.io",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#overview",
+    "href": "installation.html#overview",
+    "title": "Installing Living Earth LCCS",
+    "section": "",
+    "text": "Living Earth LCCS is an implementation of the FAO Land Cover Classification System (LCCS) designed to be applied to Earth Observation (EO) data. It was developed to generate land cover maps for countries such as Australia and Wales. The system takes multiple input products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with modifications where required for EO data.\nThe system is capable of ingesting products from OpenDataCube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins. Existing products can be read directly, or products can be created from Analysis Ready Data (ARD) through the use of plugins and virtual products.\nThe software is open-source under an Apache 2.0 licence and hosted at the following locations:\n\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nDocumentation: https://livingearth-lccs.readthedocs.io",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#prerequisites",
+    "href": "installation.html#prerequisites",
+    "title": "Installing Living Earth LCCS",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nBefore installing Living Earth LCCS, ensure the following are available on your system:\n\n\n\nRequirement\nNotes\n\n\n\n\nPython 3\nVersion 3.8 or later recommended\n\n\nGit\nTo clone the repository\n\n\nGDAL\nFor raster data handling\n\n\npip or conda\nPython package manager\n\n\n\nIf you intend to use Living Earth with the OpenDataCube (ODC) backend, a working ODC installation with a configured PostgreSQL database is also required.",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#installation-options",
+    "href": "installation.html#installation-options",
+    "title": "Installing Living Earth LCCS",
+    "section": "Installation Options",
+    "text": "Installation Options\n\nOption 1 — Install from the Bitbucket Repository (Recommended)\nClone the repository from Bitbucket and install it locally using pip:\ngit clone https://bitbucket.org/au-eoed/livingearth_lccs.git\ncd livingearth_lccs\npip install .\nTo install in editable/development mode (so that local code changes are immediately reflected):\npip install -e .\n\n\nOption 2 — Install with Optional Dependencies\nDepending on your use case, you may wish to install additional optional dependency groups. Common extras include support for OpenDataCube integration or documentation building. Check the setup.py or pyproject.toml file in the repository for the full list of optional extras, then install as appropriate:\n# Example: install with ODC support\npip install \".[odc]\"\n\n# Example: install with documentation tools\npip install \".[docs]\"\n\n\nOption 3 — Install in a Conda/Virtual Environment (Recommended for Isolation)\nUsing a virtual environment keeps your system Python clean and avoids dependency conflicts.\n\ncondavenv\n\n\nconda create -n livingearth python=3.9\nconda activate livingearth\ngit clone https://bitbucket.org/au-eoed/livingearth_lccs.git\ncd livingearth_lccs\npip install .\n\n\npython -m venv livingearth_env\n# On Linux/macOS:\nsource livingearth_env/bin/activate\n# On Windows:\n# livingearth_env\\Scripts\\activate\ngit clone https://bitbucket.org/au-eoed/livingearth_lccs.git\ncd livingearth_lccs\npip install .",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#opendatacube-integration",
+    "href": "installation.html#opendatacube-integration",
+    "title": "Installing Living Earth LCCS",
+    "section": "OpenDataCube Integration",
+    "text": "OpenDataCube Integration\nThe system is capable of ingesting products from OpenDataCube, which is the primary data backend for large-scale deployments such as Digital Earth Australia. If you plan to use this integration:\n\nInstall and configure the OpenDataCube following the ODC documentation.\nEnsure your ODC environment is connected to a PostgreSQL database.\nProducts can be indexed into ODC and then consumed directly by Living Earth LCCS.",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#high-performance-computing-and-cloud-environments",
+    "href": "installation.html#high-performance-computing-and-cloud-environments",
+    "title": "Installing Living Earth LCCS",
+    "section": "High-Performance Computing and Cloud Environments",
+    "text": "High-Performance Computing and Cloud Environments\nLiving Earth has been optimised for high-performance computing, with tested compatibility on several national supercomputing facilities (e.g. Australia’s National Computational Infrastructure) and cloud services. For such environments, the installation steps above apply, but you should consult your HPC/cloud platform’s documentation for environment module management and job scheduling.",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#verifying-the-installation",
+    "href": "installation.html#verifying-the-installation",
+    "title": "Installing Living Earth LCCS",
+    "section": "Verifying the Installation",
+    "text": "Verifying the Installation\nAfter installation, you can verify it worked by importing the package in Python:\nimport livingearth_lccs\nprint(livingearth_lccs.__version__)",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "installation.html#notes-and-further-resources",
+    "href": "installation.html#notes-and-further-resources",
+    "title": "Installing Living Earth LCCS",
+    "section": "Notes and Further Resources",
+    "text": "Notes and Further Resources\n\n\n\n\n\n\nNote\n\n\n\nThe readthedocs installation page (/en/latest/installation.html) may not always be publicly accessible. If you can reach it, it will contain the most authoritative and up-to-date installation instructions. The steps above are based on standard Python packaging conventions and information available from the project’s documentation and publications.\n\n\n\nPlugins: The system can be expanded via plugins, and existing products can be read directly or created from Analysis Ready Data (ARD) through the use of plugins and virtual products.\nFull documentation: https://livingearth-lccs.readthedocs.io/en/latest/\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nLicence: Apache 2.0",
+    "crumbs": [
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "List of funding sources that supported the work.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html#funding-sources",
+    "href": "acknowledgements.html#funding-sources",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "List of funding sources that supported the work.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html#contributions",
+    "href": "acknowledgements.html#contributions",
+    "title": "Acknowledgements",
+    "section": "Contributions",
+    "text": "Contributions\nblacla",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html#publications-using-living-earth",
+    "href": "acknowledgements.html#publications-using-living-earth",
+    "title": "Acknowledgements",
+    "section": "Publications using Living Earth",
+    "text": "Publications using Living Earth\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "workshops/index.html",
+    "href": "workshops/index.html",
+    "title": "Workshops",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "workshops/index.html#welcome",
+    "href": "workshops/index.html#welcome",
+    "title": "Workshops",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "tutorials/tuto1.html",
+    "href": "tutorials/tuto1.html",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
+    ]
+  },
+  {
+    "objectID": "tutorials/tuto1.html#welcome",
+    "href": "tutorials/tuto1.html#welcome",
+    "title": "How to create overaching ED?",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials",
+      "How to create overaching ED?"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Living Earth Handbook",
+    "section": "",
+    "text": "[Living Earth](https://livingearthhub.org) is a science-driven, open-source Earth Observation (EO) framework designed to support standardised, scalable, and transparent mapping of land cover worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#why-living-earth-matters",
+    "href": "index.html#why-living-earth-matters",
+    "title": "The Living Earth Handbook",
+    "section": "Why Living Earth matters?",
+    "text": "Why Living Earth matters?\nLand cover — the physical and biological cover on Earth’s surface such as vegetation types, water bodies, bare soil, or built environments — is a fundamental indicator of environmental state and change. Routine, high-quality land cover information is essential for tracking global and national progress toward environmental goals, such as the United Nations Sustainable Development Goals (SDGs). However, most existing Earth Observation data (e.g., analysis-ready data from satellites) do not, by themselves, provide standardized land cover products at national scales. Different methods, semantics, and classifications across countries make it difficult to compare or benchmark progress. Living Earth addresses that gap.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#a-global-framework-based-on-fao-lccs",
+    "href": "index.html#a-global-framework-based-on-fao-lccs",
+    "title": "The Living Earth Handbook",
+    "section": "A Global Framework Based on FAO LCCS",
+    "text": "A Global Framework Based on FAO LCCS\nAt the core of Living Earth is the Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) — a globally recognised, semantically robust taxonomy for land cover. Living Earth implements a fully operational version of FAO LCCS that is:\n\nOptimised for Earth Observation data: It has been adapted to work with multiple satellite sources and national EO infrastructures.\nFlexible yet consistent: Modifications have been made to environmental descriptors and classification hierarchies to ensure logic, scalability, and applicability even with limited data inputs.\nOpen-source and FAIR-compliant: The software is public and designed to follow FAIR (Findable, Accessible, Interoperable, Re-usable) data principles to encourage broad adoption. This implementation allows Living Earth to generate globally comparable land cover maps that can be used in policy, research, and sustainable land management.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#how-it-works",
+    "href": "index.html#how-it-works",
+    "title": "The Living Earth Handbook",
+    "section": "How it works?",
+    "text": "How it works?\nLiving Earth uses “environmental descriptors” — measurable or classifiable attributes (e.g., vegetation cover, water persistence) derived primarily from satellite data — as inputs. These descriptors feed into the LCCS hierarchy to produce detailed land cover classifications that are:\n\nScalable in space and time, enabling repeatable mapping workflows.\nApplicable at national and continental scales, with demonstrated implementations in countries such as Australia and Wales.\nCapable of supporting change detection, allowing assessment of land cover dynamics over years or decades.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#applications-and-impact",
+    "href": "index.html#applications-and-impact",
+    "title": "The Living Earth Handbook",
+    "section": "Applications and Impact",
+    "text": "Applications and Impact\nLiving Earth is a powerful tool for governments, environmental agencies, researchers, and policymakers who require robust landscape data for:\n\nSDG reporting and planning — especially indicators related to land, biodiversity, and ecosystem health.\nNational monitoring systems — generating operational annual land cover maps using existing data infrastructures.\nLandscape change analysis — identifying trends such as deforestation, urban expansion, and habitat shifts across time.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#open-collaborative-and-future-oriented",
+    "href": "index.html#open-collaborative-and-future-oriented",
+    "title": "The Living Earth Handbook",
+    "section": "Open, Collaborative, and Future-oriented?",
+    "text": "Open, Collaborative, and Future-oriented?\nLiving Earth is not just software — it’s a platform for global collaboration. Its open design supports extensions, plug-ins, and evolving environmental descriptors, making it adaptable for new sensors, regions, and ecosystem questions. The framework’s evolution continues through international partnerships, national implementations, and community contributions.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#what-is-this-book-about",
+    "href": "index.html#what-is-this-book-about",
+    "title": "The Living Earth Handbook",
+    "section": "What is this book about?",
+    "text": "What is this book about?\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#about-the-authors",
+    "href": "index.html#about-the-authors",
+    "title": "The Living Earth Handbook",
+    "section": "About the authors?",
+    "text": "About the authors?\n\nGregory Giuliani\nRichard Lucas\nCarole Planque\nSébastien Chognard\n\nLiving Earth Lab is about XXX.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-cite-this-book",
+    "href": "index.html#how-to-cite-this-book",
+    "title": "The Living Earth Handbook",
+    "section": "How to cite this book?",
+    "text": "How to cite this book?\nIf you use this handbook on your work, please use this reference:\nGregory Giuliani, Richard Lucas, Carole Planque, Sébastien Chognard (2026). The Living Earth Handbook. University of Geneva (UNIGE), Switzerland. Online book available at: XXX DOI: XXX",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "The Living Earth Handbook",
+    "section": "License",
+    "text": "License\nThis hanbook is licensed as Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) by Creative Commons. Living Earth is licensed under Apache 2.0.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "documentation/variables.html",
+    "href": "documentation/variables.html",
+    "title": "Variables",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "documentation/variables.html#welcome",
+    "href": "documentation/variables.html#welcome",
+    "title": "Variables",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html",
+    "href": "documentation/classification.html",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html#welcome",
+    "href": "documentation/classification.html#welcome",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html",
+    "href": "documentation/index.html",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html#welcome",
+    "href": "documentation/index.html#welcome",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html",
+    "href": "documentation/layer_values.html",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html#welcome",
+    "href": "documentation/layer_values.html#welcome",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/data_ingestion.html",
+    "href": "documentation/data_ingestion.html",
+    "title": "Data ingestion",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Data ingestion"
+    ]
+  },
+  {
+    "objectID": "documentation/data_ingestion.html#welcome",
+    "href": "documentation/data_ingestion.html#welcome",
+    "title": "Data ingestion",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Data ingestion"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html#welcome",
+    "href": "tutorials/index.html#welcome",
+    "title": "Tutorials",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Tutorials"
+    ]
+  },
+  {
+    "objectID": "workshops/gistam2026.html",
+    "href": "workshops/gistam2026.html",
+    "title": "GISTAM 2026",
+    "section": "",
+    "text": "https://gistam.scitevents.org/Home.aspx",
+    "crumbs": [
+      "Workshops",
+      "GISTAM 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/gistam2026.html#welcome",
+    "href": "workshops/gistam2026.html#welcome",
+    "title": "GISTAM 2026",
+    "section": "",
+    "text": "https://gistam.scitevents.org/Home.aspx",
+    "crumbs": [
+      "Workshops",
+      "GISTAM 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/earsel2026.html",
+    "href": "workshops/earsel2026.html",
+    "title": "EARSeL 2026",
+    "section": "",
+    "text": "https://athens2026.earsel.org",
+    "crumbs": [
+      "Workshops",
+      "EARSeL 2026"
+    ]
+  },
+  {
+    "objectID": "workshops/earsel2026.html#welcome",
+    "href": "workshops/earsel2026.html#welcome",
+    "title": "EARSeL 2026",
+    "section": "",
+    "text": "https://athens2026.earsel.org",
+    "crumbs": [
+      "Workshops",
+      "EARSeL 2026"
+    ]
+  },
+  {
     "objectID": "intro_lccs.html",
     "href": "intro_lccs.html",
     "title": "The FAO LCCS Schema and Its Implementation in Living Earth",
@@ -117,360 +551,6 @@
     "text": "National Deployments\nLiving Earth has been validated through two major national deployments. In Australia, it was deployed through Digital Earth Australia using the Landsat archive to produce annual continental-scale land cover maps at 25 m resolution from 1988 onwards. Output maps were validated with approximately 12,000 independent validation points, giving an overall map accuracy of 80%. In Wales, it has been applied within the Living Wales project using Sentinel-2 data, demonstrating the system’s transferability across different EO platforms, spatial contexts, and national EO infrastructure configurations.",
     "crumbs": [
       "Introduction to LCCS"
-    ]
-  },
-  {
-    "objectID": "workshops/earsel2026.html",
-    "href": "workshops/earsel2026.html",
-    "title": "EARSeL 2026",
-    "section": "",
-    "text": "https://athens2026.earsel.org",
-    "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
-    ]
-  },
-  {
-    "objectID": "workshops/earsel2026.html#welcome",
-    "href": "workshops/earsel2026.html#welcome",
-    "title": "EARSeL 2026",
-    "section": "",
-    "text": "https://athens2026.earsel.org",
-    "crumbs": [
-      "Workshops",
-      "EARSeL 2026"
-    ]
-  },
-  {
-    "objectID": "workshops/gistam2026.html",
-    "href": "workshops/gistam2026.html",
-    "title": "GISTAM 2026",
-    "section": "",
-    "text": "https://gistam.scitevents.org/Home.aspx",
-    "crumbs": [
-      "Workshops",
-      "GISTAM 2026"
-    ]
-  },
-  {
-    "objectID": "workshops/gistam2026.html#welcome",
-    "href": "workshops/gistam2026.html#welcome",
-    "title": "GISTAM 2026",
-    "section": "",
-    "text": "https://gistam.scitevents.org/Home.aspx",
-    "crumbs": [
-      "Workshops",
-      "GISTAM 2026"
-    ]
-  },
-  {
-    "objectID": "tutorials/index.html",
-    "href": "tutorials/index.html",
-    "title": "Tutorials",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "tutorials/index.html#welcome",
-    "href": "tutorials/index.html#welcome",
-    "title": "Tutorials",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials"
-    ]
-  },
-  {
-    "objectID": "documentation/data_ingestion.html",
-    "href": "documentation/data_ingestion.html",
-    "title": "Data ingestion",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Data ingestion"
-    ]
-  },
-  {
-    "objectID": "documentation/data_ingestion.html#welcome",
-    "href": "documentation/data_ingestion.html#welcome",
-    "title": "Data ingestion",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Data ingestion"
-    ]
-  },
-  {
-    "objectID": "documentation/layer_values.html",
-    "href": "documentation/layer_values.html",
-    "title": "Layer values",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Layer values"
-    ]
-  },
-  {
-    "objectID": "documentation/layer_values.html#welcome",
-    "href": "documentation/layer_values.html#welcome",
-    "title": "Layer values",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Layer values"
-    ]
-  },
-  {
-    "objectID": "documentation/index.html",
-    "href": "documentation/index.html",
-    "title": "Documentation",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation/index.html#welcome",
-    "href": "documentation/index.html#welcome",
-    "title": "Documentation",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation/classification.html",
-    "href": "documentation/classification.html",
-    "title": "Classification",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Classification"
-    ]
-  },
-  {
-    "objectID": "documentation/classification.html#welcome",
-    "href": "documentation/classification.html#welcome",
-    "title": "Classification",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Classification"
-    ]
-  },
-  {
-    "objectID": "documentation/variables.html",
-    "href": "documentation/variables.html",
-    "title": "Variables",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Variables"
-    ]
-  },
-  {
-    "objectID": "documentation/variables.html#welcome",
-    "href": "documentation/variables.html#welcome",
-    "title": "Variables",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Variables"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The Living Earth Handbook",
-    "section": "",
-    "text": "[Living Earth](https://livingearthhub.org) is a science-driven, open-source Earth Observation (EO) framework designed to support standardised, scalable, and transparent mapping of land cover worldwide. Grounded in internationally accepted classification principles, it enables consistent interpretation of landscapes from satellite data to inform sustainable development planning, monitoring, and reporting.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#why-living-earth-matters",
-    "href": "index.html#why-living-earth-matters",
-    "title": "The Living Earth Handbook",
-    "section": "Why Living Earth matters?",
-    "text": "Why Living Earth matters?\nLand cover — the physical and biological cover on Earth’s surface such as vegetation types, water bodies, bare soil, or built environments — is a fundamental indicator of environmental state and change. Routine, high-quality land cover information is essential for tracking global and national progress toward environmental goals, such as the United Nations Sustainable Development Goals (SDGs). However, most existing Earth Observation data (e.g., analysis-ready data from satellites) do not, by themselves, provide standardized land cover products at national scales. Different methods, semantics, and classifications across countries make it difficult to compare or benchmark progress. Living Earth addresses that gap.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#a-global-framework-based-on-fao-lccs",
-    "href": "index.html#a-global-framework-based-on-fao-lccs",
-    "title": "The Living Earth Handbook",
-    "section": "A Global Framework Based on FAO LCCS",
-    "text": "A Global Framework Based on FAO LCCS\nAt the core of Living Earth is the Food and Agriculture Organization’s Land Cover Classification System (FAO LCCS) — a globally recognised, semantically robust taxonomy for land cover. Living Earth implements a fully operational version of FAO LCCS that is:\n\nOptimised for Earth Observation data: It has been adapted to work with multiple satellite sources and national EO infrastructures.\nFlexible yet consistent: Modifications have been made to environmental descriptors and classification hierarchies to ensure logic, scalability, and applicability even with limited data inputs.\nOpen-source and FAIR-compliant: The software is public and designed to follow FAIR (Findable, Accessible, Interoperable, Re-usable) data principles to encourage broad adoption. This implementation allows Living Earth to generate globally comparable land cover maps that can be used in policy, research, and sustainable land management.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#how-it-works",
-    "href": "index.html#how-it-works",
-    "title": "The Living Earth Handbook",
-    "section": "How it works?",
-    "text": "How it works?\nLiving Earth uses “environmental descriptors” — measurable or classifiable attributes (e.g., vegetation cover, water persistence) derived primarily from satellite data — as inputs. These descriptors feed into the LCCS hierarchy to produce detailed land cover classifications that are:\n\nScalable in space and time, enabling repeatable mapping workflows.\nApplicable at national and continental scales, with demonstrated implementations in countries such as Australia and Wales.\nCapable of supporting change detection, allowing assessment of land cover dynamics over years or decades.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#applications-and-impact",
-    "href": "index.html#applications-and-impact",
-    "title": "The Living Earth Handbook",
-    "section": "Applications and Impact",
-    "text": "Applications and Impact\nLiving Earth is a powerful tool for governments, environmental agencies, researchers, and policymakers who require robust landscape data for:\n\nSDG reporting and planning — especially indicators related to land, biodiversity, and ecosystem health.\nNational monitoring systems — generating operational annual land cover maps using existing data infrastructures.\nLandscape change analysis — identifying trends such as deforestation, urban expansion, and habitat shifts across time.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#open-collaborative-and-future-oriented",
-    "href": "index.html#open-collaborative-and-future-oriented",
-    "title": "The Living Earth Handbook",
-    "section": "Open, Collaborative, and Future-oriented?",
-    "text": "Open, Collaborative, and Future-oriented?\nLiving Earth is not just software — it’s a platform for global collaboration. Its open design supports extensions, plug-ins, and evolving environmental descriptors, making it adaptable for new sensors, regions, and ecosystem questions. The framework’s evolution continues through international partnerships, national implementations, and community contributions.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#what-is-this-book-about",
-    "href": "index.html#what-is-this-book-about",
-    "title": "The Living Earth Handbook",
-    "section": "What is this book about?",
-    "text": "What is this book about?\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#about-the-authors",
-    "href": "index.html#about-the-authors",
-    "title": "The Living Earth Handbook",
-    "section": "About the authors?",
-    "text": "About the authors?\n\nGregory Giuliani\nRichard Lucas\nCarole Planque\nSébastien Chognard\n\nLiving Earth Lab is about XXX.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#how-to-cite-this-book",
-    "href": "index.html#how-to-cite-this-book",
-    "title": "The Living Earth Handbook",
-    "section": "How to cite this book?",
-    "text": "How to cite this book?\nIf you use this handbook on your work, please use this reference:\nGregory Giuliani, Richard Lucas, Carole Planque, Sébastien Chognard (2026). The Living Earth Handbook. University of Geneva (UNIGE), Switzerland. Online book available at: XXX DOI: XXX",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#license",
-    "href": "index.html#license",
-    "title": "The Living Earth Handbook",
-    "section": "License",
-    "text": "License\nThis hanbook is licensed as Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) by Creative Commons. Living Earth is licensed under Apache 2.0.",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "tutorials/tuto1.html",
-    "href": "tutorials/tuto1.html",
-    "title": "How to create overaching ED?",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
-    ]
-  },
-  {
-    "objectID": "tutorials/tuto1.html#welcome",
-    "href": "tutorials/tuto1.html#welcome",
-    "title": "How to create overaching ED?",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Tutorials",
-      "How to create overaching ED?"
-    ]
-  },
-  {
-    "objectID": "workshops/index.html",
-    "href": "workshops/index.html",
-    "title": "Workshops",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Workshops"
-    ]
-  },
-  {
-    "objectID": "workshops/index.html#welcome",
-    "href": "workshops/index.html#welcome",
-    "title": "Workshops",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Workshops"
-    ]
-  },
-  {
-    "objectID": "acknowledgements.html",
-    "href": "acknowledgements.html",
-    "title": "Acknowledgements",
-    "section": "",
-    "text": "List of funding sources that supported the work.",
-    "crumbs": [
-      "Acknowledgements"
-    ]
-  },
-  {
-    "objectID": "acknowledgements.html#funding-sources",
-    "href": "acknowledgements.html#funding-sources",
-    "title": "Acknowledgements",
-    "section": "",
-    "text": "List of funding sources that supported the work.",
-    "crumbs": [
-      "Acknowledgements"
-    ]
-  },
-  {
-    "objectID": "acknowledgements.html#contributions",
-    "href": "acknowledgements.html#contributions",
-    "title": "Acknowledgements",
-    "section": "Contributions",
-    "text": "Contributions\nblacla",
-    "crumbs": [
-      "Acknowledgements"
-    ]
-  },
-  {
-    "objectID": "acknowledgements.html#publications-using-living-earth",
-    "href": "acknowledgements.html#publications-using-living-earth",
-    "title": "Acknowledgements",
-    "section": "Publications using Living Earth",
-    "text": "Publications using Living Earth\nThis is a 1-hour tutorial that can be used to teach or as self-paced learning.",
-    "crumbs": [
-      "Acknowledgements"
     ]
   }
 ]
