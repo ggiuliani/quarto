@@ -9,7 +9,7 @@
 <meta name="author" content="">
 <meta name="dcterms.date" content="2026-03-12">
 
-<title>Installing Living Earth LCCS – Living Earth</title>
+<title>Quick Start Guide — Living Earth LCCS – Living Earth</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,8 +66,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./quickstart.html" rel="next">
-<link href="./intro_lccs.html" rel="prev">
+<link href="./change.qmd" rel="next">
+<link href="./installation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -119,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installation.html">Installation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./quickstart.html">Quick Start</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -175,13 +175,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./installation.html" class="sidebar-item-text sidebar-link active">
+  <a href="./installation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quickstart.html" class="sidebar-item-text sidebar-link">
+  <a href="./quickstart.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Quick Start</span></a>
   </div>
 </li>
@@ -294,27 +294,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#installation-options" id="toc-installation-options" class="nav-link" data-scroll-target="#installation-options">Installation Options</a>
+  <li><a href="#what-is-living-earth-lccs" id="toc-what-is-living-earth-lccs" class="nav-link active" data-scroll-target="#what-is-living-earth-lccs">What is Living Earth LCCS?</a></li>
+  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before You Begin</a></li>
+  <li><a href="#core-concepts" id="toc-core-concepts" class="nav-link" data-scroll-target="#core-concepts">Core Concepts</a>
   <ul class="collapse">
-  <li><a href="#option-1-install-from-the-bitbucket-repository-recommended" id="toc-option-1-install-from-the-bitbucket-repository-recommended" class="nav-link" data-scroll-target="#option-1-install-from-the-bitbucket-repository-recommended">Option 1 — Install from the Bitbucket Repository (Recommended)</a></li>
-  <li><a href="#option-2-install-with-optional-dependencies" id="toc-option-2-install-with-optional-dependencies" class="nav-link" data-scroll-target="#option-2-install-with-optional-dependencies">Option 2 — Install with Optional Dependencies</a></li>
-  <li><a href="#option-3-install-in-a-condavirtual-environment-recommended-for-isolation" id="toc-option-3-install-in-a-condavirtual-environment-recommended-for-isolation" class="nav-link" data-scroll-target="#option-3-install-in-a-condavirtual-environment-recommended-for-isolation">Option 3 — Install in a Conda/Virtual Environment (Recommended for Isolation)</a></li>
+  <li><a href="#the-lccs-classification-hierarchy" id="toc-the-lccs-classification-hierarchy" class="nav-link" data-scroll-target="#the-lccs-classification-hierarchy">The LCCS Classification Hierarchy</a></li>
+  <li><a href="#input-data" id="toc-input-data" class="nav-link" data-scroll-target="#input-data">Input Data</a></li>
   </ul></li>
-  <li><a href="#opendatacube-integration" id="toc-opendatacube-integration" class="nav-link" data-scroll-target="#opendatacube-integration">OpenDataCube Integration</a></li>
-  <li><a href="#high-performance-computing-and-cloud-environments" id="toc-high-performance-computing-and-cloud-environments" class="nav-link" data-scroll-target="#high-performance-computing-and-cloud-environments">High-Performance Computing and Cloud Environments</a></li>
-  <li><a href="#verifying-the-installation" id="toc-verifying-the-installation" class="nav-link" data-scroll-target="#verifying-the-installation">Verifying the Installation</a></li>
-  <li><a href="#notes-and-further-resources" id="toc-notes-and-further-resources" class="nav-link" data-scroll-target="#notes-and-further-resources">Notes and Further Resources</a></li>
+  <li><a href="#step-by-step-workflow" id="toc-step-by-step-workflow" class="nav-link" data-scroll-target="#step-by-step-workflow">Step-by-Step Workflow</a>
+  <ul class="collapse">
+  <li><a href="#step-1-prepare-your-environmental-descriptor-inputs" id="toc-step-1-prepare-your-environmental-descriptor-inputs" class="nav-link" data-scroll-target="#step-1-prepare-your-environmental-descriptor-inputs">Step 1 — Prepare Your Environmental Descriptor Inputs</a></li>
+  <li><a href="#step-2-import-the-package" id="toc-step-2-import-the-package" class="nav-link" data-scroll-target="#step-2-import-the-package">Step 2 — Import the Package</a></li>
+  <li><a href="#step-3-load-the-l3-classification-layers" id="toc-step-3-load-the-l3-classification-layers" class="nav-link" data-scroll-target="#step-3-load-the-l3-classification-layers">Step 3 — Load the L3 Classification Layers</a></li>
+  <li><a href="#step-4-generate-l4-descriptors" id="toc-step-4-generate-l4-descriptors" class="nav-link" data-scroll-target="#step-4-generate-l4-descriptors">Step 4 — Generate L4 Descriptors</a></li>
+  <li><a href="#step-5-write-output-to-file" id="toc-step-5-write-output-to-file" class="nav-link" data-scroll-target="#step-5-write-output-to-file">Step 5 — Write Output to File</a></li>
+  </ul></li>
+  <li><a href="#using-an-opendatacube-backend" id="toc-using-an-opendatacube-backend" class="nav-link" data-scroll-target="#using-an-opendatacube-backend">Using an OpenDataCube Backend</a></li>
+  <li><a href="#using-plugins" id="toc-using-plugins" class="nav-link" data-scroll-target="#using-plugins">Using Plugins</a></li>
+  <li><a href="#understanding-the-output" id="toc-understanding-the-output" class="nav-link" data-scroll-target="#understanding-the-output">Understanding the Output</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#key-references" id="toc-key-references" class="nav-link" data-scroll-target="#key-references">Key References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ggiuliani/quarto/edit/main/installation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ggiuliani/quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="installation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ggiuliani/quarto/edit/main/quickstart.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ggiuliani/quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="quickstart.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Installing Living Earth LCCS</h1>
+<h1 class="title">Quick Start Guide — Living Earth LCCS</h1>
 </div>
 
 
@@ -337,121 +345,177 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Living Earth LCCS is an implementation of the FAO Land Cover Classification System (LCCS) designed to be applied to Earth Observation (EO) data. It was developed to generate land cover maps for countries such as Australia and Wales. The system takes multiple input products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with modifications where required for EO data.</p>
-<p>The system is capable of ingesting products from OpenDataCube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins. Existing products can be read directly, or products can be created from Analysis Ready Data (ARD) through the use of plugins and virtual products.</p>
-<p>The software is open-source under an <strong>Apache 2.0 licence</strong> and hosted at the following locations:</p>
-<ul>
-<li><strong>Source code:</strong> <a href="https://bitbucket.org/au-eoed/livingearth_lccs" class="uri">https://bitbucket.org/au-eoed/livingearth_lccs</a></li>
-<li><strong>Documentation:</strong> <a href="https://livingearth-lccs.readthedocs.io" class="uri">https://livingearth-lccs.readthedocs.io</a></li>
-</ul>
-<hr>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p>Before installing Living Earth LCCS, ensure the following are available on your system:</p>
+<section id="what-is-living-earth-lccs" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-living-earth-lccs">What is Living Earth LCCS?</h2>
+<p>Living Earth LCCS is an open-source Python package that generates land cover maps from Earth Observation (EO) data using the <strong>Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS v2)</strong>. It has been applied at national scales in Australia, Wales, Papua New Guinea, and Switzerland, and is designed to be globally scalable.</p>
+<p>The classification approach works by combining <strong>Environmental Descriptors (EDs)</strong> — measurable properties of the landscape retrieved from satellite data — through a hierarchical decision-tree framework to produce standardised land cover classes. These classes fall into three levels:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Requirement</th>
-<th>Notes</th>
+<th>Descriptor type</th>
+<th>Role</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Python 3</strong></td>
-<td>Version 3.8 or later recommended</td>
+<td><strong>Overarching EDs (OEDs)</strong></td>
+<td>Determine the 8 base-level LCCS Level 3 classes (e.g.&nbsp;vegetated vs.&nbsp;bare, terrestrial vs.&nbsp;aquatic, managed vs.&nbsp;natural)</td>
 </tr>
 <tr class="even">
-<td><strong>Git</strong></td>
-<td>To clone the repository</td>
+<td><strong>Essential EDs (EEDs)</strong></td>
+<td>Add detail within each L3 class (e.g.&nbsp;lifeform, water hydroperiod) to yield Level 4 classifications</td>
 </tr>
 <tr class="odd">
-<td><strong>GDAL</strong></td>
-<td>For raster data handling</td>
-</tr>
-<tr class="even">
-<td><strong>pip</strong> or <strong>conda</strong></td>
-<td>Python package manager</td>
+<td><strong>Additional EDs (AEDs)</strong></td>
+<td>Provide further biophysical context (e.g.&nbsp;soil acidity, dominant species, urban density) — not part of the core FAO taxonomy</td>
 </tr>
 </tbody>
 </table>
-<p>If you intend to use Living Earth with the <strong>OpenDataCube (ODC)</strong> backend, a working ODC installation with a configured PostgreSQL database is also required.</p>
+<p>The resulting maps can represent over 12,000 unique land cover classes, each carrying biophysical meaning and expressed as a numeric code for use in GIS applications.</p>
 <hr>
 </section>
-<section id="installation-options" class="level2">
-<h2 class="anchored" data-anchor-id="installation-options">Installation Options</h2>
-<section id="option-1-install-from-the-bitbucket-repository-recommended" class="level3">
-<h3 class="anchored" data-anchor-id="option-1-install-from-the-bitbucket-repository-recommended">Option 1 — Install from the Bitbucket Repository (Recommended)</h3>
-<p>Clone the repository from Bitbucket and install it locally using <code>pip</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://bitbucket.org/au-eoed/livingearth_lccs.git</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> livingearth_lccs</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To install in <strong>editable/development mode</strong> (so that local code changes are immediately reflected):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="before-you-begin" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-begin">Before You Begin</h2>
+<p>Make sure you have completed installation as described in the <a href="living_earth_lccs_installation.qmd">Installation Guide</a>. In summary, you need:</p>
+<ul>
+<li>Python ≥ 3.8</li>
+<li>The <code>livingearth_lccs</code> package installed</li>
+<li>GDAL available in your environment</li>
+<li>(Optional) An OpenDataCube (ODC) instance if using cube-based data access</li>
+</ul>
+<p>Verify your installation:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> livingearth_lccs</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(livingearth_lccs.__version__)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
 </section>
-<section id="option-2-install-with-optional-dependencies" class="level3">
-<h3 class="anchored" data-anchor-id="option-2-install-with-optional-dependencies">Option 2 — Install with Optional Dependencies</h3>
-<p>Depending on your use case, you may wish to install additional optional dependency groups. Common extras include support for OpenDataCube integration or documentation building. Check the <code>setup.py</code> or <code>pyproject.toml</code> file in the repository for the full list of optional extras, then install as appropriate:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: install with ODC support</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">".[odc]"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: install with documentation tools</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="st">".[docs]"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="core-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="core-concepts">Core Concepts</h2>
+<section id="the-lccs-classification-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="the-lccs-classification-hierarchy">The LCCS Classification Hierarchy</h3>
+<p>The FAO LCCS operates in two stages:</p>
+<p><strong>Stage 1 — Dichotomous phase (Levels 1–3)</strong></p>
+<p>Three binary decisions produce 8 possible Level 3 (L3) classes:</p>
+<pre><code>Level 1:  Vegetation (A)     vs.  Bare (B)
+Level 2:  Terrestrial (1)    vs.  Aquatic (2)
+Level 3:  Managed (odd)      vs.  Natural (even)</code></pre>
+<p>Valid L3 codes are: <code>A11</code>, <code>A12</code>, <code>A23</code>, <code>A24</code>, <code>B15</code>, <code>B16</code>, <code>B27</code>, <code>B28</code>.</p>
+<p><strong>Stage 2 — Modular-hierarchical phase (Level 4)</strong></p>
+<p>Each L3 class is further described by approximately a dozen categorical L4 fields (41 in total). These encode attributes such as lifeform, canopy height, crop type, and water seasonality. L4 classes operate hierarchically: some fields must be populated before others become meaningful.</p>
 </section>
-<section id="option-3-install-in-a-condavirtual-environment-recommended-for-isolation" class="level3">
-<h3 class="anchored" data-anchor-id="option-3-install-in-a-condavirtual-environment-recommended-for-isolation">Option 3 — Install in a Conda/Virtual Environment (Recommended for Isolation)</h3>
-<p>Using a virtual environment keeps your system Python clean and avoids dependency conflicts.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">conda</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">venv</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> livingearth python=3.9</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate livingearth</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://bitbucket.org/au-eoed/livingearth_lccs.git</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> livingearth_lccs</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv livingearth_env</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># On Linux/macOS:</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> livingearth_env/bin/activate</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># On Windows:</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># livingearth_env\Scripts\activate</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://bitbucket.org/au-eoed/livingearth_lccs.git</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> livingearth_lccs</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
+<section id="input-data" class="level3">
+<h3 class="anchored" data-anchor-id="input-data">Input Data</h3>
+<p>Living Earth accepts two types of data sources:</p>
+<ul>
+<li><strong>GDAL-compatible rasters</strong> — any local or remote file format supported by GDAL (GeoTIFF, NetCDF, HDF, COG, etc.)</li>
+<li><strong>OpenDataCube products</strong> — data indexed in an ODC instance (e.g.&nbsp;Digital Earth Australia, the Welsh Data Cube)</li>
+</ul>
+<p>Inputs correspond to Environmental Descriptors and must be provided as classified or continuous raster layers (e.g.&nbsp;fractional vegetation cover as a percentage, water hydroperiod in months per year, lifeform as a categorical code).</p>
 <hr>
 </section>
 </section>
-<section id="opendatacube-integration" class="level2">
-<h2 class="anchored" data-anchor-id="opendatacube-integration">OpenDataCube Integration</h2>
-<p>The system is capable of ingesting products from OpenDataCube, which is the primary data backend for large-scale deployments such as Digital Earth Australia. If you plan to use this integration:</p>
-<ol type="1">
-<li>Install and configure the OpenDataCube following the <a href="https://opendatacube.readthedocs.io">ODC documentation</a>.</li>
-<li>Ensure your ODC environment is connected to a PostgreSQL database.</li>
-<li>Products can be indexed into ODC and then consumed directly by Living Earth LCCS.</li>
-</ol>
-<hr>
+<section id="step-by-step-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-workflow">Step-by-Step Workflow</h2>
+<section id="step-1-prepare-your-environmental-descriptor-inputs" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-prepare-your-environmental-descriptor-inputs">Step 1 — Prepare Your Environmental Descriptor Inputs</h3>
+<p>Each input raster should correspond to one Environmental Descriptor. Ensure your data:</p>
+<ul>
+<li>Is spatially aligned (same CRS, extent, and resolution)</li>
+<li>Uses the correct units or category codes as expected by the LCCS layer definitions</li>
+<li>Covers your area of interest</li>
+</ul>
+<p>For example, a minimal set of OEDs to produce L3 classifications might include:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Descriptor</th>
+<th>Format</th>
+<th>Example values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Presence of vegetation cover</td>
+<td>Binary raster</td>
+<td>0 = bare, 1 = vegetated</td>
+</tr>
+<tr class="even">
+<td>Terrestrial / aquatic</td>
+<td>Binary raster</td>
+<td>0 = aquatic, 1 = terrestrial</td>
+</tr>
+<tr class="odd">
+<td>Managed / natural</td>
+<td>Binary raster</td>
+<td>0 = natural, 1 = managed</td>
+</tr>
+</tbody>
+</table>
+<p>To generate L4 detail, add EEDs such as:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Descriptor</th>
+<th>Format</th>
+<th>Example values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lifeform (vegetation)</td>
+<td>Categorical raster</td>
+<td>e.g.&nbsp;1 = woody, 2 = herbaceous</td>
+</tr>
+<tr class="even">
+<td>Annual water hydroperiod</td>
+<td>Continuous raster (months/yr)</td>
+<td>0–12</td>
+</tr>
+<tr class="odd">
+<td>Canopy height</td>
+<td>Continuous raster (metres)</td>
+<td>0–50+</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="high-performance-computing-and-cloud-environments" class="level2">
-<h2 class="anchored" data-anchor-id="high-performance-computing-and-cloud-environments">High-Performance Computing and Cloud Environments</h2>
-<p>Living Earth has been optimised for high-performance computing, with tested compatibility on several national supercomputing facilities (e.g.&nbsp;Australia’s National Computational Infrastructure) and cloud services. For such environments, the installation steps above apply, but you should consult your HPC/cloud platform’s documentation for environment module management and job scheduling.</p>
-<hr>
+<section id="step-2-import-the-package" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-import-the-package">Step 2 — Import the Package</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> livingearth_lccs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For GDAL-based raster workflows, you will typically also need:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> osgeo <span class="im">import</span> gdal</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="verifying-the-installation" class="level2">
-<h2 class="anchored" data-anchor-id="verifying-the-installation">Verifying the Installation</h2>
-<p>After installation, you can verify it worked by importing the package in Python:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> livingearth_lccs</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(livingearth_lccs.__version__)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="notes-and-further-resources" class="level2">
-<h2 class="anchored" data-anchor-id="notes-and-further-resources">Notes and Further Resources</h2>
+<section id="step-3-load-the-l3-classification-layers" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-load-the-l3-classification-layers">Step 3 — Load the L3 Classification Layers</h3>
+<p>The dichotomous L3 phase is handled by the Level 3 classification module. Pass your OED arrays (as NumPy arrays or equivalent) into the L3 decision tree:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> livingearth_lccs <span class="im">import</span> l3_layers_lccs</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: load your OED rasters as numpy arrays</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># (replace these with your actual data loading steps)</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>vegetation <span class="op">=</span> gdal.Open(<span class="st">"vegetation_cover.tif"</span>).ReadAsArray()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>terrestrial <span class="op">=</span> gdal.Open(<span class="st">"terrestrial_aquatic.tif"</span>).ReadAsArray()</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>managed <span class="op">=</span> gdal.Open(<span class="st">"managed_natural.tif"</span>).ReadAsArray()</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate L3 classification</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>l3_result <span class="op">=</span> l3_layers_lccs.classify(</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    vegetation<span class="op">=</span>vegetation,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    terrestrial<span class="op">=</span>terrestrial,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    managed<span class="op">=</span>managed</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -462,15 +526,123 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The readthedocs installation page (<code>/en/latest/installation.html</code>) may not always be publicly accessible. If you can reach it, it will contain the most authoritative and up-to-date installation instructions. The steps above are based on standard Python packaging conventions and information available from the project’s documentation and publications.</p>
+<p>Exact function signatures and argument names should be confirmed against the module docstrings in the repository (<code>l3_layers_lccs.py</code>) or the API reference in the documentation.</p>
 </div>
 </div>
+</section>
+<section id="step-4-generate-l4-descriptors" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-generate-l4-descriptors">Step 4 — Generate L4 Descriptors</h3>
+<p>Once L3 classes are available, pass the EED layers into the L4 module to produce the full modular-hierarchical classification. The L4 code is documented with docstrings in <code>l4_layers_lccs.py</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> livingearth_lccs <span class="im">import</span> l4_layers_lccs</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>lifeform <span class="op">=</span> gdal.Open(<span class="st">"lifeform.tif"</span>).ReadAsArray()</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>hydroperiod <span class="op">=</span> gdal.Open(<span class="st">"hydroperiod.tif"</span>).ReadAsArray()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>l4_result <span class="op">=</span> l4_layers_lccs.classify(</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    l3_classification<span class="op">=</span>l3_result,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    lifeform<span class="op">=</span>lifeform,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    hydroperiod<span class="op">=</span>hydroperiod,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ... add further EEDs as available</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-5-write-output-to-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-write-output-to-file">Step 5 — Write Output to File</h3>
+<p>The classification result is a raster array of integer codes (each uniquely identifying a land cover class). Write it out using GDAL:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>driver <span class="op">=</span> gdal.GetDriverByName(<span class="st">"GTiff"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>out_ds <span class="op">=</span> driver.Create(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"landcover_output.tif"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    l4_result.shape[<span class="dv">1</span>],   <span class="co"># columns</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    l4_result.shape[<span class="dv">0</span>],   <span class="co"># rows</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>,                    <span class="co"># number of bands</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    gdal.GDT_Int32</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy georeferencing from one of your input files</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>ref_ds <span class="op">=</span> gdal.Open(<span class="st">"vegetation_cover.tif"</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>out_ds.SetGeoTransform(ref_ds.GetGeoTransform())</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>out_ds.SetProjection(ref_ds.GetProjection())</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>out_ds.GetRasterBand(<span class="dv">1</span>).WriteArray(l4_result)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>out_ds.FlushCache()</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>out_ds <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Output written to landcover_output.tif"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="using-an-opendatacube-backend" class="level2">
+<h2 class="anchored" data-anchor-id="using-an-opendatacube-backend">Using an OpenDataCube Backend</h2>
+<p>If your data is indexed in an OpenDataCube (ODC) instance, products can be loaded directly through the ODC API before passing them to the LCCS classification routines.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datacube</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>dc <span class="op">=</span> datacube.Datacube(app<span class="op">=</span><span class="st">"livingearth_quickstart"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a product (example: fractional vegetation cover)</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> dc.load(</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    product<span class="op">=</span><span class="st">"fc_percentile_albers_annual"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>(<span class="fl">149.0</span>, <span class="fl">150.0</span>),</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>(<span class="op">-</span><span class="fl">36.0</span>, <span class="op">-</span><span class="fl">35.0</span>),</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    time<span class="op">=</span>(<span class="st">"2020-01-01"</span>, <span class="st">"2020-12-31"</span>),</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    output_crs<span class="op">=</span><span class="st">"EPSG:3577"</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    resolution<span class="op">=</span>(<span class="op">-</span><span class="dv">30</span>, <span class="dv">30</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>fvc <span class="op">=</span> data[<span class="st">"PV"</span>].values  <span class="co"># Photosynthetic Vegetation fraction</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pass the resulting NumPy arrays into the LCCS classification modules as shown in Steps 3 and 4 above.</p>
+<hr>
+</section>
+<section id="using-plugins" class="level2">
+<h2 class="anchored" data-anchor-id="using-plugins">Using Plugins</h2>
+<p>Living Earth supports a plugin system for extending its input handling and for generating EDs from Analysis Ready Data (ARD). Plugins can be used to:</p>
 <ul>
-<li><strong>Plugins:</strong> The system can be expanded via plugins, and existing products can be read directly or created from Analysis Ready Data (ARD) through the use of plugins and virtual products.</li>
-<li><strong>Full documentation:</strong> <a href="https://livingearth-lccs.readthedocs.io/en/latest/" class="uri">https://livingearth-lccs.readthedocs.io/en/latest/</a></li>
-<li><strong>Source code:</strong> <a href="https://bitbucket.org/au-eoed/livingearth_lccs" class="uri">https://bitbucket.org/au-eoed/livingearth_lccs</a></li>
-<li><strong>Licence:</strong> Apache 2.0</li>
+<li>Compute Environmental Descriptors directly from ARD (e.g.&nbsp;deriving hydroperiod from Sentinel-1 backscatter time series)</li>
+<li>Integrate new data sources or sensors</li>
+<li>Add virtual products</li>
 </ul>
+<p>Consult the plugin documentation and the <code>plugins/</code> directory in the repository for examples of how to develop and register a plugin.</p>
+<hr>
+</section>
+<section id="understanding-the-output" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-the-output">Understanding the Output</h2>
+<p>Each pixel in the output raster contains a unique integer code representing a full LCCS classification. For example:</p>
+<ul>
+<li>An integer corresponding to <code>A11</code> (vegetated, terrestrial, managed) combined with L4 attributes such as <em>herbaceous lifeform, annual crop</em> encodes a specific agricultural land cover class.</li>
+<li>The full lookup table of all 573,307+ unique codes and their descriptions is available in the supplementary material of the Living Earth publication (Lewis et al., 2021, <em>Big Earth Data</em>).</li>
+</ul>
+<p>To interpret codes, refer to the <code>l4_layers_lccs.py</code> docstrings or the LCCS documentation, which describe each field, its permitted values, and its dependencies.</p>
+<hr>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>Once you have produced your first land cover map, you can:</p>
+<ul>
+<li><strong>Compare maps across time</strong> to detect land cover change using the Living Earth Global Change Taxonomy</li>
+<li><strong>Generate habitat maps</strong> through direct translation of selected LCCS classes (as done for Wales)</li>
+<li><strong>Quantify uncertainty</strong> associated with each Environmental Descriptor and propagate it through the classification</li>
+<li><strong>Explore the interactive map</strong> of existing Living Earth products at <a href="http://livingearthhub.org/tools/interactive-map-information/">livingearthhub.org</a></li>
+</ul>
+<hr>
+</section>
+<section id="key-references" class="level2">
+<h2 class="anchored" data-anchor-id="key-references">Key References</h2>
+<ul>
+<li><strong>Source code:</strong> <a href="https://bitbucket.org/au-eoed/livingearth_lccs" class="uri">https://bitbucket.org/au-eoed/livingearth_lccs</a></li>
+<li><strong>Documentation:</strong> <a href="https://livingearth-lccs.readthedocs.io/en/latest/" class="uri">https://livingearth-lccs.readthedocs.io/en/latest/</a></li>
+<li><strong>Living Earth Hub:</strong> <a href="http://livingearthhub.org" class="uri">http://livingearthhub.org</a></li>
+<li>Lewis et al.&nbsp;(2021). <em>Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development.</em> Big Earth Data, 5(3). <a href="https://doi.org/10.1080/20964471.2021.1948179" class="uri">https://doi.org/10.1080/20964471.2021.1948179</a></li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The official documentation at <code>livingearth-lccs.readthedocs.io</code> contains the most up-to-date API reference, function signatures, and worked examples. Always consult it alongside this guide, as specific argument names and module structures may evolve between versions.</p>
+</div>
+</div>
 
 
 </section>
@@ -878,13 +1050,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro_lccs.html" class="pagination-link" aria-label="Introduction to LCCS">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction to LCCS</span>
+      <a href="./installation.html" class="pagination-link" aria-label="Installation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Installation</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./quickstart.html" class="pagination-link" aria-label="Quick Start">
-        <span class="nav-page-text">Quick Start</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./change.qmd" class="pagination-link" aria-label="Change framework">
+        <span class="nav-page-text">Change framework</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -896,7 +1068,7 @@ Note
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ggiuliani/quarto/edit/main/installation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ggiuliani/quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ggiuliani/quarto/edit/main/quickstart.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ggiuliani/quarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

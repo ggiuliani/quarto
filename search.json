@@ -162,6 +162,214 @@
     ]
   },
   {
+    "objectID": "quickstart.html",
+    "href": "quickstart.html",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "",
+    "text": "Living Earth LCCS is an open-source Python package that generates land cover maps from Earth Observation (EO) data using the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS v2). It has been applied at national scales in Australia, Wales, Papua New Guinea, and Switzerland, and is designed to be globally scalable.\nThe classification approach works by combining Environmental Descriptors (EDs) — measurable properties of the landscape retrieved from satellite data — through a hierarchical decision-tree framework to produce standardised land cover classes. These classes fall into three levels:\n\n\n\n\n\n\n\nDescriptor type\nRole\n\n\n\n\nOverarching EDs (OEDs)\nDetermine the 8 base-level LCCS Level 3 classes (e.g. vegetated vs. bare, terrestrial vs. aquatic, managed vs. natural)\n\n\nEssential EDs (EEDs)\nAdd detail within each L3 class (e.g. lifeform, water hydroperiod) to yield Level 4 classifications\n\n\nAdditional EDs (AEDs)\nProvide further biophysical context (e.g. soil acidity, dominant species, urban density) — not part of the core FAO taxonomy\n\n\n\nThe resulting maps can represent over 12,000 unique land cover classes, each carrying biophysical meaning and expressed as a numeric code for use in GIS applications.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#what-is-living-earth-lccs",
+    "href": "quickstart.html#what-is-living-earth-lccs",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "",
+    "text": "Living Earth LCCS is an open-source Python package that generates land cover maps from Earth Observation (EO) data using the Food and Agriculture Organisation (FAO) Land Cover Classification System (LCCS v2). It has been applied at national scales in Australia, Wales, Papua New Guinea, and Switzerland, and is designed to be globally scalable.\nThe classification approach works by combining Environmental Descriptors (EDs) — measurable properties of the landscape retrieved from satellite data — through a hierarchical decision-tree framework to produce standardised land cover classes. These classes fall into three levels:\n\n\n\n\n\n\n\nDescriptor type\nRole\n\n\n\n\nOverarching EDs (OEDs)\nDetermine the 8 base-level LCCS Level 3 classes (e.g. vegetated vs. bare, terrestrial vs. aquatic, managed vs. natural)\n\n\nEssential EDs (EEDs)\nAdd detail within each L3 class (e.g. lifeform, water hydroperiod) to yield Level 4 classifications\n\n\nAdditional EDs (AEDs)\nProvide further biophysical context (e.g. soil acidity, dominant species, urban density) — not part of the core FAO taxonomy\n\n\n\nThe resulting maps can represent over 12,000 unique land cover classes, each carrying biophysical meaning and expressed as a numeric code for use in GIS applications.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#before-you-begin",
+    "href": "quickstart.html#before-you-begin",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Before You Begin",
+    "text": "Before You Begin\nMake sure you have completed installation as described in the Installation Guide. In summary, you need:\n\nPython ≥ 3.8\nThe livingearth_lccs package installed\nGDAL available in your environment\n(Optional) An OpenDataCube (ODC) instance if using cube-based data access\n\nVerify your installation:\nimport livingearth_lccs\nprint(livingearth_lccs.__version__)",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#core-concepts",
+    "href": "quickstart.html#core-concepts",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Core Concepts",
+    "text": "Core Concepts\n\nThe LCCS Classification Hierarchy\nThe FAO LCCS operates in two stages:\nStage 1 — Dichotomous phase (Levels 1–3)\nThree binary decisions produce 8 possible Level 3 (L3) classes:\nLevel 1:  Vegetation (A)     vs.  Bare (B)\nLevel 2:  Terrestrial (1)    vs.  Aquatic (2)\nLevel 3:  Managed (odd)      vs.  Natural (even)\nValid L3 codes are: A11, A12, A23, A24, B15, B16, B27, B28.\nStage 2 — Modular-hierarchical phase (Level 4)\nEach L3 class is further described by approximately a dozen categorical L4 fields (41 in total). These encode attributes such as lifeform, canopy height, crop type, and water seasonality. L4 classes operate hierarchically: some fields must be populated before others become meaningful.\n\n\nInput Data\nLiving Earth accepts two types of data sources:\n\nGDAL-compatible rasters — any local or remote file format supported by GDAL (GeoTIFF, NetCDF, HDF, COG, etc.)\nOpenDataCube products — data indexed in an ODC instance (e.g. Digital Earth Australia, the Welsh Data Cube)\n\nInputs correspond to Environmental Descriptors and must be provided as classified or continuous raster layers (e.g. fractional vegetation cover as a percentage, water hydroperiod in months per year, lifeform as a categorical code).",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#step-by-step-workflow",
+    "href": "quickstart.html#step-by-step-workflow",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Step-by-Step Workflow",
+    "text": "Step-by-Step Workflow\n\nStep 1 — Prepare Your Environmental Descriptor Inputs\nEach input raster should correspond to one Environmental Descriptor. Ensure your data:\n\nIs spatially aligned (same CRS, extent, and resolution)\nUses the correct units or category codes as expected by the LCCS layer definitions\nCovers your area of interest\n\nFor example, a minimal set of OEDs to produce L3 classifications might include:\n\n\n\n\n\n\n\n\nDescriptor\nFormat\nExample values\n\n\n\n\nPresence of vegetation cover\nBinary raster\n0 = bare, 1 = vegetated\n\n\nTerrestrial / aquatic\nBinary raster\n0 = aquatic, 1 = terrestrial\n\n\nManaged / natural\nBinary raster\n0 = natural, 1 = managed\n\n\n\nTo generate L4 detail, add EEDs such as:\n\n\n\n\n\n\n\n\nDescriptor\nFormat\nExample values\n\n\n\n\nLifeform (vegetation)\nCategorical raster\ne.g. 1 = woody, 2 = herbaceous\n\n\nAnnual water hydroperiod\nContinuous raster (months/yr)\n0–12\n\n\nCanopy height\nContinuous raster (metres)\n0–50+\n\n\n\n\n\nStep 2 — Import the Package\nimport livingearth_lccs\nFor GDAL-based raster workflows, you will typically also need:\nimport numpy as np\nfrom osgeo import gdal\n\n\nStep 3 — Load the L3 Classification Layers\nThe dichotomous L3 phase is handled by the Level 3 classification module. Pass your OED arrays (as NumPy arrays or equivalent) into the L3 decision tree:\nfrom livingearth_lccs import l3_layers_lccs\n\n# Example: load your OED rasters as numpy arrays\n# (replace these with your actual data loading steps)\nvegetation = gdal.Open(\"vegetation_cover.tif\").ReadAsArray()\nterrestrial = gdal.Open(\"terrestrial_aquatic.tif\").ReadAsArray()\nmanaged = gdal.Open(\"managed_natural.tif\").ReadAsArray()\n\n# Generate L3 classification\nl3_result = l3_layers_lccs.classify(\n    vegetation=vegetation,\n    terrestrial=terrestrial,\n    managed=managed\n)\n\n\n\n\n\n\nNote\n\n\n\nExact function signatures and argument names should be confirmed against the module docstrings in the repository (l3_layers_lccs.py) or the API reference in the documentation.\n\n\n\n\nStep 4 — Generate L4 Descriptors\nOnce L3 classes are available, pass the EED layers into the L4 module to produce the full modular-hierarchical classification. The L4 code is documented with docstrings in l4_layers_lccs.py:\nfrom livingearth_lccs import l4_layers_lccs\n\nlifeform = gdal.Open(\"lifeform.tif\").ReadAsArray()\nhydroperiod = gdal.Open(\"hydroperiod.tif\").ReadAsArray()\n\nl4_result = l4_layers_lccs.classify(\n    l3_classification=l3_result,\n    lifeform=lifeform,\n    hydroperiod=hydroperiod,\n    # ... add further EEDs as available\n)\n\n\nStep 5 — Write Output to File\nThe classification result is a raster array of integer codes (each uniquely identifying a land cover class). Write it out using GDAL:\ndriver = gdal.GetDriverByName(\"GTiff\")\nout_ds = driver.Create(\n    \"landcover_output.tif\",\n    l4_result.shape[1],   # columns\n    l4_result.shape[0],   # rows\n    1,                    # number of bands\n    gdal.GDT_Int32\n)\n\n# Copy georeferencing from one of your input files\nref_ds = gdal.Open(\"vegetation_cover.tif\")\nout_ds.SetGeoTransform(ref_ds.GetGeoTransform())\nout_ds.SetProjection(ref_ds.GetProjection())\n\nout_ds.GetRasterBand(1).WriteArray(l4_result)\nout_ds.FlushCache()\nout_ds = None\nprint(\"Output written to landcover_output.tif\")",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#using-an-opendatacube-backend",
+    "href": "quickstart.html#using-an-opendatacube-backend",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Using an OpenDataCube Backend",
+    "text": "Using an OpenDataCube Backend\nIf your data is indexed in an OpenDataCube (ODC) instance, products can be loaded directly through the ODC API before passing them to the LCCS classification routines.\nimport datacube\n\ndc = datacube.Datacube(app=\"livingearth_quickstart\")\n\n# Load a product (example: fractional vegetation cover)\ndata = dc.load(\n    product=\"fc_percentile_albers_annual\",\n    x=(149.0, 150.0),\n    y=(-36.0, -35.0),\n    time=(\"2020-01-01\", \"2020-12-31\"),\n    output_crs=\"EPSG:3577\",\n    resolution=(-30, 30)\n)\n\nfvc = data[\"PV\"].values  # Photosynthetic Vegetation fraction\nPass the resulting NumPy arrays into the LCCS classification modules as shown in Steps 3 and 4 above.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#using-plugins",
+    "href": "quickstart.html#using-plugins",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Using Plugins",
+    "text": "Using Plugins\nLiving Earth supports a plugin system for extending its input handling and for generating EDs from Analysis Ready Data (ARD). Plugins can be used to:\n\nCompute Environmental Descriptors directly from ARD (e.g. deriving hydroperiod from Sentinel-1 backscatter time series)\nIntegrate new data sources or sensors\nAdd virtual products\n\nConsult the plugin documentation and the plugins/ directory in the repository for examples of how to develop and register a plugin.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#understanding-the-output",
+    "href": "quickstart.html#understanding-the-output",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Understanding the Output",
+    "text": "Understanding the Output\nEach pixel in the output raster contains a unique integer code representing a full LCCS classification. For example:\n\nAn integer corresponding to A11 (vegetated, terrestrial, managed) combined with L4 attributes such as herbaceous lifeform, annual crop encodes a specific agricultural land cover class.\nThe full lookup table of all 573,307+ unique codes and their descriptions is available in the supplementary material of the Living Earth publication (Lewis et al., 2021, Big Earth Data).\n\nTo interpret codes, refer to the l4_layers_lccs.py docstrings or the LCCS documentation, which describe each field, its permitted values, and its dependencies.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#next-steps",
+    "href": "quickstart.html#next-steps",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Next Steps",
+    "text": "Next Steps\nOnce you have produced your first land cover map, you can:\n\nCompare maps across time to detect land cover change using the Living Earth Global Change Taxonomy\nGenerate habitat maps through direct translation of selected LCCS classes (as done for Wales)\nQuantify uncertainty associated with each Environmental Descriptor and propagate it through the classification\nExplore the interactive map of existing Living Earth products at livingearthhub.org",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "quickstart.html#key-references",
+    "href": "quickstart.html#key-references",
+    "title": "Quick Start Guide — Living Earth LCCS",
+    "section": "Key References",
+    "text": "Key References\n\nSource code: https://bitbucket.org/au-eoed/livingearth_lccs\nDocumentation: https://livingearth-lccs.readthedocs.io/en/latest/\nLiving Earth Hub: http://livingearthhub.org\nLewis et al. (2021). Living Earth: Implementing national standardised land cover classification systems for Earth Observation in support of sustainable development. Big Earth Data, 5(3). https://doi.org/10.1080/20964471.2021.1948179\n\n\n\n\n\n\n\nImportant\n\n\n\nThe official documentation at livingearth-lccs.readthedocs.io contains the most up-to-date API reference, function signatures, and worked examples. Always consult it alongside this guide, as specific argument names and module structures may evolve between versions.",
+    "crumbs": [
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "documentation/data_ingestion.html",
+    "href": "documentation/data_ingestion.html",
+    "title": "Data ingestion",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Data ingestion"
+    ]
+  },
+  {
+    "objectID": "documentation/data_ingestion.html#welcome",
+    "href": "documentation/data_ingestion.html#welcome",
+    "title": "Data ingestion",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Data ingestion"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html",
+    "href": "documentation/layer_values.html",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/layer_values.html#welcome",
+    "href": "documentation/layer_values.html#welcome",
+    "title": "Layer values",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Layer values"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html",
+    "href": "documentation/index.html",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/index.html#welcome",
+    "href": "documentation/index.html#welcome",
+    "title": "Documentation",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html",
+    "href": "documentation/classification.html",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/classification.html#welcome",
+    "href": "documentation/classification.html#welcome",
+    "title": "Classification",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Classification"
+    ]
+  },
+  {
+    "objectID": "documentation/variables.html",
+    "href": "documentation/variables.html",
+    "title": "Variables",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Variables"
+    ]
+  },
+  {
+    "objectID": "documentation/variables.html#welcome",
+    "href": "documentation/variables.html#welcome",
+    "title": "Variables",
+    "section": "",
+    "text": "blalbla",
+    "crumbs": [
+      "Documentation",
+      "Variables"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "The Living Earth Handbook",
@@ -259,114 +467,6 @@
     "text": "License\nThis hanbook is licensed as Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) by Creative Commons. Living Earth is licensed under Apache 2.0.",
     "crumbs": [
       "Welcome"
-    ]
-  },
-  {
-    "objectID": "documentation/variables.html",
-    "href": "documentation/variables.html",
-    "title": "Variables",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Variables"
-    ]
-  },
-  {
-    "objectID": "documentation/variables.html#welcome",
-    "href": "documentation/variables.html#welcome",
-    "title": "Variables",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Variables"
-    ]
-  },
-  {
-    "objectID": "documentation/classification.html",
-    "href": "documentation/classification.html",
-    "title": "Classification",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Classification"
-    ]
-  },
-  {
-    "objectID": "documentation/classification.html#welcome",
-    "href": "documentation/classification.html#welcome",
-    "title": "Classification",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Classification"
-    ]
-  },
-  {
-    "objectID": "documentation/index.html",
-    "href": "documentation/index.html",
-    "title": "Documentation",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation/index.html#welcome",
-    "href": "documentation/index.html#welcome",
-    "title": "Documentation",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation"
-    ]
-  },
-  {
-    "objectID": "documentation/layer_values.html",
-    "href": "documentation/layer_values.html",
-    "title": "Layer values",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Layer values"
-    ]
-  },
-  {
-    "objectID": "documentation/layer_values.html#welcome",
-    "href": "documentation/layer_values.html#welcome",
-    "title": "Layer values",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Layer values"
-    ]
-  },
-  {
-    "objectID": "documentation/data_ingestion.html",
-    "href": "documentation/data_ingestion.html",
-    "title": "Data ingestion",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Data ingestion"
-    ]
-  },
-  {
-    "objectID": "documentation/data_ingestion.html#welcome",
-    "href": "documentation/data_ingestion.html#welcome",
-    "title": "Data ingestion",
-    "section": "",
-    "text": "blalbla",
-    "crumbs": [
-      "Documentation",
-      "Data ingestion"
     ]
   },
   {
