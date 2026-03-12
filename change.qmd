@@ -1,0 +1,166 @@
+---
+title: "The Global Change Taxonomy in the Context of Living Earth"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    theme: cosmo
+  pdf:
+    toc: true
+    number-sections: true
+author: ""
+date: today
+bibliography: references.bib
+---
+
+## Overview
+
+Understanding *how* and *why* land cover changes is just as important as mapping what land looks like at any given moment. Living Earth addresses this challenge through the **Global Change Taxonomy** (GCT), a standardised and globally applicable framework for describing land cover change in a consistent and evidence-based way. Published by Lucas et al. (2022, *Global Change Biology*, [doi:10.1111/gcb.16346](https://doi.org/10.1111/gcb.16346)), the GCT was developed as a direct extension of the classification principles that underpin the Living Earth system.
+
+Where Living Earth maps the *state* of the land surface using the FAO Land Cover Classification System (LCCS), the Global Change Taxonomy describes *transitions between states* — what changed, by how much, and under what pressures. Together, these two components form a coherent and interoperable framework for land monitoring from the local to the planetary scale.
+
+---
+
+## Why a New Change Taxonomy Was Needed
+
+Despite decades of Earth observation and land cover research, the language used to describe land cover change has remained highly inconsistent. Terms such as *degradation*, *deforestation*, *desertification* or *vegetation dieback* are used differently across disciplines, countries and policy contexts, making it difficult to compare or aggregate findings at regional or global scales.
+
+This fragmentation has real consequences: it limits the ability of scientists, land managers and policymakers to communicate clearly about the nature and causes of landscape change, and weakens collective responses to environmental challenges such as biodiversity loss, climate change and land degradation. A globally consistent and detailed change framework has therefore long been lacking.
+
+The Global Change Taxonomy addresses this gap by providing a structured, openly accessible vocabulary of change that is:
+
+- **Standardised** — each term is precisely defined in an openly accessible glossary
+- **Evidence-based** — every change class is linked to measurable Environmental Descriptors (EDs)
+- **Scale-independent** — applicable from individual plots to entire nations
+- **Time-aware** — change descriptions explicitly account for when and how long change events occur
+- **Globally relevant** — applicable to any land cover type and any region of the world
+
+---
+
+## Conceptual Foundations
+
+### The DPSIR Framework
+
+The Global Change Taxonomy is built on the **Driver–Pressure–State–Impact–Response (DPSIR)** framework, originally developed by the European Environment Agency. DPSIR provides a logical structure for understanding causality in environmental change:
+
+| Component | Role in the GCT |
+|---|---|
+| **Drivers** | Underlying forces that generate pressure (e.g. rising CO₂, population growth, demand for resources) |
+| **Pressures** | Direct natural or human-induced agents of change (e.g. wildfire, drought, deforestation, overgrazing) |
+| **State** | The observable condition of the land surface at a given time, described using Environmental Descriptors |
+| **Impacts** | The measurable consequences of changes in state (e.g. vegetation loss, flooding, coral bleaching) |
+| **Responses** | Actions taken to address or mitigate change (e.g. restoration, policy interventions) |
+
+In the GCT, land cover maps produced by Living Earth LCCS provide a direct measure of **state**, with temporal comparisons between maps generating the evidence needed to identify **impacts**. Additional data sources — such as climate records, field surveys and management histories — provide evidence for the **pressures** behind those impacts.
+
+### The Role of Environmental Descriptors
+
+The connection between Living Earth land cover maps and the Global Change Taxonomy runs through **Environmental Descriptors (EDs)** — the same measurable variables that are used to construct LCCS classifications. EDs are either continuous (e.g. canopy cover in %, water depth in metres, vegetation height in metres) or categorical (e.g. dominant lifeform, plant species codes, water state), and are assigned standardised units or pre-defined codes.
+
+In the change framework, EDs serve a dual purpose:
+
+- As **state indicators**, they describe the land cover at any given moment and form the basis of LCCS classifications (as Overarching, Essential, and Additional EDs — OEDs, EEDs, and AEDs respectively).
+- As **evidence for change**, temporal comparisons of EDs between two time periods (T₁ and T₂) generate the empirical evidence needed to identify what changed (the impact) and why (the pressure).
+
+This direct link between Living Earth's classification inputs and the GCT's evidence base is a key strength of the system: the same data used to produce land cover maps can be directly interrogated to characterise the nature and causes of change.
+
+---
+
+## Structure of the Global Change Taxonomy
+
+### The 'Impact (Pressure)' Notation
+
+The core innovation of the GCT is its use of a combined **'impact (pressure)'** notation to describe change. Rather than using a single umbrella term (e.g. "degradation"), each change class pairs:
+
+- an **impact** — the observable consequence of change (e.g. *vegetation loss (extent)*, *flooding*, *coral bleaching*)
+- with a **pressure** — the reason behind it (e.g. *deforestation*, *excess rain*, *prolonged temperature increase*)
+
+This structure allows impact and pressure terms to be defined independently and then combined flexibly, so that the same impact (e.g. *vegetation dieback*) can be paired with many different pressures (e.g. *drought*, *pathogens*, *prolonged inundation*, *sea level fluctuation*), yielding distinct and precisely defined change classes.
+
+### Scale and Scope
+
+The current version of the GCT comprises:
+
+- **77 impact terms** covering vegetation, water, urban, agricultural and naturally bare surface domains
+- **144 pressure terms** spanning abiotic, biotic and anthropogenic categories (71 natural, 73 human-influenced)
+- **246 combined 'impact (pressure)' classes**, representing the full range of change categories currently identified as globally relevant
+
+Examples span the full breadth of land change processes:
+
+| Category | Example GCT class |
+|---|---|
+| Natural abiotic | *Deglaciation (prolonged temperature increase)* |
+| Natural abiotic | *Net snow loss (extent) (snowmelt)* |
+| Natural biotic | *Vegetation gain (extent) (colonisation)* |
+| Natural biotic | *Vegetation species change (succession)* |
+| Anthropogenic | *Vegetation loss (extent) (deforestation)* |
+| Anthropogenic | *Cropland gain (agricultural expansion)* |
+| Anthropogenic | *Water gain (extent) (wetland restoration and/or construction)* |
+| Anthropogenic | *Urban sprawl (construction)* |
+
+All terms and their definitions are maintained in an openly accessible online glossary at [doi:10.5281/zenodo.6884999](https://doi.org/10.5281/zenodo.6884999), designed to be updated as knowledge evolves.
+
+### Types of Change: Conversions and Modifications
+
+The GCT distinguishes two fundamental modes of land cover change:
+
+**Conversions** occur when a pixel transitions from one Level 3 LCCS class to another between T₁ and T₂ — for example, natural terrestrial vegetation (NTV) becoming an artificial surface (AS) through urban expansion. This represents a change in *extent* of both the original and replacement class.
+
+**Modifications** occur when the overarching land cover class remains the same but measurable attributes within it change — for example, a decrease in canopy cover (%), a change in dominant lifeform from woody to herbaceous, or a shift in water depth or turbidity. These changes in *amount* or *type* are captured through comparisons of EEDs and AEDs within the same OED class.
+
+This distinction is important because both types of change are ecologically and politically significant, yet modifications are often invisible to coarser land cover products that only track broad class changes.
+
+---
+
+## The Role of Time
+
+A distinctive feature of the GCT is its explicit treatment of time as evidence for change. Four temporal dimensions are considered:
+
+| Dimension | Definition | Example |
+|---|---|---|
+| **Occurrence** | Duration of the causative event or activity | A storm lasts hours; deforestation may last weeks |
+| **Lag** | Time between the pressure and the observable impact | Pathogen infestation may cause dieback months later |
+| **Manifestation** | How long the impact remains detectable | Flood damage visible for days; deforestation visible for decades |
+| **Duration** | Total period from onset to completion or recovery | Regrowth after fire may take decades |
+
+These temporal attributes are built into the evidence base for each GCT class, allowing users to better interpret the timing and reversibility of changes observed in satellite time-series data. For example, flash floods, crop harvesting and snow accumulation are linked to sub-daily to weekly timescales, while desertification, deglaciation and ecological succession unfold over decades to centuries.
+
+---
+
+## Applying the Global Change Taxonomy with Living Earth
+
+In practice, using the GCT in the context of Living Earth involves the following steps:
+
+1. **Generate multi-temporal land cover maps** using Living Earth LCCS for two or more time periods (T₁ and T₂).
+2. **Compare OED classes** between periods to identify broad conversions (between-class changes) or the absence of class change.
+3. **Examine EED and AED layers** at T₁ and T₂ to characterise detailed modifications (within-class changes in amounts or types of descriptors).
+4. **Identify the impact** — the observable consequence of change — using the direction and magnitude of ED changes.
+5. **Gather evidence for the pressure** — typically from ancillary data sources such as climate records, fire histories, management plans, or biodiversity surveys.
+6. **Assign a GCT class** using the 'impact (pressure)' notation, consulting the glossary to ensure consistent terminology.
+
+This workflow can be applied at any spatial scale and using any combination of ground observations, Earth observation data, or predictive model outputs.
+
+---
+
+## Supporting Global Environmental Policy
+
+The Global Change Taxonomy was explicitly designed to serve the needs of national and international policy and reporting frameworks. By providing consistent and standardised descriptions of land change, it supports:
+
+- **UN Sustainable Development Goals (SDGs)** — particularly SDG 15 (Life on Land) and SDG 6 (Clean Water)
+- **IPBES assessments** of biodiversity and ecosystem services
+- **Land degradation neutrality** targets under the UNCCD
+- **National greenhouse gas inventories** and REDD+ reporting for forests
+- **Ecosystem restoration monitoring** under the UN Decade on Ecosystem Restoration (2021–2030)
+
+The taxonomy also provides detailed and standardised language for describing processes that are currently described inconsistently in the literature and policy, including land degradation, desertification, and ecosystem recovery — replacing broad umbrella terms with precise, evidence-based combinations of impacts and pressures.
+
+---
+
+## Key Reference
+
+Lucas, R.M., German, S., Metternicht, G., Schmidt, R.K., Owers, C.J., Prober, S.M., et al. (2022). A globally relevant change taxonomy and evidence-based change framework for land monitoring. *Global Change Biology*, 28(21), 6293–6317. <https://doi.org/10.1111/gcb.16346>
+
+::: {.callout-note}
+The Global Change Taxonomy glossary, containing all impact and pressure term definitions, is openly accessible at <https://doi.org/10.5281/zenodo.6884999> and is designed to be updated over time through an ongoing peer-review process.
+:::
