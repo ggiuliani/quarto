@@ -1,0 +1,143 @@
+---
+title: "Installing Living Earth LCCS"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    theme: cosmo
+  pdf:
+    toc: true
+    number-sections: true
+author: ""
+date: today
+---
+
+## Overview
+
+Living Earth LCCS is an implementation of the FAO Land Cover Classification System (LCCS) designed to be applied to Earth Observation (EO) data. It was developed to generate land cover maps for countries such as Australia and Wales. The system takes multiple input products and combines them through a series of decision trees to produce all classes described as part of LCCS v2, with modifications where required for EO data.
+
+The system is capable of ingesting products from OpenDataCube and any raster format compatible with GDAL (local or remote), with the option to expand via plugins. Existing products can be read directly, or products can be created from Analysis Ready Data (ARD) through the use of plugins and virtual products.
+
+The software is open-source under an **Apache 2.0 licence** and hosted at the following locations:
+
+- **Source code:** <https://bitbucket.org/au-eoed/livingearth_lccs>
+- **Documentation:** <https://livingearth-lccs.readthedocs.io>
+
+---
+
+## Prerequisites
+
+Before installing Living Earth LCCS, ensure the following are available on your system:
+
+| Requirement | Notes |
+|---|---|
+| **Python 3** | Version 3.8 or later recommended |
+| **Git** | To clone the repository |
+| **GDAL** | For raster data handling |
+| **pip** or **conda** | Python package manager |
+
+If you intend to use Living Earth with the **OpenDataCube (ODC)** backend, a working ODC installation with a configured PostgreSQL database is also required.
+
+---
+
+## Installation Options
+
+### Option 1 — Install from the Bitbucket Repository (Recommended)
+
+Clone the repository from Bitbucket and install it locally using `pip`:
+
+```bash
+git clone https://bitbucket.org/au-eoed/livingearth_lccs.git
+cd livingearth_lccs
+pip install .
+```
+
+To install in **editable/development mode** (so that local code changes are immediately reflected):
+
+```bash
+pip install -e .
+```
+
+### Option 2 — Install with Optional Dependencies
+
+Depending on your use case, you may wish to install additional optional dependency groups. Common extras include support for OpenDataCube integration or documentation building. Check the `setup.py` or `pyproject.toml` file in the repository for the full list of optional extras, then install as appropriate:
+
+```bash
+# Example: install with ODC support
+pip install ".[odc]"
+
+# Example: install with documentation tools
+pip install ".[docs]"
+```
+
+### Option 3 — Install in a Conda/Virtual Environment (Recommended for Isolation)
+
+Using a virtual environment keeps your system Python clean and avoids dependency conflicts.
+
+::: {.panel-tabset}
+
+#### conda
+
+```bash
+conda create -n livingearth python=3.9
+conda activate livingearth
+git clone https://bitbucket.org/au-eoed/livingearth_lccs.git
+cd livingearth_lccs
+pip install .
+```
+
+#### venv
+
+```bash
+python -m venv livingearth_env
+# On Linux/macOS:
+source livingearth_env/bin/activate
+# On Windows:
+# livingearth_env\Scripts\activate
+git clone https://bitbucket.org/au-eoed/livingearth_lccs.git
+cd livingearth_lccs
+pip install .
+```
+
+:::
+
+---
+
+## OpenDataCube Integration
+
+The system is capable of ingesting products from OpenDataCube, which is the primary data backend for large-scale deployments such as Digital Earth Australia. If you plan to use this integration:
+
+1. Install and configure the OpenDataCube following the [ODC documentation](https://opendatacube.readthedocs.io).
+2. Ensure your ODC environment is connected to a PostgreSQL database.
+3. Products can be indexed into ODC and then consumed directly by Living Earth LCCS.
+
+---
+
+## High-Performance Computing and Cloud Environments
+
+Living Earth has been optimised for high-performance computing, with tested compatibility on several national supercomputing facilities (e.g. Australia's National Computational Infrastructure) and cloud services. For such environments, the installation steps above apply, but you should consult your HPC/cloud platform's documentation for environment module management and job scheduling.
+
+---
+
+## Verifying the Installation
+
+After installation, you can verify it worked by importing the package in Python:
+
+```python
+import livingearth_lccs
+print(livingearth_lccs.__version__)
+```
+
+---
+
+## Notes and Further Resources
+
+::: {.callout-note}
+The readthedocs installation page (`/en/latest/installation.html`) may not always be publicly accessible. If you can reach it, it will contain the most authoritative and up-to-date installation instructions. The steps above are based on standard Python packaging conventions and information available from the project's documentation and publications.
+:::
+
+- **Plugins:** The system can be expanded via plugins, and existing products can be read directly or created from Analysis Ready Data (ARD) through the use of plugins and virtual products.
+- **Full documentation:** <https://livingearth-lccs.readthedocs.io/en/latest/>
+- **Source code:** <https://bitbucket.org/au-eoed/livingearth_lccs>
+- **Licence:** Apache 2.0
