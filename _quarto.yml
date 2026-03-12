@@ -38,7 +38,7 @@ website:
         text: Introduction to LCCS
       - href: installation.qmd
         text: Installation
-      - href: quick_start.qmd
+      - href: quickstart.qmd
         text: Quick Start
       - href: change.qmd
         text: Change framework
